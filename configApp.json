@@ -1,9 +1,1 @@
-{
-  "bahasa": "id",
-  "greeting": {
-    "id": "Selamat Datang",
-    "en": "Welcome"
-  },
-  "height": 720,
-  "widht": 1080
-}
+{"height":720,"width":1080,"bahasa":"id","greeting":{"id":"Selamat Datang","en":"Welcome"}}
