@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.IO;
+﻿using System;
 
 namespace Aplikasi_Perpustakaan
 {
@@ -21,49 +19,6 @@ namespace Aplikasi_Perpustakaan
         }
     }
 
-    class ProgramConfig
-    {
-        public dynamic conf;
-        public Config defaultConfig;
-        public string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-        public string configFileName = "configApp.json";
-
-        public ProgramConfig()
-        {
-            try
-            {
-                ReadConfigFile();
-                Console.WriteLine("berhasil");
-            }
-            catch
-            {
-                SetDefault();
-                WriteNewConfigFile();
-                Console.WriteLine("gagal");
-            }
-        }
-
-        private void SetDefault()
-        {
-            greeting pesanAwal = new greeting("Selamat Datang", "Welcome");
-            defaultConfig = new Config(720, 1080, "id", pesanAwal);
-        }
-
-        public dynamic ReadConfigFile()
-        {
-            string jsonFromFile = File.ReadAllText(path + '/' + configFileName);
-            conf = JsonConvert.DeserializeObject<Config>(jsonFromFile);
-            return conf;
-        }
-
-        private void WriteNewConfigFile()
-        {
-            String jsonString = JsonConvert.SerializeObject(defaultConfig);
-            string fullPath = path + '/' + configFileName;
-            File.WriteAllText(fullPath, jsonString);
-        }
-    }
-
     class greeting
     {
         public string id { get; set; }
@@ -75,6 +30,5 @@ namespace Aplikasi_Perpustakaan
             this.id = id;
             this.en = en;
         }
-
     }
 }
