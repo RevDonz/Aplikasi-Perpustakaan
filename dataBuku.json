@@ -50,7 +50,7 @@
     {
       "nama_peminjam": "Saya",
       "id_buku": 5,
-      "tanggal_pinjam": "14/04/2022",
+      "tanggal_pinjam": "2022-04-14T00:00:00",
       "status_peminjaman": "dikonfirmasi"
     }
   ]
