@@ -39,7 +39,8 @@
             // 
             this.LabelGreeting.AutoSize = true;
             this.LabelGreeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelGreeting.Location = new System.Drawing.Point(338, 29);
+            this.LabelGreeting.Location = new System.Drawing.Point(339, 36);
+            this.LabelGreeting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelGreeting.Name = "LabelGreeting";
             this.LabelGreeting.Size = new System.Drawing.Size(195, 29);
             this.LabelGreeting.TabIndex = 0;
@@ -50,7 +51,8 @@
             // 
             this.LabelChooseLang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LabelChooseLang.AutoSize = true;
-            this.LabelChooseLang.Location = new System.Drawing.Point(818, 16);
+            this.LabelChooseLang.Location = new System.Drawing.Point(812, 8);
+            this.LabelChooseLang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelChooseLang.Name = "LabelChooseLang";
             this.LabelChooseLang.Size = new System.Drawing.Size(82, 16);
             this.LabelChooseLang.TabIndex = 4;
@@ -60,10 +62,10 @@
             // btn_idn
             // 
             this.btn_idn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_idn.Location = new System.Drawing.Point(807, 34);
-            this.btn_idn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_idn.Location = new System.Drawing.Point(782, 37);
+            this.btn_idn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_idn.Name = "btn_idn";
-            this.btn_idn.Size = new System.Drawing.Size(108, 29);
+            this.btn_idn.Size = new System.Drawing.Size(144, 36);
             this.btn_idn.TabIndex = 5;
             this.btn_idn.Text = "Indonesia";
             this.btn_idn.UseVisualStyleBackColor = true;
@@ -72,10 +74,10 @@
             // btn_en
             // 
             this.btn_en.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_en.Location = new System.Drawing.Point(807, 67);
-            this.btn_en.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_en.Location = new System.Drawing.Point(782, 77);
+            this.btn_en.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_en.Name = "btn_en";
-            this.btn_en.Size = new System.Drawing.Size(108, 30);
+            this.btn_en.Size = new System.Drawing.Size(144, 37);
             this.btn_en.TabIndex = 6;
             this.btn_en.Text = "Inggris";
             this.btn_en.UseVisualStyleBackColor = true;
@@ -84,9 +86,10 @@
             // buttonBook
             // 
             this.buttonBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonBook.Location = new System.Drawing.Point(59, 533);
+            this.buttonBook.Location = new System.Drawing.Point(13, 542);
+            this.buttonBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonBook.Name = "buttonBook";
-            this.buttonBook.Size = new System.Drawing.Size(145, 50);
+            this.buttonBook.Size = new System.Drawing.Size(193, 62);
             this.buttonBook.TabIndex = 7;
             this.buttonBook.Text = "Data Buku";
             this.buttonBook.UseVisualStyleBackColor = true;
@@ -94,7 +97,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 617);
             this.Controls.Add(this.btn_en);
@@ -103,7 +106,7 @@
             this.Controls.Add(this.buttonBook);
             this.Controls.Add(this.LabelGreeting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Form1";
             this.Text = "Aplikasi Perpustakaan";
             this.Load += new System.EventHandler(this.Form1_Load);

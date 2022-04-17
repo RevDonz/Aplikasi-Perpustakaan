@@ -30,11 +30,6 @@ namespace Aplikasi_Perpustakaan
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_idn_Click(object sender, EventArgs e)
         {
             ProgramConfig config = new ProgramConfig();
@@ -61,9 +56,5 @@ namespace Aplikasi_Perpustakaan
             bookPage.Show();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
