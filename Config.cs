@@ -8,14 +8,30 @@ namespace Aplikasi_Perpustakaan
         public int width { get; set; }
         public String bahasa { get; set; }
         public text text { get; set; }
+        public button button { get; set; }
 
         public Config() { }
-        public Config(int height, int width, string bahasa, text text)
+        public Config(int height, int width, string bahasa, text text, button button)
         {
             this.height = height;
             this.width = width;
             this.bahasa = bahasa;
             this.text = text;
+            this.button = button;
+        }
+    }
+
+    class button
+    {
+        public tambah tambah { get; set; }
+        public hapus hapus { get; set; }
+        public dataBuku dataBuku { get; set; }
+        public button() { }
+        public button(tambah tambah, hapus hapus, dataBuku dataBuku)
+        {
+            this.tambah = tambah;
+            this.hapus = hapus;
+            this.dataBuku = dataBuku;
         }
     }
 
@@ -52,6 +68,45 @@ namespace Aplikasi_Perpustakaan
 
         public pilihBahasa() { }
         public pilihBahasa(string id, string en)
+        {
+            this.id = id;
+            this.en = en;
+        }
+    }
+
+    class tambah
+    {
+        public string id { get; set; }
+        public string en { get; set; }
+
+        public tambah() { }
+        public tambah(string id, string en)
+        {
+            this.id = id;
+            this.en = en;
+        }
+    }
+
+    class hapus
+    {
+        public string id { get; set; }
+        public string en { get; set; }
+
+        public hapus() { }
+        public hapus(string id, string en)
+        {
+            this.id = id;
+            this.en = en;
+        }
+    }
+
+    class dataBuku
+    {
+        public string id { get; set; }
+        public string en { get; set; }
+
+        public dataBuku() { }
+        public dataBuku(string id, string en)
         {
             this.id = id;
             this.en = en;

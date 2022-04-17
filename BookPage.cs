@@ -29,5 +29,12 @@ namespace Aplikasi_Perpustakaan
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 dashboard = new Form1();
+            dashboard.Closed += (s, args) => this.Close();
+            dashboard.Show();
+        }
     }
 }
