@@ -4,7 +4,7 @@
       "idBuku": 1,
       "judulBuku": "Buku1",
       "jumlahHalaman": 100,
-      "penulis": "Penulis1"
+      "penulis": "Penulis1",
       "penerbit": "Penerbit1",
       "tahunTerbit": 2006,
       "status": "hilang"
@@ -44,6 +44,14 @@
       "penerbit": "Penerbit2",
       "tahunTerbit": 2021,
       "status": "dipinjam"
+    }
+  ],
+  "peminjaman": [
+    {
+      "nama_peminjam": "Saya",
+      "id_buku": 5,
+      "tanggal_pinjam": "14/04/2022",
+      "status_peminjaman": "dikonfirmasi"
     }
   ]
 }
