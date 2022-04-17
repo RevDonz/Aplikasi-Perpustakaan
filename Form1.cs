@@ -12,6 +12,7 @@ namespace Aplikasi_Perpustakaan
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,43 @@ namespace Aplikasi_Perpustakaan
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            this.Size = new Size(conf.width, conf.height);
+        }
+
+        private void LabelGreeting_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
+
+        private void btn_idn_Click(object sender, EventArgs e)
+        {
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            LabelGreeting.Text = conf.text.greeting.id;
+            LabelChooseLang.Text = conf.text.pilihBahasa.id;
+            //addBook.Text = conf.button.tambahBuku.id;
+        }
+
+        private void btn_en_Click(object sender, EventArgs e)
+        {
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            LabelGreeting.Text = conf.text.greeting.en;
+            LabelChooseLang.Text = conf.text.pilihBahasa.en;
+            //addBook.Text = conf.button.tambahBuku.en;
+        }
+
+        private void addBook_Click(object sender, EventArgs e)
+        {
+            new BookPage().Show();
+        }
+
     }
 }

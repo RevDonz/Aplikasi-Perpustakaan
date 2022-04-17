@@ -27,7 +27,9 @@ namespace Aplikasi_Perpustakaan
         private void SetDefault()
         {
             greeting pesanAwal = new greeting("Selamat Datang", "Welcome");
-            defaultConfig = new Config(720, 1080, "id", pesanAwal);
+            pilihBahasa pilihBahasaAwal = new pilihBahasa("Pilih Bahasa", "Choose Language");
+            text textAwal = new text(pesanAwal, pilihBahasaAwal);
+            defaultConfig = new Config(720, 1080, "id", textAwal);
         }
 
         public dynamic ReadConfigFile()

@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookPage.Designer.cs">
+      <DependentUpon>BookPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buku.cs" />
     <Compile Include="Serializer.cs" />
     <Compile Include="Raw.cs" />
@@ -64,6 +70,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="ProgramConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookPage.resx">
+      <DependentUpon>BookPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,10 +85,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="configApp.json" />
     <None Include="dataBuku.json" />
     <None Include="configApp.json" />
     <None Include="dataBuku2.json" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BookPage.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
