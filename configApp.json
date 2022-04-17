@@ -2,8 +2,28 @@
   "height": 540,
   "width": 720,
   "bahasa": "id",
-  "greeting": {
-    "id": "Selamat Datang",
-    "en": "Welcome"
+  "text": {
+    "greeting": {
+      "id": "Selamat Datang",
+      "en": "Welcome"
+    },
+    "pilihBahasa": {
+      "id": "Pilih Bahasa",
+      "en": "Choose Language"
+    }
+  },
+  "button": {
+    "tambah": {
+      "id": "Tambah",
+      "en": "Add"
+    },
+    "hapus": {
+      "id": "Hapus",
+      "en": "Delete"
+    },
+    "tambahBuku": {
+      "id": "Tambah Buku",
+      "en": "Add Book"
+    }
   }
 }

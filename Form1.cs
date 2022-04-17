@@ -20,9 +20,9 @@ namespace Aplikasi_Perpustakaan
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //ProgramConfig config = new ProgramConfig();
-            //dynamic conf = config.ReadConfigFile();
-            //this.Size = new System.Drawing.Size(720, 540);
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            this.Size = new Size(conf.width, conf.height);
         }
 
         private void LabelGreeting_Click(object sender, EventArgs e)
@@ -39,14 +39,24 @@ namespace Aplikasi_Perpustakaan
         {
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
-            LabelGreeting.Text = conf.greeting.id;
+            LabelGreeting.Text = conf.text.greeting.id;
+            LabelChooseLang.Text = conf.text.pilihBahasa.id;
+            //addBook.Text = conf.button.tambahBuku.id;
         }
 
         private void btn_en_Click(object sender, EventArgs e)
         {
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
-            LabelGreeting.Text = conf.greeting.en;
+            LabelGreeting.Text = conf.text.greeting.en;
+            LabelChooseLang.Text = conf.text.pilihBahasa.en;
+            //addBook.Text = conf.button.tambahBuku.en;
         }
+
+        private void addBook_Click(object sender, EventArgs e)
+        {
+            new BookPage().Show();
+        }
+
     }
 }
