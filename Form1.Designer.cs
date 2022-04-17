@@ -32,37 +32,40 @@
             this.LabelChooseLang = new System.Windows.Forms.Label();
             this.btn_idn = new System.Windows.Forms.Button();
             this.btn_en = new System.Windows.Forms.Button();
-            this.addBook = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.buttonBook = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelGreeting
             // 
             this.LabelGreeting.AutoSize = true;
-            this.LabelGreeting.Location = new System.Drawing.Point(386, 34);
+            this.LabelGreeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelGreeting.Location = new System.Drawing.Point(339, 36);
+            this.LabelGreeting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelGreeting.Name = "LabelGreeting";
-            this.LabelGreeting.Size = new System.Drawing.Size(104, 16);
+            this.LabelGreeting.Size = new System.Drawing.Size(195, 29);
             this.LabelGreeting.TabIndex = 0;
             this.LabelGreeting.Text = "Selamat Datang";
             this.LabelGreeting.Click += new System.EventHandler(this.LabelGreeting_Click);
             // 
             // LabelChooseLang
             // 
+            this.LabelChooseLang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LabelChooseLang.AutoSize = true;
-            this.LabelChooseLang.Location = new System.Drawing.Point(3, 0);
+            this.LabelChooseLang.Location = new System.Drawing.Point(812, 8);
+            this.LabelChooseLang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelChooseLang.Name = "LabelChooseLang";
             this.LabelChooseLang.Size = new System.Drawing.Size(82, 16);
             this.LabelChooseLang.TabIndex = 4;
             this.LabelChooseLang.Text = "Pilih Bahasa";
+            this.LabelChooseLang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_idn
             // 
             this.btn_idn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_idn.Location = new System.Drawing.Point(3, 35);
-            this.btn_idn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_idn.Location = new System.Drawing.Point(782, 37);
+            this.btn_idn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_idn.Name = "btn_idn";
-            this.btn_idn.Size = new System.Drawing.Size(108, 29);
+            this.btn_idn.Size = new System.Drawing.Size(144, 36);
             this.btn_idn.TabIndex = 5;
             this.btn_idn.Text = "Indonesia";
             this.btn_idn.UseVisualStyleBackColor = true;
@@ -71,57 +74,42 @@
             // btn_en
             // 
             this.btn_en.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_en.Location = new System.Drawing.Point(3, 68);
-            this.btn_en.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_en.Location = new System.Drawing.Point(782, 77);
+            this.btn_en.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_en.Name = "btn_en";
-            this.btn_en.Size = new System.Drawing.Size(108, 30);
+            this.btn_en.Size = new System.Drawing.Size(144, 37);
             this.btn_en.TabIndex = 6;
             this.btn_en.Text = "Inggris";
             this.btn_en.UseVisualStyleBackColor = true;
             this.btn_en.Click += new System.EventHandler(this.btn_en_Click);
             // 
-            // addBook
+            // buttonBook
             // 
-            this.addBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addBook.Location = new System.Drawing.Point(112, 284);
-            this.addBook.Name = "addBook";
-            this.addBook.Size = new System.Drawing.Size(145, 50);
-            this.addBook.TabIndex = 7;
-            this.addBook.Text = "Tambah Buku";
-            this.addBook.UseVisualStyleBackColor = true;
-            this.addBook.Click += new System.EventHandler(this.addBook_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.LabelChooseLang, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_en, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btn_idn, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(796, 12);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(131, 100);
-            this.tableLayoutPanel1.TabIndex = 8;
+            this.buttonBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBook.Location = new System.Drawing.Point(13, 542);
+            this.buttonBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBook.Name = "buttonBook";
+            this.buttonBook.Size = new System.Drawing.Size(193, 62);
+            this.buttonBook.TabIndex = 7;
+            this.buttonBook.Text = "Data Buku";
+            this.buttonBook.UseVisualStyleBackColor = true;
+            this.buttonBook.Click += new System.EventHandler(this.buttonBook_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 617);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.addBook);
+            this.Controls.Add(this.btn_en);
+            this.Controls.Add(this.LabelChooseLang);
+            this.Controls.Add(this.btn_idn);
+            this.Controls.Add(this.buttonBook);
             this.Controls.Add(this.LabelGreeting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Form1";
             this.Text = "Aplikasi Perpustakaan";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,8 +121,7 @@
         private System.Windows.Forms.Label LabelChooseLang;
         private System.Windows.Forms.Button btn_idn;
         private System.Windows.Forms.Button btn_en;
-        private System.Windows.Forms.Button addBook;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button buttonBook;
     }
 }
 

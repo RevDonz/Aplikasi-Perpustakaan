@@ -29,7 +29,12 @@ namespace Aplikasi_Perpustakaan
             greeting pesanAwal = new greeting("Selamat Datang", "Welcome");
             pilihBahasa pilihBahasaAwal = new pilihBahasa("Pilih Bahasa", "Choose Language");
             text textAwal = new text(pesanAwal, pilihBahasaAwal);
-            defaultConfig = new Config(720, 1080, "id", textAwal);
+
+            tambah btnTambah = new tambah("Tambah", "Add");
+            hapus btnHapus = new hapus("Hapus", "Delete");
+            dataBuku btnDataBuku= new dataBuku("Data Buku", "Book Data");
+            button btnAwal = new button(btnTambah, btnHapus, btnDataBuku);
+            defaultConfig = new Config(720, 1080, "id", textAwal, btnAwal);
         }
 
         public dynamic ReadConfigFile()

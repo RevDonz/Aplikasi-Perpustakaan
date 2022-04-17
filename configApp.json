@@ -21,9 +21,9 @@
       "id": "Hapus",
       "en": "Delete"
     },
-    "tambahBuku": {
-      "id": "Tambah Buku",
-      "en": "Add Book"
+    "dataBuku": {
+      "id": "Data Buku",
+      "en": "Book Data"
     }
   }
 }
