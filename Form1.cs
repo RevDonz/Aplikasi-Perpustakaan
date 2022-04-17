@@ -41,7 +41,7 @@ namespace Aplikasi_Perpustakaan
             dynamic conf = config.ReadConfigFile();
             LabelGreeting.Text = conf.text.greeting.id;
             LabelChooseLang.Text = conf.text.pilihBahasa.id;
-            //addBook.Text = conf.button.tambahBuku.id;
+            buttonBook.Text = conf.button.dataBuku.id;
         }
 
         private void btn_en_Click(object sender, EventArgs e)
@@ -50,13 +50,20 @@ namespace Aplikasi_Perpustakaan
             dynamic conf = config.ReadConfigFile();
             LabelGreeting.Text = conf.text.greeting.en;
             LabelChooseLang.Text = conf.text.pilihBahasa.en;
-            //addBook.Text = conf.button.tambahBuku.en;
+            buttonBook.Text = conf.button.dataBuku.en;
         }
 
-        private void addBook_Click(object sender, EventArgs e)
+        private void buttonBook_Click(object sender, EventArgs e)
         {
-            new BookPage().Show();
+            this.Hide();
+            BookPage bookPage = new BookPage();
+            bookPage.Closed += (s, args) => this.Close();
+            bookPage.Show();
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

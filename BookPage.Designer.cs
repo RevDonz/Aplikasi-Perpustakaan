@@ -29,43 +29,41 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
             this.bookPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.backButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bookPageBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(420, 123);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // bookPageBindingSource
             // 
             this.bookPageBindingSource.DataSource = typeof(Aplikasi_Perpustakaan.BookPage);
+            // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(12, 12);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.TabIndex = 0;
+            this.backButton.Text = "Kembali";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // BookPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 617);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.backButton);
             this.Name = "BookPage";
             this.Text = "Data Buku";
             this.Load += new System.EventHandler(this.BookPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bookPageBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource bookPageBindingSource;
+        private System.Windows.Forms.Button backButton;
     }
 }
