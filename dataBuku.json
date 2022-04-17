@@ -45,5 +45,13 @@
       "tahunTerbit": 2021,
       "status": "dipinjam"
     }
+  ],
+  "peminjaman": [
+    {
+      "nama_peminjam": "Saya",
+      "id_buku": 5,
+      "tanggal_pinjam": "14/04/2022",
+      "status_peminjaman": "dikonfirmasi"
+    }
   ]
 }

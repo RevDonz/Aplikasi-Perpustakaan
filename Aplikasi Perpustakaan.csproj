@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buku.cs" />
-    <Compile Include="SerializerBuku.cs" />
+    <Compile Include="Serializer.cs" />
+    <Compile Include="Raw.cs" />
+    <Compile Include="Peminjaman.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -74,7 +76,7 @@
     </Compile>
     <None Include="dataBuku.json" />
     <None Include="configApp.json" />
-    <None Include="jsconfig1.json" />
+    <None Include="dataBuku2.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
