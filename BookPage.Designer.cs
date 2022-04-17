@@ -28,15 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.bookPageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.bookPageBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bookPageBindingSource
-            // 
-            this.bookPageBindingSource.DataSource = typeof(Aplikasi_Perpustakaan.BookPage);
             // 
             // backButton
             // 
@@ -57,13 +50,11 @@
             this.Name = "BookPage";
             this.Text = "Data Buku";
             this.Load += new System.EventHandler(this.BookPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bookPageBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource bookPageBindingSource;
         private System.Windows.Forms.Button backButton;
     }
 }
