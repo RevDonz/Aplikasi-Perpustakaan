@@ -21,6 +21,10 @@
       "id": "Hapus",
       "en": "Delete"
     },
+    "kembali": {
+      "id": "Kembali",
+      "en": "Back"
+    },
     "dataBuku": {
       "id": "Data Buku",
       "en": "Book Data"
