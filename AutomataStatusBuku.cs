@@ -52,7 +52,7 @@ namespace Aplikasi_Perpustakaan
         public void TriggerAksi(Aksi aksi)
         {
             StatusBuku sekarang = changeStatus(this.StatusBukuSaatIni, aksi);
-            StatusBuku StatusBukuSaatIni = sekarang;
+            StatusBukuSaatIni = sekarang;
         }
 
         public AutomataStatusBuku() { }
