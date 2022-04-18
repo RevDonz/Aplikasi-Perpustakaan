@@ -37,6 +37,12 @@ namespace Aplikasi_Perpustakaan
             //{
             //    System.Diagnostics.Debug.WriteLine(peminjaman.tanggal_pinjam.ToString("dd/MM/yyyy"));
             //}
+            AutomataStatusBuku test = new AutomataStatusBuku();
+            Console.WriteLine(test.StatusBukuSaatIni);
+            test.TriggerAksi(AutomataStatusBuku.Aksi.hilang);
+            Console.WriteLine(test.StatusBukuSaatIni);
+
+
         }
     }
 }
