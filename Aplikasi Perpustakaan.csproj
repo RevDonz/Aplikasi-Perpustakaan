@@ -98,7 +98,6 @@
     <None Include="configApp.json" />
     <None Include="dataBuku.json" />
     <None Include="configApp.json" />
-    <None Include="dataBuku2.json" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BookPage.datasource" />
     <None Include="Properties\Settings.settings">
