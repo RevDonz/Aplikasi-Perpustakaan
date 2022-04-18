@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aplikasi_Perpustakaan
 {
-    public partial class PeminjamanPage : Form
+    public partial class PagePeminjaman : Form
     {
-        public PeminjamanPage()
+        public PagePeminjaman()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace Aplikasi_Perpustakaan
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 dashboard = new Form1();
+            PageDashboard dashboard = new PageDashboard();
             dashboard.Closed += (s, args) => this.Close();
             dashboard.Show();
         }

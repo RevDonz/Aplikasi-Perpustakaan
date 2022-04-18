@@ -17,7 +17,7 @@ namespace Aplikasi_Perpustakaan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new PageDashboard());
 
             //string path = directory.getparent(directory.getcurrentdirectory()).parent.fullname;
             //string file = "databuku.json";

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Aplikasi_Perpustakaan
 {
-    public partial class Form1 : Form
+    public partial class PageDashboard : Form
     {
         
-        public Form1()
+        public PageDashboard()
         {
             InitializeComponent();
         }
@@ -64,7 +64,7 @@ namespace Aplikasi_Perpustakaan
         private void buttonBook_Click(object sender, EventArgs e)
         {
             this.Hide();
-            BookPage bookPage = new BookPage();
+            PageBook bookPage = new PageBook();
             bookPage.Closed += (s, args) => this.Close();
             bookPage.Show();
         }
@@ -72,7 +72,7 @@ namespace Aplikasi_Perpustakaan
         private void buttonPeminjaman_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PeminjamanPage peminjamanPage = new PeminjamanPage();
+            PagePeminjaman peminjamanPage = new PagePeminjaman();
             peminjamanPage.Closed += (s, args) => this.Close();
             peminjamanPage.Show();
         }
