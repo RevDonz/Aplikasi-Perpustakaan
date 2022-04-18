@@ -22,10 +22,9 @@ namespace Aplikasi_Perpustakaan
             }
         }
 
-        public static void BukuTersedia()
+        public static bool BukuTersedia(T cari)
         {
-            dynamic Cari = Console.ReadLine();
-            dynamic temp = SearchBuku(Cari);
+            dynamic temp = SearchBuku(cari);
             List<Buku> list_buku = new List<Buku>();
             list_buku = Serializer.deserialize<Buku>(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\" + "dataBuku.json");
             for (int i = 0; i < list_buku.Count; i++)
@@ -33,12 +32,10 @@ namespace Aplikasi_Perpustakaan
                 Buku dataBuku = list_buku[i];
                 if (dataBuku.idBuku == temp)
                 {
-                    Console.WriteLine("buku ditemukan");
-                    Console.WriteLine("Judul: " + dataBuku.judulBuku);
-                    Console.WriteLine("id buku: " + dataBuku.idBuku);
-                    Console.WriteLine("penulis: " + dataBuku.penulis);
+                    return true;
                 }
             }
+            return false;
         }
     }
 }
