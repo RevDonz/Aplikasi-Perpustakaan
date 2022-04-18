@@ -12,6 +12,7 @@ namespace Aplikasi_Perpustakaan
     {
         public List<Buku> buku;
         public List<Peminjaman> peminjaman;
+        public string path { get; set; }
 
         public static Raw getRecord(string path)
         {
@@ -23,6 +24,7 @@ namespace Aplikasi_Perpustakaan
             {
                 DateFormatString = "dd/MM/yyyy"
             });
+            raw.path = path;
             return raw;
         }
     }

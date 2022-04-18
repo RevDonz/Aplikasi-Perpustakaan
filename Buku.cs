@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,9 +43,27 @@ namespace Aplikasi_Perpustakaan
 
         public static Raw update(Raw data, int id_buku, string status)
         {
+            bool changed = false;
+
             foreach (Buku item in data.buku)
             {
+                if (item.idBuku == id_buku)
+                {
+                    item.status = status;
+                    changed = true;
+                    break;
+                }
+            }
 
+            string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+            File.WriteAllText(data.path, json);
+
+            if (changed)
+            {
+                return data;
+            } else
+            {
+                return null;
             }
         }
     }

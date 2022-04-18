@@ -19,13 +19,14 @@ namespace Aplikasi_Perpustakaan
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
 
-            Peminjaman peminjaman1 = new Peminjaman("Baru", 2, new DateTime(2022, 4, 13), "dikonfirmasi");
+            //Peminjaman peminjaman1 = new Peminjaman("Baru", 2, new DateTime(2022, 4, 13), "dikonfirmasi");
 
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
 
             Raw raw = Raw.getRecord(path);
 
-            raw = Peminjaman.pinjam(raw, peminjaman1, path);
+            //raw = Peminjaman.pinjam(raw, peminjaman1, path);
+            raw = Buku.update(raw, 2, "hilang");
 
             //List<Buku> list_buku = new List<Buku>();
             //List<Peminjaman> list_peminjaman = new List<Peminjaman>();
