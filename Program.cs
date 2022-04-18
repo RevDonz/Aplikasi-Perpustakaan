@@ -15,27 +15,33 @@ namespace Aplikasi_Perpustakaan
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
 
-            //string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            //string file = "dataBuku.json";
+            //Peminjaman peminjaman1 = new Peminjaman("Baru", 2, new DateTime(2022, 4, 13), "dikonfirmasi");
 
-            //List<Buku> list_buku = new List<Buku>();
-            //List<Peminjaman> list_peminjaman = new List<Peminjaman>();
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
 
-            //list_buku = Serializer.deserialize<Buku>(path + "\\" + file);
-            //list_peminjaman = Serializer.deserialize<Peminjaman>(path + "\\" + file);
-            //System.Diagnostics.Debug.WriteLine(path + "\\" + file);
+            Raw raw = Raw.getRecord(path);
 
-            //foreach (Buku buku in list_buku)
+            //raw = Peminjaman.pinjam(raw, peminjaman1, path);
+            raw = Buku.update(raw, 2, "hilang");
+
+            //list<buku> list_buku = new list<buku>();
+            //list<peminjaman> list_peminjaman = new list<peminjaman>();
+
+            //list_buku = raw.buku;
+            //list_peminjaman = raw.peminjaman;
+
+
+            //foreach (buku buku in list_buku)
             //{
-            //    System.Diagnostics.Debug.WriteLine(buku.penulis);
+            //    system.diagnostics.debug.writeline(buku.penulis);
             //}
-            //foreach (Peminjaman peminjaman in list_peminjaman)
+            //foreach (peminjaman peminjaman in list_peminjaman)
             //{
-            //    System.Diagnostics.Debug.WriteLine(peminjaman.tanggal_pinjam.ToString("dd/MM/yyyy"));
+            //    system.diagnostics.debug.writeline(peminjaman.tanggal_pinjam.tostring("dd/mm/yyyy"));
             //}
         }
     }

@@ -56,6 +56,12 @@
       <DependentUpon>BookPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Buku.cs" />
+    <Compile Include="PeminjamanPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PeminjamanPage.Designer.cs">
+      <DependentUpon>PeminjamanPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Serializer.cs" />
     <Compile Include="Raw.cs" />
     <Compile Include="Peminjaman.cs" />
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeminjamanPage.resx">
+      <DependentUpon>PeminjamanPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
