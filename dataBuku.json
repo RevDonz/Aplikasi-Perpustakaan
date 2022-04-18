@@ -52,6 +52,18 @@
       "id_buku": 5,
       "tanggal_pinjam": "2022-04-14T00:00:00",
       "status_peminjaman": "dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "Saya",
+      "id_buku": 1,
+      "tanggal_pinjam": "2022-04-11T00:00:00",
+      "status_peminjaman": "Dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "Baru",
+      "id_buku": 2,
+      "tanggal_pinjam": "2022-04-13T00:00:00",
+      "status_peminjaman": "dikonfirmasi"
     }
   ]
 }

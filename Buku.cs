@@ -26,5 +26,25 @@ namespace Aplikasi_Perpustakaan
             this.tahunTerbit = tahunTerbit;
             this.status = status;
         }
+
+        public static Buku search(Raw data, int id_buku)
+        {
+            foreach (Buku item in data.buku)
+            {
+                if (item.idBuku == id_buku)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+
+        public static Raw update(Raw data, int id_buku, string status)
+        {
+            foreach (Buku item in data.buku)
+            {
+
+            }
+        }
     }
 }
