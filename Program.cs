@@ -15,19 +15,25 @@ namespace Aplikasi_Perpustakaan
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
 
-            //string path = directory.getparent(directory.getcurrentdirectory()).parent.fullname;
-            //string file = "databuku.json";
+            //Peminjaman peminjaman1 = new Peminjaman("Baru", 2, new DateTime(2022, 4, 13), "dikonfirmasi");
+
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
+
+            Raw raw = Raw.getRecord(path);
+
+            //raw = Peminjaman.pinjam(raw, peminjaman1, path);
+            raw = Buku.update(raw, 2, "hilang");
 
             //list<buku> list_buku = new list<buku>();
             //list<peminjaman> list_peminjaman = new list<peminjaman>();
 
-            //list_buku = serializer.deserialize<buku>(path + "\\" + file);
-            //list_peminjaman = serializer.deserialize<peminjaman>(path + "\\" + file);
-            //system.diagnostics.debug.writeline(path + "\\" + file);
+            //list_buku = raw.buku;
+            //list_peminjaman = raw.peminjaman;
+
 
             //foreach (buku buku in list_buku)
             //{
