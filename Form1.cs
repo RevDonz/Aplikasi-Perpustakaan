@@ -12,6 +12,7 @@ namespace Aplikasi_Perpustakaan
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,61 @@ namespace Aplikasi_Perpustakaan
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            this.Size = new Size(conf.width, conf.height);
+            if (conf.bahasa == "id")
+            {
+                LabelGreeting.Text = conf.text.greeting.id;
+                LabelChooseLang.Text = conf.text.pilihBahasa.id;
+                buttonBook.Text = conf.button.dataBuku.id;
+            }
+            else
+            {
+                LabelGreeting.Text = conf.text.greeting.en;
+                LabelChooseLang.Text = conf.text.pilihBahasa.en;
+                buttonBook.Text = conf.button.dataBuku.en;
+            }
+        }
 
+        private void LabelGreeting_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void btn_idn_Click(object sender, EventArgs e)
+        {
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            LabelGreeting.Text = conf.text.greeting.id;
+            LabelChooseLang.Text = conf.text.pilihBahasa.id;
+            buttonBook.Text = conf.button.dataBuku.id;
+        }
+
+        private void btn_en_Click(object sender, EventArgs e)
+        {
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            LabelGreeting.Text = conf.text.greeting.en;
+            LabelChooseLang.Text = conf.text.pilihBahasa.en;
+            buttonBook.Text = conf.button.dataBuku.en;
+        }
+
+        private void buttonBook_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BookPage bookPage = new BookPage();
+            bookPage.Closed += (s, args) => this.Close();
+            bookPage.Show();
+        }
+
+        private void buttonPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PeminjamanPage peminjamanPage = new PeminjamanPage();
+            peminjamanPage.Closed += (s, args) => this.Close();
+            peminjamanPage.Show();
         }
     }
 }

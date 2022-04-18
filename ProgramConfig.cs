@@ -27,7 +27,16 @@ namespace Aplikasi_Perpustakaan
         private void SetDefault()
         {
             greeting pesanAwal = new greeting("Selamat Datang", "Welcome");
-            defaultConfig = new Config(720, 1080, "id", pesanAwal);
+            pilihBahasa pilihBahasaAwal = new pilihBahasa("Pilih Bahasa", "Choose Language");
+            text textAwal = new text(pesanAwal, pilihBahasaAwal);
+
+            tambah btnTambah = new tambah("Tambah", "Add");
+            hapus btnHapus = new hapus("Hapus", "Delete");
+            kembali btnKembali = new kembali("Kembali", "Back");
+            dataBuku btnDataBuku= new dataBuku("Data Buku", "Book Data");
+
+            button btnAwal = new button(btnTambah, btnHapus, btnKembali, btnDataBuku);
+            defaultConfig = new Config(720, 1080, "id", textAwal, btnAwal);
         }
 
         public dynamic ReadConfigFile()

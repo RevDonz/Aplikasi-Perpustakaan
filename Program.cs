@@ -28,20 +28,20 @@ namespace Aplikasi_Perpustakaan
             //raw = Peminjaman.pinjam(raw, peminjaman1, path);
             raw = Buku.update(raw, 2, "hilang");
 
-            //List<Buku> list_buku = new List<Buku>();
-            //List<Peminjaman> list_peminjaman = new List<Peminjaman>();
+            //list<buku> list_buku = new list<buku>();
+            //list<peminjaman> list_peminjaman = new list<peminjaman>();
 
             //list_buku = raw.buku;
             //list_peminjaman = raw.peminjaman;
 
 
-            //foreach (Buku buku in list_buku)
+            //foreach (buku buku in list_buku)
             //{
-            //    System.Diagnostics.Debug.WriteLine(buku.penulis);
+            //    system.diagnostics.debug.writeline(buku.penulis);
             //}
-            //foreach (Peminjaman peminjaman in list_peminjaman)
+            //foreach (peminjaman peminjaman in list_peminjaman)
             //{
-            //    System.Diagnostics.Debug.WriteLine(peminjaman.tanggal_pinjam.ToString("dd/MM/yyyy"));
+            //    system.diagnostics.debug.writeline(peminjaman.tanggal_pinjam.tostring("dd/mm/yyyy"));
             //}
         }
     }
