@@ -19,23 +19,23 @@ namespace Aplikasi_Perpustakaan
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            //string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            //string file = "dataBuku.json";
+            //string path = directory.getparent(directory.getcurrentdirectory()).parent.fullname;
+            //string file = "databuku.json";
 
-            //List<Buku> list_buku = new List<Buku>();
-            //List<Peminjaman> list_peminjaman = new List<Peminjaman>();
+            //list<buku> list_buku = new list<buku>();
+            //list<peminjaman> list_peminjaman = new list<peminjaman>();
 
-            //list_buku = Serializer.deserialize<Buku>(path + "\\" + file);
-            //list_peminjaman = Serializer.deserialize<Peminjaman>(path + "\\" + file);
-            //System.Diagnostics.Debug.WriteLine(path + "\\" + file);
+            //list_buku = serializer.deserialize<buku>(path + "\\" + file);
+            //list_peminjaman = serializer.deserialize<peminjaman>(path + "\\" + file);
+            //system.diagnostics.debug.writeline(path + "\\" + file);
 
-            //foreach (Buku buku in list_buku)
+            //foreach (buku buku in list_buku)
             //{
-            //    System.Diagnostics.Debug.WriteLine(buku.penulis);
+            //    system.diagnostics.debug.writeline(buku.penulis);
             //}
-            //foreach (Peminjaman peminjaman in list_peminjaman)
+            //foreach (peminjaman peminjaman in list_peminjaman)
             //{
-            //    System.Diagnostics.Debug.WriteLine(peminjaman.tanggal_pinjam.ToString("dd/MM/yyyy"));
+            //    system.diagnostics.debug.writeline(peminjaman.tanggal_pinjam.tostring("dd/mm/yyyy"));
             //}
         }
     }
