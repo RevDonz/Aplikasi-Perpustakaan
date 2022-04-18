@@ -10,17 +10,9 @@ namespace Aplikasi_Perpustakaan
 {
     internal class Serializer
     {
-        public static List<T> deserialize<T>(string path)
+        public static List<T> deserialize<T>(Raw raw)
         {
             dynamic list_result = new List<T>();
-            Raw raw = new Raw();
-
-            string raw_text = File.ReadAllText(path);
-
-            raw = JsonConvert.DeserializeObject<Raw>(raw_text, new JsonSerializerSettings
-            {
-                DateFormatString = "dd/MM/yyyy"
-            });
 
             if (typeof(T) == typeof(Buku))
             {

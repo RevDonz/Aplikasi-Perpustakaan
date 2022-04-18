@@ -25,13 +25,15 @@ namespace Aplikasi_Perpustakaan
     {
         public tambah tambah { get; set; }
         public hapus hapus { get; set; }
+        public kembali kembali { get; set; }
         public dataBuku dataBuku { get; set; }
         public button() { }
-        public button(tambah tambah, hapus hapus, dataBuku dataBuku)
+        public button(tambah tambah, hapus hapus, kembali kembali, dataBuku dataBuku)
         {
             this.tambah = tambah;
             this.hapus = hapus;
             this.dataBuku = dataBuku;
+            this.kembali = kembali;
         }
     }
 
@@ -94,6 +96,19 @@ namespace Aplikasi_Perpustakaan
 
         public hapus() { }
         public hapus(string id, string en)
+        {
+            this.id = id;
+            this.en = en;
+        }
+    }
+
+    class kembali
+    {
+        public string id { get; set; }
+        public string en { get; set; }
+
+        public kembali() { }
+        public kembali(string id, string en)
         {
             this.id = id;
             this.en = en;
