@@ -1,6 +1,6 @@
 ﻿namespace Aplikasi_Perpustakaan
 {
-    partial class Form1
+    partial class PageDashboard
     {
         /// <summary>
         /// Required designer variable.

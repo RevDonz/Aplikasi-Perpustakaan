@@ -1,6 +1,6 @@
 ﻿namespace Aplikasi_Perpustakaan
 {
-    partial class BookPage
+    partial class PageBook
     {
         /// <summary>
         /// Required designer variable.
