@@ -62,7 +62,6 @@
     <Compile Include="PeminjamanPage.Designer.cs">
       <DependentUpon>PeminjamanPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Serializer.cs" />
     <Compile Include="Raw.cs" />
     <Compile Include="Peminjaman.cs" />
     <Compile Include="AutomataStatusBuku.cs" />

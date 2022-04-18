@@ -14,12 +14,12 @@ namespace Aplikasi_Perpustakaan
         {
             InitializeComponent();
 
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            string file = "databuku.json";
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "databuku.json";
 
             List<Buku> list_buku = new List<Buku>();
 
-            list_buku = Serializer.deserialize<Buku>(path + "\\" + file);
+            Raw raw = Raw.getRecord(path);
+            list_buku = raw.buku;
             dgvDataBuku.DataSource = this.ToDataTable(list_buku);
         }
 
