@@ -7,10 +7,10 @@ using System.Windows.Forms;
 
 namespace Aplikasi_Perpustakaan
 {
-    public partial class BookPage : Form
+    public partial class PageBook : Form
     {
         
-        public BookPage()
+        public PageBook()
         {
             InitializeComponent();
 
@@ -71,7 +71,7 @@ namespace Aplikasi_Perpustakaan
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 dashboard = new Form1();
+            PageDashboard dashboard = new PageDashboard();
             dashboard.Closed += (s, args) => this.Close();
             dashboard.Show();
         }

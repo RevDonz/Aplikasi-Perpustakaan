@@ -15,9 +15,9 @@ namespace Aplikasi_Perpustakaan
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new PageDashboard());
 
             //Peminjaman peminjaman1 = new Peminjaman("Baru", 2, new DateTime(2022, 4, 13), "dikonfirmasi");
 
@@ -43,6 +43,13 @@ namespace Aplikasi_Perpustakaan
             //{
             //    system.diagnostics.debug.writeline(peminjaman.tanggal_pinjam.tostring("dd/mm/yyyy"));
             //}
+            CariBuku book = new CariBuku();
+            //dynamic q = book.BukuTersedia("Buku1");
+            //Console.WriteLine(q);
+
+            dynamic rq = book.BukuTersedia("Buku10");
+            Console.WriteLine(rq);
+
         }
     }
 }
