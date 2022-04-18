@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Aplikasi_Perpustakaan
 {
-    internal class CariBuku<T>
+    internal class CariBuku
     {
-        public static T SearchBuku<T>(T searchBuku)
+        public T SearchBuku<T>(T searchBuku)
         {
             if (typeof(T) == typeof(string))
             {
@@ -17,12 +17,11 @@ namespace Aplikasi_Perpustakaan
                 return (T)title;
             } else
             {
-                dynamic id = searchBuku;
-                return (T)id;
+                return default(T);
             }
         }
 
-        public static bool BukuTersedia(T cari)
+        public bool BukuTersedia<T>(T cari)
         {
             dynamic temp = SearchBuku(cari);
             List<Buku> list_buku = new List<Buku>();
@@ -30,7 +29,7 @@ namespace Aplikasi_Perpustakaan
             for (int i = 0; i < list_buku.Count; i++)
             {
                 Buku dataBuku = list_buku[i];
-                if (dataBuku.idBuku == temp)
+                if (dataBuku.judulBuku == temp)
                 {
                     return true;
                 }

@@ -37,6 +37,13 @@ namespace Aplikasi_Perpustakaan
             //{
             //    System.Diagnostics.Debug.WriteLine(peminjaman.tanggal_pinjam.ToString("dd/MM/yyyy"));
             //}
+            CariBuku book = new CariBuku();
+            //dynamic q = book.BukuTersedia("Buku1");
+            //Console.WriteLine(q);
+
+            dynamic rq = book.BukuTersedia("Buku10");
+            Console.WriteLine(rq);
+
         }
     }
 }
