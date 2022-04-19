@@ -68,5 +68,10 @@ namespace Aplikasi_Perpustakaan
             bookSearch.Closed += (s, args) => this.Close();
             bookSearch.Show();
         }
+
+        private void LabelChooseLang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

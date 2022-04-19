@@ -80,7 +80,16 @@ namespace Aplikasi_Perpustakaan
 
         }
 
+
+        
+
         private void labelJudul_Click(object sender, EventArgs e)
+
+        {
+
+        }
+
+        private void labelPenerbit_Click(object sender, EventArgs e)
         {
 
         }
