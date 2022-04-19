@@ -17,15 +17,6 @@ namespace Aplikasi_Perpustakaan
         public PagePeminjaman()
         {
             InitializeComponent();
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
-            List<Peminjaman> list_peminjaman = new List<Peminjaman>();
-            Raw raw = Raw.getRecord(path);
-            list_peminjaman = raw.peminjaman;
-            dgvDataPeminjaman.DataSource = this.ToDataTable(list_peminjaman);
-
-            List<Buku> list_buku = new List<Buku>();
-            list_buku = raw.buku;
-            dgvDataBuku.DataSource = this.ToDataTable(list_buku);
         }
 
         public DataTable ToDataTable<T>(List<T> items)
@@ -52,12 +43,24 @@ namespace Aplikasi_Perpustakaan
             return dataTable;
         }
 
-
         private void PeminjamanPage_Load(object sender, EventArgs e)
         {
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
             this.Size = new Size(conf.width, conf.height);
+
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
+            Raw raw = Raw.getRecord(path);
+            List<Peminjaman> list_peminjaman = new List<Peminjaman>();
+            List<Buku> list_buku = new List<Buku>();
+
+            list_peminjaman = raw.peminjaman;
+            dgvDataPeminjaman.DataSource = this.ToDataTable(list_peminjaman);
+            
+            list_buku = raw.buku;
+            dgvDataBuku.DataSource = this.ToDataTable(list_buku);
+
+            comboBoxStatus.SelectedItem = "dikonfirmasi";
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -70,7 +73,7 @@ namespace Aplikasi_Perpustakaan
 
         private void dgvDataBuku_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            inputIdBuku.Text = dgvDataBuku.SelectedRows[0].Cells[0].Value.ToString();
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)

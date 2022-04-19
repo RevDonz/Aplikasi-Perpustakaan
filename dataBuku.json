@@ -52,6 +52,30 @@
       "id_buku": 5,
       "tanggal_pinjam": "2022-04-14T00:00:00",
       "status_peminjaman": "dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "asd",
+      "id_buku": 1,
+      "tanggal_pinjam": "0001-01-01T00:00:00",
+      "status_peminjaman": ""
+    },
+    {
+      "nama_peminjam": "asd",
+      "id_buku": 1,
+      "tanggal_pinjam": "0001-01-01T00:00:00",
+      "status_peminjaman": "dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "asd",
+      "id_buku": 12,
+      "tanggal_pinjam": "0001-01-01T00:00:00",
+      "status_peminjaman": "dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "asd",
+      "id_buku": 1,
+      "tanggal_pinjam": "0001-01-01T00:00:00",
+      "status_peminjaman": "dikembalikan"
     }
   ],
   "path": "E:\\SEMESTER 4\\Konstruksi Perangkat Lunak\\Tugas Besar\\Aplikasi Perpustakaan\\dataBuku.json"
