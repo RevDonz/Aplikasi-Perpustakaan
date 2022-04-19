@@ -44,6 +44,24 @@
       "penerbit": "Penerbit2",
       "tahunTerbit": 2021,
       "status": "dipinjam"
+    },
+    {
+      "idBuku": 6,
+      "judulBuku": "Judul Baru",
+      "jumlahHalaman": 100,
+      "penulis": "Bukan saya",
+      "penerbit": "Gramedia",
+      "tahunTerbit": 2022,
+      "status": "disimpan"
+    },
+    {
+      "idBuku": 7,
+      "judulBuku": "BUKUBARU",
+      "jumlahHalaman": 10,
+      "penulis": "Bukan saya",
+      "penerbit": "Gramedia",
+      "tahunTerbit": 2022,
+      "status": "disimpan"
     }
   ],
   "peminjaman": [
@@ -54,29 +72,41 @@
       "status_peminjaman": "dikonfirmasi"
     },
     {
-      "nama_peminjam": "asd",
-      "id_buku": 1,
-      "tanggal_pinjam": "0001-01-01T00:00:00",
-      "status_peminjaman": ""
-    },
-    {
-      "nama_peminjam": "asd",
-      "id_buku": 1,
+      "nama_peminjam": "Baru",
+      "id_buku": 2,
       "tanggal_pinjam": "0001-01-01T00:00:00",
       "status_peminjaman": "dikonfirmasi"
     },
     {
-      "nama_peminjam": "asd",
-      "id_buku": 12,
+      "nama_peminjam": "Baru",
+      "id_buku": 2,
       "tanggal_pinjam": "0001-01-01T00:00:00",
       "status_peminjaman": "dikonfirmasi"
     },
     {
-      "nama_peminjam": "asd",
-      "id_buku": 1,
+      "nama_peminjam": "Baru",
+      "id_buku": 2,
       "tanggal_pinjam": "0001-01-01T00:00:00",
-      "status_peminjaman": "dikembalikan"
+      "status_peminjaman": "dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "Baru",
+      "id_buku": 2,
+      "tanggal_pinjam": "0001-01-01T00:00:00",
+      "status_peminjaman": "dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "Baru",
+      "id_buku": 2,
+      "tanggal_pinjam": "0001-01-01T00:00:00",
+      "status_peminjaman": "dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "Rama",
+      "id_buku": 3,
+      "tanggal_pinjam": "2022-04-19T12:46:51.6754999+07:00",
+      "status_peminjaman": "dikonfirmasi"
     }
   ],
-  "path": "E:\\SEMESTER 4\\Konstruksi Perangkat Lunak\\Tugas Besar\\Aplikasi Perpustakaan\\dataBuku.json"
+  "path": "D:\\Aplikasi-Perpustakaan\\dataBuku.json"
 }
