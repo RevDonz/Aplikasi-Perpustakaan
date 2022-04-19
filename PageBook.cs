@@ -80,11 +80,16 @@ namespace Aplikasi_Perpustakaan
 
         }
 
-<<<<<<< HEAD
-        private void juduldatabuku_Click(object sender, EventArgs e)
-=======
+
+        
+
         private void labelJudul_Click(object sender, EventArgs e)
->>>>>>> 26fd3be148d92129fda3c2782ff7462c2f711eab
+
+        {
+
+        }
+
+        private void labelPenerbit_Click(object sender, EventArgs e)
         {
 
         }
