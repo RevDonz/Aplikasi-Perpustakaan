@@ -28,6 +28,10 @@
     "dataBuku": {
       "id": "Data Buku",
       "en": "Book Data"
+    },
+    "cariBuku": {
+      "id": "Cari Buku",
+      "en": "Search Book"
     }
   }
 }

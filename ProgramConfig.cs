@@ -34,8 +34,9 @@ namespace Aplikasi_Perpustakaan
             hapus btnHapus = new hapus("Hapus", "Delete");
             kembali btnKembali = new kembali("Kembali", "Back");
             dataBuku btnDataBuku= new dataBuku("Data Buku", "Book Data");
+            cariBuku btnCariBuku = new cariBuku("Cari Buku", "Search Book");
 
-            button btnAwal = new button(btnTambah, btnHapus, btnKembali, btnDataBuku);
+            button btnAwal = new button(btnTambah, btnHapus, btnKembali, btnDataBuku, btnCariBuku);
             defaultConfig = new Config(720, 1080, "id", textAwal, btnAwal);
         }
 
