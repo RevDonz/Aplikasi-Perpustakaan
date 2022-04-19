@@ -62,6 +62,15 @@
       "penerbit": "Gramedia",
       "tahunTerbit": 2022,
       "status": "disimpan"
+    },
+    {
+      "idBuku": 7,
+      "judulBuku": "Judulnya diganti",
+      "jumlahHalaman": 10,
+      "penulis": "Bukan Saya",
+      "penerbit": "Gramedia",
+      "tahunTerbit": 2022,
+      "status": "disimpan"
     }
   ],
   "peminjaman": [
@@ -88,7 +97,13 @@
       "id_buku": 2,
       "tanggal_pinjam": "2022-04-19T14:27:03.2360366+07:00",
       "status_peminjaman": "dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "Doni",
+      "id_buku": 1,
+      "tanggal_pinjam": "2022-04-19T15:15:40.9695922+07:00",
+      "status_peminjaman": "dikembalikan"
     }
   ],
-  "path": "D:\\KULIAH SMT 4\\KONTRUKSI PERANGKAT LUNAK\\Aplikasi-Perpustakaan\\dataBuku.json"
+  "path": "E:\\SEMESTER 4\\Konstruksi Perangkat Lunak\\Tugas Besar\\Aplikasi Perpustakaan\\dataBuku.json"
 }
