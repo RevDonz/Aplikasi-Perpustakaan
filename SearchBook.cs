@@ -37,5 +37,10 @@ namespace Aplikasi_Perpustakaan
             dashboard.Closed += (s, args) => this.Close();
             dashboard.Show();
         }
+
+        private void SearchBook_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

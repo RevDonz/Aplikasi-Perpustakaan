@@ -71,6 +71,7 @@
             this.Controls.Add(this.button1);
             this.Name = "SearchBook";
             this.Text = "SearchBook";
+            this.Load += new System.EventHandler(this.SearchBook_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
