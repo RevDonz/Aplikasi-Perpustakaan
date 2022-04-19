@@ -11,10 +11,10 @@
     },
     {
       "idBuku": 2,
-      "judulBuku": "Buku2",
-      "jumlahHalaman": 120,
+      "judulBuku": "Kedua",
+      "jumlahHalaman": 100,
       "penulis": "Penulis2",
-      "penerbit": "Penerbit1",
+      "penerbit": "Penerbit2",
       "tahunTerbit": 2005,
       "status": "hilang"
     },
@@ -63,5 +63,5 @@
       "status_peminjaman": "dikembalikan"
     }
   ],
-  "path": "E:\\SEMESTER 4\\Konstruksi Perangkat Lunak\\Tugas Besar\\Aplikasi Perpustakaan\\dataBuku.json"
+  "path": "D:\\Aplikasi-Perpustakaan\\dataBuku.json"
 }

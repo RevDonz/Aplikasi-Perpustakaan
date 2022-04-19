@@ -123,7 +123,6 @@ namespace Aplikasi_Perpustakaan
                 if (item.idBuku == buku.idBuku)
                 {
                     found = true;
-                    MessageBox.Show("Buku dengan id tersebut sudah terdaftar");
                     break;
                 }
             }
@@ -131,6 +130,11 @@ namespace Aplikasi_Perpustakaan
             {
                 raw = buku.tambah(raw);
                 MessageBox.Show("Buku berhasil ditambahkan");
+            }
+            else
+            {
+                raw = buku.update(raw);
+                MessageBox.Show("Buku berhasil diupdate");
             }
             dgvDataBuku.DataSource = null;
             dgvDataBuku.DataSource = this.ToDataTable(raw.buku);
