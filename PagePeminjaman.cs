@@ -143,5 +143,10 @@ namespace Aplikasi_Perpustakaan
             inputIdBuku.SelectedItem = 1;
             inputNama.Text = "";
         }
+
+        private void inputIdBuku_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

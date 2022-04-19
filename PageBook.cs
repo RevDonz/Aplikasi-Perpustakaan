@@ -60,6 +60,14 @@ namespace Aplikasi_Perpustakaan
 
             list_buku = raw.buku;
             dgvDataBuku.DataSource = this.ToDataTable(list_buku);
+
+            inputStatus.SelectedItem = "disimpan";
+            inputIdBuku.SelectedItem = 1;
+
+            foreach (Buku item in raw.buku)
+            {
+                this.inputIdBuku.Items.Add(item.idBuku);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -134,6 +142,11 @@ namespace Aplikasi_Perpustakaan
         }
 
         private void labelJmlHal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
         {
 
         }

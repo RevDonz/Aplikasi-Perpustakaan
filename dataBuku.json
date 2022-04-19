@@ -47,20 +47,11 @@
     },
     {
       "idBuku": 6,
-      "judulBuku": "Judul Baru",
-      "jumlahHalaman": 100,
-      "penulis": "Bukan saya",
-      "penerbit": "Gramedia",
-      "tahunTerbit": 2022,
-      "status": "disimpan"
-    },
-    {
-      "idBuku": 7,
-      "judulBuku": "Judulnya diganti",
-      "jumlahHalaman": 10,
-      "penulis": "Bukan Saya",
-      "penerbit": "Gramedia",
-      "tahunTerbit": 2022,
+      "judulBuku": "Buku6",
+      "jumlahHalaman": 23,
+      "penulis": "penulis4",
+      "penerbit": "Penerbit8",
+      "tahunTerbit": 2019,
       "status": "disimpan"
     }
   ],

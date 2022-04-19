@@ -33,7 +33,6 @@
             this.juduldatabuku = new System.Windows.Forms.Label();
             this.labelJudul = new System.Windows.Forms.Label();
             this.inputJudul = new System.Windows.Forms.TextBox();
-            this.inputIdBuku = new System.Windows.Forms.TextBox();
             this.labelIdBuku = new System.Windows.Forms.Label();
             this.inputJmlHal = new System.Windows.Forms.TextBox();
             this.inputPenulis = new System.Windows.Forms.TextBox();
@@ -44,9 +43,10 @@
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.inputTahun = new System.Windows.Forms.TextBox();
-            this.inputStatus = new System.Windows.Forms.TextBox();
             this.labelTahun = new System.Windows.Forms.Label();
             this.labelStatus = new System.Windows.Forms.Label();
+            this.inputStatus = new System.Windows.Forms.ComboBox();
+            this.inputIdBuku = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataBuku)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,14 +105,6 @@
             this.inputJudul.Name = "inputJudul";
             this.inputJudul.Size = new System.Drawing.Size(250, 22);
             this.inputJudul.TabIndex = 3;
-            // 
-            // inputIdBuku
-            // 
-            this.inputIdBuku.Location = new System.Drawing.Point(153, 123);
-            this.inputIdBuku.Margin = new System.Windows.Forms.Padding(4);
-            this.inputIdBuku.Name = "inputIdBuku";
-            this.inputIdBuku.Size = new System.Drawing.Size(250, 22);
-            this.inputIdBuku.TabIndex = 4;
             // 
             // labelIdBuku
             // 
@@ -208,6 +200,7 @@
             this.buttonReset.TabIndex = 14;
             this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // inputTahun
             // 
@@ -216,14 +209,6 @@
             this.inputTahun.Name = "inputTahun";
             this.inputTahun.Size = new System.Drawing.Size(250, 22);
             this.inputTahun.TabIndex = 15;
-            // 
-            // inputStatus
-            // 
-            this.inputStatus.Location = new System.Drawing.Point(479, 123);
-            this.inputStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.inputStatus.Name = "inputStatus";
-            this.inputStatus.Size = new System.Drawing.Size(250, 22);
-            this.inputStatus.TabIndex = 16;
             // 
             // labelTahun
             // 
@@ -248,15 +233,37 @@
             this.labelStatus.TabIndex = 18;
             this.labelStatus.Text = "Status";
             // 
+            // inputStatus
+            // 
+            this.inputStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.inputStatus.FormattingEnabled = true;
+            this.inputStatus.Items.AddRange(new object[] {
+            "disimpan",
+            "dipinjam",
+            "hilang"});
+            this.inputStatus.Location = new System.Drawing.Point(477, 121);
+            this.inputStatus.Name = "inputStatus";
+            this.inputStatus.Size = new System.Drawing.Size(252, 24);
+            this.inputStatus.TabIndex = 19;
+            // 
+            // inputIdBuku
+            // 
+            this.inputIdBuku.FormattingEnabled = true;
+            this.inputIdBuku.Location = new System.Drawing.Point(153, 121);
+            this.inputIdBuku.Name = "inputIdBuku";
+            this.inputIdBuku.Size = new System.Drawing.Size(252, 24);
+            this.inputIdBuku.TabIndex = 20;
+            // 
             // PageBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(939, 617);
+            this.Controls.Add(this.inputIdBuku);
+            this.Controls.Add(this.inputStatus);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.labelTahun);
-            this.Controls.Add(this.inputStatus);
             this.Controls.Add(this.inputTahun);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonSubmit);
@@ -268,7 +275,6 @@
             this.Controls.Add(this.inputPenulis);
             this.Controls.Add(this.inputJmlHal);
             this.Controls.Add(this.labelIdBuku);
-            this.Controls.Add(this.inputIdBuku);
             this.Controls.Add(this.inputJudul);
             this.Controls.Add(this.labelJudul);
             this.Controls.Add(this.dgvDataBuku);
@@ -293,7 +299,6 @@
 
         private System.Windows.Forms.Label labelJudul;
         private System.Windows.Forms.TextBox inputJudul;
-        private System.Windows.Forms.TextBox inputIdBuku;
         private System.Windows.Forms.Label labelIdBuku;
         private System.Windows.Forms.TextBox inputJmlHal;
         private System.Windows.Forms.TextBox inputPenulis;
@@ -304,8 +309,9 @@
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.TextBox inputTahun;
-        private System.Windows.Forms.TextBox inputStatus;
         private System.Windows.Forms.Label labelTahun;
         private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.ComboBox inputStatus;
+        private System.Windows.Forms.ComboBox inputIdBuku;
     }
 }
