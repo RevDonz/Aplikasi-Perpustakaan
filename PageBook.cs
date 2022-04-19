@@ -96,7 +96,36 @@ namespace Aplikasi_Perpustakaan
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
+            Raw raw = Raw.getRecord(path);
 
+            int id_buku = int.Parse(this.inputIdBuku.Text);
+            string judul = this.inputJudul.Text;
+            int jumlahHalaman = int.Parse(this.inputJmlHal.Text);
+            string penulis = this.inputPenulis.Text;
+            string penerbit = this.inputPenerbit.Text;
+            int tahun = int.Parse(this.inputTahun.Text);
+            string status = this.inputStatus.Text;
+
+            Buku buku = new Buku(id_buku, judul, jumlahHalaman, penulis, penerbit, tahun, status);
+
+            bool found = false;
+            foreach (Buku item in raw.buku)
+            {
+                if (item.idBuku == buku.idBuku)
+                {
+                    found = true;
+                    MessageBox.Show("Buku dengan id tersebut sudah terdaftar");
+                    break;
+                }
+            }
+            if (!found)
+            {
+                raw = buku.tambah(raw);
+                MessageBox.Show("Buku berhasil ditambahkan");
+            }
+            dgvDataBuku.DataSource = null;
+            dgvDataBuku.DataSource = this.ToDataTable(raw.buku);
         }
     }
 }
