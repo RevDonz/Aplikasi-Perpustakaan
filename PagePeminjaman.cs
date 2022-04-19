@@ -56,8 +56,6 @@ namespace Aplikasi_Perpustakaan
                 this.inputIdBuku.Items.Add(item.idBuku);
             }
 
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
-            Raw raw = Raw.getRecord(path);
             List<Peminjaman> list_peminjaman = new List<Peminjaman>();
             List<Buku> list_buku = new List<Buku>();
 
@@ -68,6 +66,7 @@ namespace Aplikasi_Perpustakaan
             dgvDataBuku.DataSource = this.ToDataTable(list_buku);
 
             comboBoxStatus.SelectedItem = "dikonfirmasi";
+            inputIdBuku.SelectedItem = 1;
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -80,7 +79,7 @@ namespace Aplikasi_Perpustakaan
 
         private void dgvDataBuku_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            inputIdBuku.Text = dgvDataBuku.SelectedRows[0].Cells[0].Value.ToString();
+
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -97,6 +96,13 @@ namespace Aplikasi_Perpustakaan
                 MessageBox.Show("Id Buku harus berupa angka");
             }
 
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            comboBoxStatus.SelectedItem = "dikonfirmasi";
+            inputIdBuku.SelectedItem = 1;
+            inputNama.Text = "";
         }
     }
 }
