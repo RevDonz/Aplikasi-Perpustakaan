@@ -55,10 +55,10 @@
       "status": "disimpan"
     },
     {
-      "idBuku": 10,
-      "judulBuku": "Judul Tidak Baru",
-      "jumlahHalaman": 101,
-      "penulis": "saya",
+      "idBuku": 7,
+      "judulBuku": "BUKUBARU",
+      "jumlahHalaman": 10,
+      "penulis": "Bukan saya",
       "penerbit": "Gramedia",
       "tahunTerbit": 2022,
       "status": "disimpan"

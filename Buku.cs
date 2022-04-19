@@ -67,9 +67,9 @@ namespace Aplikasi_Perpustakaan
             }
         }
 
-        public static Raw tambah(Raw raw, Buku data)
+        public Raw tambah(Raw raw)
         {
-            raw.buku.Add(data);
+            raw.buku.Add(this);
             string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
             File.WriteAllText(raw.path, json);
             return raw;
