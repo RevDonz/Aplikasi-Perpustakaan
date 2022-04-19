@@ -41,11 +41,11 @@
             // 
             this.LabelGreeting.AutoSize = true;
             this.LabelGreeting.Font = new System.Drawing.Font("Gaegu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelGreeting.Location = new System.Drawing.Point(207, 30);
+            this.LabelGreeting.Location = new System.Drawing.Point(124, 133);
             this.LabelGreeting.Name = "LabelGreeting";
-            this.LabelGreeting.Size = new System.Drawing.Size(245, 35);
+            this.LabelGreeting.Size = new System.Drawing.Size(447, 35);
             this.LabelGreeting.TabIndex = 0;
-            this.LabelGreeting.Text = "Selamat Datang";
+            this.LabelGreeting.Text = "Selamat Datang di MyLibrary";
             this.LabelGreeting.Click += new System.EventHandler(this.LabelGreeting_Click);
             // 
             // LabelChooseLang
@@ -53,7 +53,7 @@
             this.LabelChooseLang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LabelChooseLang.AutoSize = true;
             this.LabelChooseLang.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelChooseLang.Location = new System.Drawing.Point(604, 18);
+            this.LabelChooseLang.Location = new System.Drawing.Point(604, 10);
             this.LabelChooseLang.Name = "LabelChooseLang";
             this.LabelChooseLang.Size = new System.Drawing.Size(70, 15);
             this.LabelChooseLang.TabIndex = 4;
@@ -65,10 +65,10 @@
             // 
             this.btn_idn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_idn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_idn.Location = new System.Drawing.Point(586, 45);
+            this.btn_idn.Location = new System.Drawing.Point(595, 36);
             this.btn_idn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_idn.Name = "btn_idn";
-            this.btn_idn.Size = new System.Drawing.Size(108, 29);
+            this.btn_idn.Size = new System.Drawing.Size(88, 29);
             this.btn_idn.TabIndex = 5;
             this.btn_idn.Text = "Indonesia";
             this.btn_idn.UseVisualStyleBackColor = true;
@@ -78,10 +78,10 @@
             // 
             this.btn_en.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_en.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_en.Location = new System.Drawing.Point(586, 78);
+            this.btn_en.Location = new System.Drawing.Point(595, 69);
             this.btn_en.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_en.Name = "btn_en";
-            this.btn_en.Size = new System.Drawing.Size(108, 30);
+            this.btn_en.Size = new System.Drawing.Size(88, 30);
             this.btn_en.TabIndex = 6;
             this.btn_en.Text = "Inggris";
             this.btn_en.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             this.buttonBook.BackColor = System.Drawing.Color.MintCream;
             this.buttonBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBook.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBook.Location = new System.Drawing.Point(107, 203);
+            this.buttonBook.Location = new System.Drawing.Point(107, 258);
             this.buttonBook.Name = "buttonBook";
             this.buttonBook.Size = new System.Drawing.Size(145, 62);
             this.buttonBook.TabIndex = 7;
@@ -105,7 +105,7 @@
             this.buttonPeminjaman.BackColor = System.Drawing.Color.MintCream;
             this.buttonPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPeminjaman.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPeminjaman.Location = new System.Drawing.Point(281, 203);
+            this.buttonPeminjaman.Location = new System.Drawing.Point(281, 258);
             this.buttonPeminjaman.Name = "buttonPeminjaman";
             this.buttonPeminjaman.Size = new System.Drawing.Size(145, 62);
             this.buttonPeminjaman.TabIndex = 8;
@@ -117,7 +117,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.MintCream;
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(452, 203);
+            this.button1.Location = new System.Drawing.Point(452, 258);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 62);
             this.button1.TabIndex = 9;

@@ -37,5 +37,7 @@ namespace Aplikasi_Perpustakaan
             dashboard.Closed += (s, args) => this.Close();
             dashboard.Show();
         }
+
+      
     }
 }

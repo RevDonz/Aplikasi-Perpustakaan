@@ -30,49 +30,71 @@
         {
             this.backButton = new System.Windows.Forms.Button();
             this.dgvDataBuku = new System.Windows.Forms.DataGridView();
+            this.juduldatabuku = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataBuku)).BeginInit();
             this.SuspendLayout();
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(12, 12);
+            this.backButton.BackColor = System.Drawing.Color.MintCream;
+            this.backButton.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Location = new System.Drawing.Point(25, 20);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.Size = new System.Drawing.Size(70, 30);
             this.backButton.TabIndex = 0;
             this.backButton.Text = "Kembali";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // dgvDataBuku
             // 
+            this.dgvDataBuku.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvDataBuku.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDataBuku.Location = new System.Drawing.Point(51, 293);
+            this.dgvDataBuku.Location = new System.Drawing.Point(41, 177);
+            this.dgvDataBuku.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDataBuku.Name = "dgvDataBuku";
             this.dgvDataBuku.RowHeadersWidth = 51;
             this.dgvDataBuku.RowTemplate.Height = 24;
-            this.dgvDataBuku.Size = new System.Drawing.Size(777, 150);
+            this.dgvDataBuku.Size = new System.Drawing.Size(621, 158);
             this.dgvDataBuku.TabIndex = 1;
             this.dgvDataBuku.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataBuku_CellContentClick);
             // 
-            // BookPage
+            // juduldatabuku
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.juduldatabuku.AutoSize = true;
+            this.juduldatabuku.Font = new System.Drawing.Font("Gaegu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.juduldatabuku.Location = new System.Drawing.Point(201, 79);
+            this.juduldatabuku.Name = "juduldatabuku";
+            this.juduldatabuku.Size = new System.Drawing.Size(269, 29);
+            this.juduldatabuku.TabIndex = 2;
+            this.juduldatabuku.Text = "Data Buku MyLibrary";
+            this.juduldatabuku.Click += new System.EventHandler(this.juduldatabuku_Click);
+            // 
+            // PageBook
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 617);
+            this.BackColor = System.Drawing.Color.Turquoise;
+            this.ClientSize = new System.Drawing.Size(704, 501);
+            this.Controls.Add(this.juduldatabuku);
             this.Controls.Add(this.dgvDataBuku);
             this.Controls.Add(this.backButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "BookPage";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "PageBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Buku";
             this.Load += new System.EventHandler(this.BookPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataBuku)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.DataGridView dgvDataBuku;
+        private System.Windows.Forms.Label juduldatabuku;
     }
 }

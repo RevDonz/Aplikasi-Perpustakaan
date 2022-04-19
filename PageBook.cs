@@ -80,5 +80,10 @@ namespace Aplikasi_Perpustakaan
         {
 
         }
+
+        private void juduldatabuku_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
