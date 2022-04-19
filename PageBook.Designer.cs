@@ -75,10 +75,10 @@
             // juduldatabuku
             // 
             this.juduldatabuku.AutoSize = true;
-            this.juduldatabuku.Font = new System.Drawing.Font("Gaegu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.juduldatabuku.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.juduldatabuku.Location = new System.Drawing.Point(234, 18);
             this.juduldatabuku.Name = "juduldatabuku";
-            this.juduldatabuku.Size = new System.Drawing.Size(269, 29);
+            this.juduldatabuku.Size = new System.Drawing.Size(306, 33);
             this.juduldatabuku.TabIndex = 2;
             this.juduldatabuku.Text = "Data Buku MyLibrary";
             // 
@@ -178,6 +178,7 @@
             this.buttonSubmit.TabIndex = 13;
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // buttonReset
             // 
