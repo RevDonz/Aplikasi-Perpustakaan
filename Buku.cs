@@ -41,16 +41,21 @@ namespace Aplikasi_Perpustakaan
             return null;
         }
 
-        public static Raw update(Raw data, int id_buku, string status)
+        public Raw update(Raw data)
         {
             bool changed = false;
 
             foreach (Buku item in data.buku)
             {
-                if (item.idBuku == id_buku)
+                if (item.idBuku == this.idBuku)
                 {
-                    item.status = status;
                     changed = true;
+                    item.status = status;
+                    item.judulBuku = this.judulBuku;
+                    item.jumlahHalaman = this.jumlahHalaman;
+                    item.penulis = this.penulis;
+                    item.penerbit = this.penerbit;
+                    item.tahunTerbit = this.tahunTerbit;
                     break;
                 }
             }
