@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Aplikasi_Perpustakaan
 {
-    public partial class Form1 : Form
+    public partial class PageDashboard : Form
     {
         
-        public Form1()
+        public PageDashboard()
         {
             InitializeComponent();
         }
@@ -23,10 +23,25 @@ namespace Aplikasi_Perpustakaan
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
             this.Size = new Size(conf.width, conf.height);
+            if (conf.bahasa == "id")
+            {
+                LabelGreeting.Text = conf.text.greeting.id;
+                LabelChooseLang.Text = conf.text.pilihBahasa.id;
+                buttonBook.Text = conf.button.dataBuku.id;
+                button1.Text = conf.button.cariBuku.id;
+            }
+            else
+            {
+                LabelGreeting.Text = conf.text.greeting.en;
+                LabelChooseLang.Text = conf.text.pilihBahasa.en;
+                buttonBook.Text = conf.button.dataBuku.en;
+                button1.Text = conf.button.cariBuku.en;
+            }
         }
 
         private void LabelGreeting_Click(object sender, EventArgs e)
         {
+            
             
         }
 
@@ -37,6 +52,7 @@ namespace Aplikasi_Perpustakaan
             LabelGreeting.Text = conf.text.greeting.id;
             LabelChooseLang.Text = conf.text.pilihBahasa.id;
             buttonBook.Text = conf.button.dataBuku.id;
+            button1.Text = conf.button.cariBuku.id;
         }
 
         private void btn_en_Click(object sender, EventArgs e)
@@ -46,15 +62,31 @@ namespace Aplikasi_Perpustakaan
             LabelGreeting.Text = conf.text.greeting.en;
             LabelChooseLang.Text = conf.text.pilihBahasa.en;
             buttonBook.Text = conf.button.dataBuku.en;
+            button1.Text = conf.button.cariBuku.en;
         }
 
         private void buttonBook_Click(object sender, EventArgs e)
         {
             this.Hide();
-            BookPage bookPage = new BookPage();
+            PageBook bookPage = new PageBook();
             bookPage.Closed += (s, args) => this.Close();
             bookPage.Show();
         }
 
+        private void buttonPeminjaman_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PagePeminjaman peminjamanPage = new PagePeminjaman();
+            peminjamanPage.Closed += (s, args) => this.Close();
+            peminjamanPage.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SearchBook bookSearch = new SearchBook();
+            bookSearch.Closed += (s, args) => this.Close();
+            bookSearch.Show();
+        }
     }
 }

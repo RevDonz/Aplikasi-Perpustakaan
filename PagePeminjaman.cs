@@ -10,29 +10,24 @@ using System.Windows.Forms;
 
 namespace Aplikasi_Perpustakaan
 {
-    public partial class BookPage : Form
+    public partial class PagePeminjaman : Form
     {
-        public BookPage()
+        public PagePeminjaman()
         {
             InitializeComponent();
         }
 
-        private void BookPage_Load(object sender, EventArgs e)
+        private void PeminjamanPage_Load(object sender, EventArgs e)
         {
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
-            this.Size = new System.Drawing.Size(conf.width, conf.height);
+            this.Size = new Size(conf.width, conf.height);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 dashboard = new Form1();
+            PageDashboard dashboard = new PageDashboard();
             dashboard.Closed += (s, args) => this.Close();
             dashboard.Show();
         }

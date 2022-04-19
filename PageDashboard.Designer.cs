@@ -1,6 +1,6 @@
 ﻿namespace Aplikasi_Perpustakaan
 {
-    partial class Form1
+    partial class PageDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,8 @@
             this.btn_idn = new System.Windows.Forms.Button();
             this.btn_en = new System.Windows.Forms.Button();
             this.buttonBook = new System.Windows.Forms.Button();
+            this.buttonPeminjaman = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelGreeting
@@ -87,7 +89,7 @@
             // 
             this.buttonBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBook.Location = new System.Drawing.Point(13, 542);
-            this.buttonBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBook.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBook.Name = "buttonBook";
             this.buttonBook.Size = new System.Drawing.Size(193, 62);
             this.buttonBook.TabIndex = 7;
@@ -95,11 +97,35 @@
             this.buttonBook.UseVisualStyleBackColor = true;
             this.buttonBook.Click += new System.EventHandler(this.buttonBook_Click);
             // 
-            // Form1
+            // buttonPeminjaman
+            // 
+            this.buttonPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPeminjaman.Location = new System.Drawing.Point(235, 542);
+            this.buttonPeminjaman.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPeminjaman.Name = "buttonPeminjaman";
+            this.buttonPeminjaman.Size = new System.Drawing.Size(193, 62);
+            this.buttonPeminjaman.TabIndex = 8;
+            this.buttonPeminjaman.Text = "Data Peminjaman";
+            this.buttonPeminjaman.UseVisualStyleBackColor = true;
+            this.buttonPeminjaman.Click += new System.EventHandler(this.buttonPeminjaman_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(459, 542);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(186, 62);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Cari Buku";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // PageDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 617);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonPeminjaman);
             this.Controls.Add(this.btn_en);
             this.Controls.Add(this.LabelChooseLang);
             this.Controls.Add(this.btn_idn);
@@ -107,7 +133,8 @@
             this.Controls.Add(this.LabelGreeting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.Name = "Form1";
+            this.Name = "PageDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplikasi Perpustakaan";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -121,7 +148,9 @@
         private System.Windows.Forms.Label LabelChooseLang;
         private System.Windows.Forms.Button btn_idn;
         private System.Windows.Forms.Button btn_en;
+        private System.Windows.Forms.Button buttonPeminjaman;
         private System.Windows.Forms.Button buttonBook;
+        private System.Windows.Forms.Button button1;
     }
 }
 

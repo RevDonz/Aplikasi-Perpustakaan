@@ -4,12 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Aplikasi_Perpustakaan
 {
-    internal class CariBuku<T>
+    internal class CariBuku
     {
-        public static T SearchBuku<T>(T searchBuku)
+        public T SearchBuku<T>(T searchBuku)
         {
             if (typeof(T) == typeof(string))
             {
@@ -17,27 +18,52 @@ namespace Aplikasi_Perpustakaan
                 return (T)title;
             } else
             {
-                dynamic id = searchBuku;
-                return (T)id;
+                return default(T);
             }
         }
 
-        public static void BukuTersedia()
+        public bool BukuTersedia<T>(T cari)
         {
-            dynamic Cari = Console.ReadLine();
-            dynamic temp = SearchBuku(Cari);
+            dynamic temp = SearchBuku(cari);
+            string convertTemp = Convert.ToString(temp);
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
+
             List<Buku> list_buku = new List<Buku>();
-            list_buku = Serializer.deserialize<Buku>(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\" + "dataBuku.json");
+
+            Raw raw = Raw.getRecord(path);
+            list_buku = raw.buku;
             for (int i = 0; i < list_buku.Count; i++)
             {
                 Buku dataBuku = list_buku[i];
-                if (dataBuku.idBuku == temp)
+                if (dataBuku.judulBuku == convertTemp)
                 {
-                    Console.WriteLine("buku ditemukan");
-                    Console.WriteLine("Judul: " + dataBuku.judulBuku);
-                    Console.WriteLine("id buku: " + dataBuku.idBuku);
-                    Console.WriteLine("penulis: " + dataBuku.penulis);
+                    return true;
                 }
+            }
+            return false;
+        }
+        public void TampilDataBuku(bool hasil, dynamic cari)
+        {
+            cari = Convert.ToString(cari);
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
+            List<Buku> list_buku = new List<Buku>();
+            Raw raw = Raw.getRecord(path);
+            list_buku = raw.buku;
+            if (hasil == true)
+            {
+                for (int i = 0; i < list_buku.Count; i++)
+                {
+                    Buku dataBuku = list_buku[i];
+                    if (cari == dataBuku.judulBuku)
+                    {
+                        MessageBox.Show("judul: " + dataBuku.judulBuku + "\n" + "id: " + dataBuku.idBuku + "\n" + "jumlah halaman: " + dataBuku.jumlahHalaman + "\n" + "peulis: " + dataBuku.penulis + "\n" + "status peminjaman: " + dataBuku.status);
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Buku Tidak Ditemukan !");
             }
         }
     }
