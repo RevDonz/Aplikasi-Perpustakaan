@@ -21,9 +21,11 @@ namespace Aplikasi_Perpustakaan
             List<Peminjaman> list_peminjaman = new List<Peminjaman>();
             Raw raw = Raw.getRecord(path);
             list_peminjaman = raw.peminjaman;
-            dgvDataBuku.DataSource = this.ToDataTable(list_peminjaman);
+            dgvDataPeminjaman.DataSource = this.ToDataTable(list_peminjaman);
 
-
+            List<Buku> list_buku = new List<Buku>();
+            list_buku = raw.buku;
+            dgvDataBuku.DataSource = this.ToDataTable(list_buku);
         }
 
         public DataTable ToDataTable<T>(List<T> items)
@@ -68,6 +70,22 @@ namespace Aplikasi_Perpustakaan
 
         private void dgvDataBuku_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void buttonSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Peminjaman newPeminjaman = new Peminjaman(inputNama.Text, int.Parse(inputIdBuku.Text), new DateTime(), comboBoxStatus.Text);
+                string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
+                Raw raw = Raw.getRecord(path);
+                raw = Peminjaman.pinjam(raw, newPeminjaman, path);
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show("Id Buku harus berupa angka");
+            }
 
         }
     }
