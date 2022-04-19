@@ -23,7 +23,7 @@ namespace Aplikasi_Perpustakaan
             this.status_peminjaman = status_peminjaman;
         }
 
-        public static Raw pinjam(Raw raw, Peminjaman data, string path)
+        public static Raw pinjam(Raw raw, Peminjaman data)
         {
             raw.peminjaman.Add(data);
             string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
@@ -32,7 +32,7 @@ namespace Aplikasi_Perpustakaan
             //    JsonSerializer serializer = new JsonSerializer();
             //    serializer.Serialize(file, raw);
             //}
-            File.WriteAllText(path, json);
+            File.WriteAllText(raw.path, json);
             return raw;
         }
     }

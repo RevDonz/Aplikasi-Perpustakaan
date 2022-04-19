@@ -58,6 +58,13 @@ namespace Aplikasi_Perpustakaan
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
             this.Size = new Size(conf.width, conf.height);
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
+
+            Raw raw = Raw.getRecord(path);
+            foreach (Buku item in raw.buku)
+            {
+                this.inputIdBuku.Items.Add(item.idBuku);
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -77,10 +84,10 @@ namespace Aplikasi_Perpustakaan
         {
             try
             {
-                Peminjaman newPeminjaman = new Peminjaman(inputNama.Text, int.Parse(inputIdBuku.Text), new DateTime(), comboBoxStatus.Text);
+                Peminjaman newPeminjaman = new Peminjaman(inputNama.Text, int.Parse(inputIdBuku.Text), DateTime.Now, comboBoxStatus.Text);
                 string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
                 Raw raw = Raw.getRecord(path);
-                raw = Peminjaman.pinjam(raw, newPeminjaman, path);
+                raw = Peminjaman.pinjam(raw, newPeminjaman);
             } 
             catch (Exception ex)
             {
