@@ -15,16 +15,16 @@ namespace Aplikasi_Perpustakaan
         [STAThread]
         static void Main()
         {
-            Peminjaman peminjaman1 = new Peminjaman("Baru", 2, new DateTime(), "dikonfirmasi");
-            Buku buku1 = new Buku(6, "Judul Baru", 100, "Bukan saya", "Gramedia", 2022, "disimpan");
+            //Peminjaman peminjaman1 = new Peminjaman("Baru", 2, new DateTime(), "dikonfirmasi");
+            //Buku buku1 = new Buku(6, "Judul Baru", 100, "Bukan saya", "Gramedia", 2022, "disimpan");
 
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
-            System.Diagnostics.Debug.WriteLine(path);
+            //string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
+            //System.Diagnostics.Debug.WriteLine(path);
 
-            Raw raw = Raw.getRecord(path);
+            //Raw raw = Raw.getRecord(path);
 
-            raw = Peminjaman.pinjam(raw, peminjaman1);
-            raw = Buku.tambah(raw, buku1);
+            //raw = Peminjaman.pinjam(raw, peminjaman1);
+            //raw = Buku.tambah(raw, buku1);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
