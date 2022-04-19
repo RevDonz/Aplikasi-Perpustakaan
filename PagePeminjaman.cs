@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace Aplikasi_Perpustakaan
 {
@@ -89,7 +90,32 @@ namespace Aplikasi_Perpustakaan
                 Peminjaman newPeminjaman = new Peminjaman(inputNama.Text, int.Parse(inputIdBuku.Text), DateTime.Now, comboBoxStatus.Text);
                 string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
                 Raw raw = Raw.getRecord(path);
-                raw = Peminjaman.pinjam(raw, newPeminjaman);
+
+                bool found = false;
+                foreach (Peminjaman item in raw.peminjaman)
+                {
+                    if (item.nama_peminjam == newPeminjaman.nama_peminjam && item.id_buku == newPeminjaman.id_buku)
+                    {
+                        found = true;
+                        if (newPeminjaman.status_peminjaman == "dikonfirmasi")
+                        {
+                            MessageBox.Show("Data peminjaman ditemukan. Apakah status yang dimaksud 'dikembalikan'?");
+                        }
+                        else
+                        {
+                            item.status_peminjaman = newPeminjaman.status_peminjaman;
+                            string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
+                            File.WriteAllText(raw.path, json);
+                            MessageBox.Show("Buku berhasil dikembalikan");
+                        }
+                    }
+                }
+                if (!found)
+                {
+                    raw = Peminjaman.pinjam(raw, newPeminjaman);
+                }
+                dgvDataPeminjaman.DataSource = null;
+                dgvDataPeminjaman.DataSource = this.ToDataTable(raw.peminjaman);
             } 
             catch (Exception ex)
             {
