@@ -56,9 +56,9 @@
     },
     {
       "idBuku": 7,
-      "judulBuku": "BUKUBARU",
+      "judulBuku": "Judulnya diganti",
       "jumlahHalaman": 10,
-      "penulis": "Bukan saya",
+      "penulis": "Bukan Saya",
       "penerbit": "Gramedia",
       "tahunTerbit": 2022,
       "status": "disimpan"
