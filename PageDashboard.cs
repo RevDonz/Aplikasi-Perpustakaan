@@ -28,14 +28,14 @@ namespace Aplikasi_Perpustakaan
                 LabelGreeting.Text = conf.text.greeting.id;
                 LabelChooseLang.Text = conf.text.pilihBahasa.id;
                 buttonBook.Text = conf.button.dataBuku.id;
-                button1.Text = conf.button.cariBuku.id;
+                buttonSearch.Text = conf.button.cariBuku.id;
             }
             else
             {
                 LabelGreeting.Text = conf.text.greeting.en;
                 LabelChooseLang.Text = conf.text.pilihBahasa.en;
                 buttonBook.Text = conf.button.dataBuku.en;
-                button1.Text = conf.button.cariBuku.en;
+                buttonSearch.Text = conf.button.cariBuku.en;
             }
         }
 
@@ -52,7 +52,7 @@ namespace Aplikasi_Perpustakaan
             LabelGreeting.Text = conf.text.greeting.id;
             LabelChooseLang.Text = conf.text.pilihBahasa.id;
             buttonBook.Text = conf.button.dataBuku.id;
-            button1.Text = conf.button.cariBuku.id;
+            buttonSearch.Text = conf.button.cariBuku.id;
         }
 
         private void btn_en_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace Aplikasi_Perpustakaan
             LabelGreeting.Text = conf.text.greeting.en;
             LabelChooseLang.Text = conf.text.pilihBahasa.en;
             buttonBook.Text = conf.button.dataBuku.en;
-            button1.Text = conf.button.cariBuku.en;
+            buttonSearch.Text = conf.button.cariBuku.en;
         }
 
         private void buttonBook_Click(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace Aplikasi_Perpustakaan
             peminjamanPage.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
             this.Hide();
             SearchBook bookSearch = new SearchBook();

@@ -13,14 +13,6 @@ namespace Aplikasi_Perpustakaan
         public PageBook()
         {
             InitializeComponent();
-
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
-
-            List<Buku> list_buku = new List<Buku>();
-
-            Raw raw = Raw.getRecord(path);
-            list_buku = raw.buku;
-            dgvDataBuku.DataSource = this.ToDataTable(list_buku);
         }
 
         public DataTable ToDataTable<T>(List<T> items)
@@ -61,6 +53,13 @@ namespace Aplikasi_Perpustakaan
             {
                 backButton.Text = conf.button.kembali.en;
             }
+
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
+            List<Buku> list_buku = new List<Buku>();
+            Raw raw = Raw.getRecord(path);
+
+            list_buku = raw.buku;
+            dgvDataBuku.DataSource = this.ToDataTable(list_buku);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -81,7 +80,11 @@ namespace Aplikasi_Perpustakaan
 
         }
 
+<<<<<<< HEAD
         private void juduldatabuku_Click(object sender, EventArgs e)
+=======
+        private void labelJudul_Click(object sender, EventArgs e)
+>>>>>>> 26fd3be148d92129fda3c2782ff7462c2f711eab
         {
 
         }

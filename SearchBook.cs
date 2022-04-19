@@ -38,6 +38,13 @@ namespace Aplikasi_Perpustakaan
             dashboard.Show();
         }
 
+<<<<<<< HEAD
       
+=======
+        private void SearchBook_Load(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 26fd3be148d92129fda3c2782ff7462c2f711eab
     }
 }

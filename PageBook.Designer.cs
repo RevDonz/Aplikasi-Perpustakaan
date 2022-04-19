@@ -30,7 +30,21 @@
         {
             this.backButton = new System.Windows.Forms.Button();
             this.dgvDataBuku = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.juduldatabuku = new System.Windows.Forms.Label();
+=======
+            this.labelJudul = new System.Windows.Forms.Label();
+            this.inputJudul = new System.Windows.Forms.TextBox();
+            this.inputIdBuku = new System.Windows.Forms.TextBox();
+            this.labelIdBuku = new System.Windows.Forms.Label();
+            this.inputJmlHal = new System.Windows.Forms.TextBox();
+            this.inputPenulis = new System.Windows.Forms.TextBox();
+            this.inputPenerbit = new System.Windows.Forms.TextBox();
+            this.inputTahun = new System.Windows.Forms.TextBox();
+            this.labelJmlHal = new System.Windows.Forms.Label();
+            this.labelPenulis = new System.Windows.Forms.Label();
+            this.labelPenerbit = new System.Windows.Forms.Label();
+>>>>>>> 26fd3be148d92129fda3c2782ff7462c2f711eab
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataBuku)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +65,7 @@
             // 
             this.dgvDataBuku.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvDataBuku.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             this.dgvDataBuku.Location = new System.Drawing.Point(41, 177);
             this.dgvDataBuku.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDataBuku.Name = "dgvDataBuku";
@@ -61,6 +76,105 @@
             this.dgvDataBuku.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataBuku_CellContentClick);
             // 
             // juduldatabuku
+=======
+            this.dgvDataBuku.Location = new System.Drawing.Point(29, 411);
+            this.dgvDataBuku.Name = "dgvDataBuku";
+            this.dgvDataBuku.RowHeadersWidth = 51;
+            this.dgvDataBuku.RowTemplate.Height = 24;
+            this.dgvDataBuku.Size = new System.Drawing.Size(884, 150);
+            this.dgvDataBuku.TabIndex = 1;
+            this.dgvDataBuku.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataBuku_CellContentClick);
+            // 
+            // labelJudul
+            // 
+            this.labelJudul.AutoSize = true;
+            this.labelJudul.Location = new System.Drawing.Point(485, 130);
+            this.labelJudul.Name = "labelJudul";
+            this.labelJudul.Size = new System.Drawing.Size(72, 16);
+            this.labelJudul.TabIndex = 2;
+            this.labelJudul.Text = "Judul Buku";
+            this.labelJudul.Click += new System.EventHandler(this.labelJudul_Click);
+            // 
+            // inputJudul
+            // 
+            this.inputJudul.Location = new System.Drawing.Point(594, 127);
+            this.inputJudul.Name = "inputJudul";
+            this.inputJudul.Size = new System.Drawing.Size(319, 22);
+            this.inputJudul.TabIndex = 3;
+            // 
+            // inputIdBuku
+            // 
+            this.inputIdBuku.Location = new System.Drawing.Point(338, 85);
+            this.inputIdBuku.Name = "inputIdBuku";
+            this.inputIdBuku.Size = new System.Drawing.Size(319, 22);
+            this.inputIdBuku.TabIndex = 4;
+            // 
+            // labelIdBuku
+            // 
+            this.labelIdBuku.AutoSize = true;
+            this.labelIdBuku.Location = new System.Drawing.Point(335, 52);
+            this.labelIdBuku.Name = "labelIdBuku";
+            this.labelIdBuku.Size = new System.Drawing.Size(53, 16);
+            this.labelIdBuku.TabIndex = 5;
+            this.labelIdBuku.Text = "ID Buku";
+            // 
+            // inputJmlHal
+            // 
+            this.inputJmlHal.Location = new System.Drawing.Point(594, 183);
+            this.inputJmlHal.Name = "inputJmlHal";
+            this.inputJmlHal.Size = new System.Drawing.Size(319, 22);
+            this.inputJmlHal.TabIndex = 6;
+            // 
+            // inputPenulis
+            // 
+            this.inputPenulis.Location = new System.Drawing.Point(594, 236);
+            this.inputPenulis.Name = "inputPenulis";
+            this.inputPenulis.Size = new System.Drawing.Size(319, 22);
+            this.inputPenulis.TabIndex = 7;
+            // 
+            // inputPenerbit
+            // 
+            this.inputPenerbit.Location = new System.Drawing.Point(594, 287);
+            this.inputPenerbit.Name = "inputPenerbit";
+            this.inputPenerbit.Size = new System.Drawing.Size(319, 22);
+            this.inputPenerbit.TabIndex = 8;
+            // 
+            // inputTahun
+            // 
+            this.inputTahun.Location = new System.Drawing.Point(594, 338);
+            this.inputTahun.Name = "inputTahun";
+            this.inputTahun.Size = new System.Drawing.Size(319, 22);
+            this.inputTahun.TabIndex = 9;
+            // 
+            // labelJmlHal
+            // 
+            this.labelJmlHal.AutoSize = true;
+            this.labelJmlHal.Location = new System.Drawing.Point(466, 186);
+            this.labelJmlHal.Name = "labelJmlHal";
+            this.labelJmlHal.Size = new System.Drawing.Size(108, 16);
+            this.labelJmlHal.TabIndex = 10;
+            this.labelJmlHal.Text = "Jumlah Halaman";
+            // 
+            // labelPenulis
+            // 
+            this.labelPenulis.AutoSize = true;
+            this.labelPenulis.Location = new System.Drawing.Point(449, 242);
+            this.labelPenulis.Name = "labelPenulis";
+            this.labelPenulis.Size = new System.Drawing.Size(51, 16);
+            this.labelPenulis.TabIndex = 11;
+            this.labelPenulis.Text = "Penulis";
+            // 
+            // labelPenerbit
+            // 
+            this.labelPenerbit.AutoSize = true;
+            this.labelPenerbit.Location = new System.Drawing.Point(444, 300);
+            this.labelPenerbit.Name = "labelPenerbit";
+            this.labelPenerbit.Size = new System.Drawing.Size(57, 16);
+            this.labelPenerbit.TabIndex = 12;
+            this.labelPenerbit.Text = "Penerbit";
+            // 
+            // PageBook
+>>>>>>> 26fd3be148d92129fda3c2782ff7462c2f711eab
             // 
             this.juduldatabuku.AutoSize = true;
             this.juduldatabuku.Font = new System.Drawing.Font("Gaegu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,6 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(704, 501);
             this.Controls.Add(this.juduldatabuku);
@@ -82,6 +197,23 @@
             this.Controls.Add(this.backButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.ClientSize = new System.Drawing.Size(939, 617);
+            this.Controls.Add(this.labelPenerbit);
+            this.Controls.Add(this.labelPenulis);
+            this.Controls.Add(this.labelJmlHal);
+            this.Controls.Add(this.inputTahun);
+            this.Controls.Add(this.inputPenerbit);
+            this.Controls.Add(this.inputPenulis);
+            this.Controls.Add(this.inputJmlHal);
+            this.Controls.Add(this.labelIdBuku);
+            this.Controls.Add(this.inputIdBuku);
+            this.Controls.Add(this.inputJudul);
+            this.Controls.Add(this.labelJudul);
+            this.Controls.Add(this.dgvDataBuku);
+            this.Controls.Add(this.backButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+>>>>>>> 26fd3be148d92129fda3c2782ff7462c2f711eab
             this.Name = "PageBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Buku";
@@ -95,6 +227,20 @@
         #endregion
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.DataGridView dgvDataBuku;
+<<<<<<< HEAD
         private System.Windows.Forms.Label juduldatabuku;
+=======
+        private System.Windows.Forms.Label labelJudul;
+        private System.Windows.Forms.TextBox inputJudul;
+        private System.Windows.Forms.TextBox inputIdBuku;
+        private System.Windows.Forms.Label labelIdBuku;
+        private System.Windows.Forms.TextBox inputJmlHal;
+        private System.Windows.Forms.TextBox inputPenulis;
+        private System.Windows.Forms.TextBox inputPenerbit;
+        private System.Windows.Forms.TextBox inputTahun;
+        private System.Windows.Forms.Label labelJmlHal;
+        private System.Windows.Forms.Label labelPenulis;
+        private System.Windows.Forms.Label labelPenerbit;
+>>>>>>> 26fd3be148d92129fda3c2782ff7462c2f711eab
     }
 }
