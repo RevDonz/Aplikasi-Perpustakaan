@@ -34,6 +34,7 @@
             this.btn_en = new System.Windows.Forms.Button();
             this.buttonBook = new System.Windows.Forms.Button();
             this.buttonPeminjaman = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelGreeting
@@ -108,11 +109,23 @@
             this.buttonPeminjaman.UseVisualStyleBackColor = true;
             this.buttonPeminjaman.Click += new System.EventHandler(this.buttonPeminjaman_Click);
             // 
-            // Form1
+            // buttonSearch
+            // 
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSearch.Location = new System.Drawing.Point(459, 542);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(186, 62);
+            this.buttonSearch.TabIndex = 9;
+            this.buttonSearch.Text = "Cari Buku";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // PageDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 617);
+            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonPeminjaman);
             this.Controls.Add(this.btn_en);
             this.Controls.Add(this.LabelChooseLang);
@@ -121,7 +134,7 @@
             this.Controls.Add(this.LabelGreeting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.Name = "Form1";
+            this.Name = "PageDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplikasi Perpustakaan";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -138,6 +151,7 @@
         private System.Windows.Forms.Button btn_en;
         private System.Windows.Forms.Button buttonPeminjaman;
         private System.Windows.Forms.Button buttonBook;
+        private System.Windows.Forms.Button buttonSearch;
     }
 }
 
