@@ -67,6 +67,19 @@ namespace Aplikasi_Perpustakaan
 
             comboBoxStatus.SelectedItem = "dikonfirmasi";
             inputIdBuku.SelectedItem = 1;
+
+            if (conf.bahasa == "id")
+            {
+                backButton.Text = conf.button.kembali.id;
+                labelIdBuku.Text = conf.text.formDataBuku.idBuku.id;
+                labelPeminjam.Text = conf.text.formDataBuku.namaPeminjam.id;
+            }
+            else
+            {
+                backButton.Text = conf.button.kembali.en;
+                labelIdBuku.Text = conf.text.formDataBuku.idBuku.en;
+                labelPeminjam.Text = conf.text.formDataBuku.namaPeminjam.en;
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)

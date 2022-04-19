@@ -33,7 +33,7 @@
             this.labelPenulis = new System.Windows.Forms.Label();
             this.labelIdBuku = new System.Windows.Forms.Label();
             this.inputNama = new System.Windows.Forms.TextBox();
-            this.labelJudul = new System.Windows.Forms.Label();
+            this.labelPeminjam = new System.Windows.Forms.Label();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.dgvDataBuku = new System.Windows.Forms.DataGridView();
@@ -92,14 +92,14 @@
             this.inputNama.Size = new System.Drawing.Size(319, 22);
             this.inputNama.TabIndex = 14;
             // 
-            // labelJudul
+            // labelPeminjam
             // 
-            this.labelJudul.AutoSize = true;
-            this.labelJudul.Location = new System.Drawing.Point(27, 165);
-            this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(107, 16);
-            this.labelJudul.TabIndex = 13;
-            this.labelJudul.Text = "Nama Peminjam";
+            this.labelPeminjam.AutoSize = true;
+            this.labelPeminjam.Location = new System.Drawing.Point(27, 165);
+            this.labelPeminjam.Name = "labelPeminjam";
+            this.labelPeminjam.Size = new System.Drawing.Size(107, 16);
+            this.labelPeminjam.TabIndex = 13;
+            this.labelPeminjam.Text = "Nama Peminjam";
             // 
             // buttonSubmit
             // 
@@ -153,7 +153,7 @@
             this.inputIdBuku.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.inputIdBuku.FormattingEnabled = true;
             this.inputIdBuku.Location = new System.Drawing.Point(190, 113);
-            this.inputIdBuku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputIdBuku.Margin = new System.Windows.Forms.Padding(4);
             this.inputIdBuku.Name = "inputIdBuku";
             this.inputIdBuku.Size = new System.Drawing.Size(319, 24);
             this.inputIdBuku.TabIndex = 27;
@@ -171,7 +171,7 @@
             this.Controls.Add(this.labelPenulis);
             this.Controls.Add(this.labelIdBuku);
             this.Controls.Add(this.inputNama);
-            this.Controls.Add(this.labelJudul);
+            this.Controls.Add(this.labelPeminjam);
             this.Controls.Add(this.dgvDataPeminjaman);
             this.Controls.Add(this.backButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -194,7 +194,7 @@
         private System.Windows.Forms.Label labelPenulis;
         private System.Windows.Forms.Label labelIdBuku;
         private System.Windows.Forms.TextBox inputNama;
-        private System.Windows.Forms.Label labelJudul;
+        private System.Windows.Forms.Label labelPeminjam;
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.DataGridView dgvDataBuku;

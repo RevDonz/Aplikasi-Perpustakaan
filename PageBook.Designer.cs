@@ -68,7 +68,7 @@
             // labelJudul
             // 
             this.labelJudul.AutoSize = true;
-            this.labelJudul.Location = new System.Drawing.Point(485, 130);
+            this.labelJudul.Location = new System.Drawing.Point(449, 130);
             this.labelJudul.Name = "labelJudul";
             this.labelJudul.Size = new System.Drawing.Size(72, 16);
             this.labelJudul.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             // inputIdBuku
             // 
-            this.inputIdBuku.Location = new System.Drawing.Point(338, 85);
+            this.inputIdBuku.Location = new System.Drawing.Point(594, 77);
             this.inputIdBuku.Name = "inputIdBuku";
             this.inputIdBuku.Size = new System.Drawing.Size(319, 22);
             this.inputIdBuku.TabIndex = 4;
@@ -92,7 +92,7 @@
             // labelIdBuku
             // 
             this.labelIdBuku.AutoSize = true;
-            this.labelIdBuku.Location = new System.Drawing.Point(335, 52);
+            this.labelIdBuku.Location = new System.Drawing.Point(449, 77);
             this.labelIdBuku.Name = "labelIdBuku";
             this.labelIdBuku.Size = new System.Drawing.Size(53, 16);
             this.labelIdBuku.TabIndex = 5;
@@ -129,7 +129,7 @@
             // labelJmlHal
             // 
             this.labelJmlHal.AutoSize = true;
-            this.labelJmlHal.Location = new System.Drawing.Point(466, 186);
+            this.labelJmlHal.Location = new System.Drawing.Point(449, 186);
             this.labelJmlHal.Name = "labelJmlHal";
             this.labelJmlHal.Size = new System.Drawing.Size(108, 16);
             this.labelJmlHal.TabIndex = 10;
@@ -147,7 +147,7 @@
             // labelPenerbit
             // 
             this.labelPenerbit.AutoSize = true;
-            this.labelPenerbit.Location = new System.Drawing.Point(444, 300);
+            this.labelPenerbit.Location = new System.Drawing.Point(449, 290);
             this.labelPenerbit.Name = "labelPenerbit";
             this.labelPenerbit.Size = new System.Drawing.Size(57, 16);
             this.labelPenerbit.TabIndex = 12;
