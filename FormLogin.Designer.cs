@@ -90,7 +90,7 @@
             // buttonLogin
             // 
             this.buttonLogin.BackColor = System.Drawing.Color.Teal;
-            this.buttonLogin.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonLogin.Location = new System.Drawing.Point(178, 208);
             this.buttonLogin.Name = "buttonLogin";
@@ -103,7 +103,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.inputPassword);
