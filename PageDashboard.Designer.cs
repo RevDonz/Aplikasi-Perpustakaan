@@ -40,11 +40,10 @@
             // LabelGreeting
             // 
             this.LabelGreeting.AutoSize = true;
-            this.LabelGreeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelGreeting.Location = new System.Drawing.Point(339, 36);
-            this.LabelGreeting.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelGreeting.Font = new System.Drawing.Font("Gaegu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelGreeting.Location = new System.Drawing.Point(207, 30);
             this.LabelGreeting.Name = "LabelGreeting";
-            this.LabelGreeting.Size = new System.Drawing.Size(195, 29);
+            this.LabelGreeting.Size = new System.Drawing.Size(245, 35);
             this.LabelGreeting.TabIndex = 0;
             this.LabelGreeting.Text = "Selamat Datang";
             this.LabelGreeting.Click += new System.EventHandler(this.LabelGreeting_Click);
@@ -53,21 +52,23 @@
             // 
             this.LabelChooseLang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LabelChooseLang.AutoSize = true;
-            this.LabelChooseLang.Location = new System.Drawing.Point(812, 8);
-            this.LabelChooseLang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelChooseLang.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelChooseLang.Location = new System.Drawing.Point(604, 18);
             this.LabelChooseLang.Name = "LabelChooseLang";
-            this.LabelChooseLang.Size = new System.Drawing.Size(82, 16);
+            this.LabelChooseLang.Size = new System.Drawing.Size(70, 15);
             this.LabelChooseLang.TabIndex = 4;
             this.LabelChooseLang.Text = "Pilih Bahasa";
             this.LabelChooseLang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelChooseLang.Click += new System.EventHandler(this.LabelChooseLang_Click);
             // 
             // btn_idn
             // 
+            this.btn_idn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_idn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_idn.Location = new System.Drawing.Point(782, 37);
-            this.btn_idn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_idn.Location = new System.Drawing.Point(586, 45);
+            this.btn_idn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_idn.Name = "btn_idn";
-            this.btn_idn.Size = new System.Drawing.Size(144, 36);
+            this.btn_idn.Size = new System.Drawing.Size(108, 29);
             this.btn_idn.TabIndex = 5;
             this.btn_idn.Text = "Indonesia";
             this.btn_idn.UseVisualStyleBackColor = true;
@@ -75,11 +76,12 @@
             // 
             // btn_en
             // 
+            this.btn_en.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_en.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_en.Location = new System.Drawing.Point(782, 77);
-            this.btn_en.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_en.Location = new System.Drawing.Point(586, 78);
+            this.btn_en.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_en.Name = "btn_en";
-            this.btn_en.Size = new System.Drawing.Size(144, 37);
+            this.btn_en.Size = new System.Drawing.Size(108, 30);
             this.btn_en.TabIndex = 6;
             this.btn_en.Text = "Inggris";
             this.btn_en.UseVisualStyleBackColor = true;
@@ -87,43 +89,48 @@
             // 
             // buttonBook
             // 
+            this.buttonBook.BackColor = System.Drawing.Color.MintCream;
             this.buttonBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonBook.Location = new System.Drawing.Point(13, 542);
-            this.buttonBook.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBook.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBook.Location = new System.Drawing.Point(107, 203);
             this.buttonBook.Name = "buttonBook";
-            this.buttonBook.Size = new System.Drawing.Size(193, 62);
+            this.buttonBook.Size = new System.Drawing.Size(145, 62);
             this.buttonBook.TabIndex = 7;
             this.buttonBook.Text = "Data Buku";
-            this.buttonBook.UseVisualStyleBackColor = true;
+            this.buttonBook.UseVisualStyleBackColor = false;
             this.buttonBook.Click += new System.EventHandler(this.buttonBook_Click);
             // 
             // buttonPeminjaman
             // 
+            this.buttonPeminjaman.BackColor = System.Drawing.Color.MintCream;
             this.buttonPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonPeminjaman.Location = new System.Drawing.Point(235, 542);
-            this.buttonPeminjaman.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPeminjaman.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPeminjaman.Location = new System.Drawing.Point(281, 203);
             this.buttonPeminjaman.Name = "buttonPeminjaman";
-            this.buttonPeminjaman.Size = new System.Drawing.Size(193, 62);
+            this.buttonPeminjaman.Size = new System.Drawing.Size(145, 62);
             this.buttonPeminjaman.TabIndex = 8;
             this.buttonPeminjaman.Text = "Data Peminjaman";
-            this.buttonPeminjaman.UseVisualStyleBackColor = true;
+            this.buttonPeminjaman.UseVisualStyleBackColor = false;
             this.buttonPeminjaman.Click += new System.EventHandler(this.buttonPeminjaman_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(459, 542);
+            this.button1.BackColor = System.Drawing.Color.MintCream;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(452, 203);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 62);
+            this.button1.Size = new System.Drawing.Size(149, 62);
             this.button1.TabIndex = 9;
             this.button1.Text = "Cari Buku";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // PageDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 617);
+            this.BackColor = System.Drawing.Color.Turquoise;
+            this.ClientSize = new System.Drawing.Size(704, 501);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonPeminjaman);
             this.Controls.Add(this.btn_en);
@@ -132,7 +139,7 @@
             this.Controls.Add(this.buttonBook);
             this.Controls.Add(this.LabelGreeting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PageDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplikasi Perpustakaan";
