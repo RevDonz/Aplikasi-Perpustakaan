@@ -17,7 +17,7 @@ namespace Aplikasi_Perpustakaan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PageDashboard());
+            Application.Run(new SearchBook());
 
             //Peminjaman peminjaman1 = new Peminjaman("Baru", 2, new DateTime(2022, 4, 13), "dikonfirmasi");
 
