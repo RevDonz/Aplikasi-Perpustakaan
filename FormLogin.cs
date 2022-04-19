@@ -26,7 +26,6 @@ namespace Aplikasi_Perpustakaan
             if(username.Contains(inputUsername.Text) && password.Contains(inputPassword.Text) && Array.IndexOf(username, inputUsername.Text) ==
                 Array.IndexOf(password, inputPassword.Text))
             {
-                
                 MessageBox.Show("Sukses Login! Selamat Datang di MyLibrary");
             }
             else
