@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace Aplikasi_Perpustakaan
 {
@@ -67,6 +68,19 @@ namespace Aplikasi_Perpustakaan
 
             comboBoxStatus.SelectedItem = "dikonfirmasi";
             inputIdBuku.SelectedItem = 1;
+
+            if (conf.bahasa == "id")
+            {
+                backButton.Text = conf.button.kembali.id;
+                labelIdBuku.Text = conf.text.formDataBuku.idBuku.id;
+                labelPeminjam.Text = conf.text.formDataBuku.namaPeminjam.id;
+            }
+            else
+            {
+                backButton.Text = conf.button.kembali.en;
+                labelIdBuku.Text = conf.text.formDataBuku.idBuku.en;
+                labelPeminjam.Text = conf.text.formDataBuku.namaPeminjam.en;
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -89,7 +103,32 @@ namespace Aplikasi_Perpustakaan
                 Peminjaman newPeminjaman = new Peminjaman(inputNama.Text, int.Parse(inputIdBuku.Text), DateTime.Now, comboBoxStatus.Text);
                 string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
                 Raw raw = Raw.getRecord(path);
-                raw = Peminjaman.pinjam(raw, newPeminjaman);
+
+                bool found = false;
+                foreach (Peminjaman item in raw.peminjaman)
+                {
+                    if (item.nama_peminjam == newPeminjaman.nama_peminjam && item.id_buku == newPeminjaman.id_buku)
+                    {
+                        found = true;
+                        if (newPeminjaman.status_peminjaman == "dikonfirmasi")
+                        {
+                            MessageBox.Show("Data peminjaman ditemukan. Apakah status yang dimaksud 'dikembalikan'?");
+                        }
+                        else
+                        {
+                            item.status_peminjaman = newPeminjaman.status_peminjaman;
+                            string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
+                            File.WriteAllText(raw.path, json);
+                            MessageBox.Show("Buku berhasil dikembalikan");
+                        }
+                    }
+                }
+                if (!found)
+                {
+                    raw = Peminjaman.pinjam(raw, newPeminjaman);
+                }
+                dgvDataPeminjaman.DataSource = null;
+                dgvDataPeminjaman.DataSource = this.ToDataTable(raw.peminjaman);
             } 
             catch (Exception ex)
             {
@@ -103,6 +142,11 @@ namespace Aplikasi_Perpustakaan
             comboBoxStatus.SelectedItem = "dikonfirmasi";
             inputIdBuku.SelectedItem = 1;
             inputNama.Text = "";
+        }
+
+        private void inputIdBuku_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

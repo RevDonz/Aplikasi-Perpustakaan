@@ -30,148 +30,257 @@
         {
             this.backButton = new System.Windows.Forms.Button();
             this.dgvDataBuku = new System.Windows.Forms.DataGridView();
+            this.juduldatabuku = new System.Windows.Forms.Label();
             this.labelJudul = new System.Windows.Forms.Label();
             this.inputJudul = new System.Windows.Forms.TextBox();
-            this.inputIdBuku = new System.Windows.Forms.TextBox();
             this.labelIdBuku = new System.Windows.Forms.Label();
             this.inputJmlHal = new System.Windows.Forms.TextBox();
             this.inputPenulis = new System.Windows.Forms.TextBox();
-            this.inputPenerbit = new System.Windows.Forms.TextBox();
-            this.inputTahun = new System.Windows.Forms.TextBox();
             this.labelJmlHal = new System.Windows.Forms.Label();
             this.labelPenulis = new System.Windows.Forms.Label();
+            this.inputPenerbit = new System.Windows.Forms.TextBox();
             this.labelPenerbit = new System.Windows.Forms.Label();
+            this.buttonSubmit = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.inputTahun = new System.Windows.Forms.TextBox();
+            this.labelTahun = new System.Windows.Forms.Label();
+            this.labelStatus = new System.Windows.Forms.Label();
+            this.inputStatus = new System.Windows.Forms.ComboBox();
+            this.inputIdBuku = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataBuku)).BeginInit();
             this.SuspendLayout();
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(12, 12);
+            this.backButton.BackColor = System.Drawing.Color.MintCream;
+            this.backButton.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Location = new System.Drawing.Point(33, 25);
+            this.backButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.Size = new System.Drawing.Size(93, 37);
             this.backButton.TabIndex = 0;
             this.backButton.Text = "Kembali";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // dgvDataBuku
             // 
+            this.dgvDataBuku.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvDataBuku.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDataBuku.Location = new System.Drawing.Point(29, 411);
+            this.dgvDataBuku.Location = new System.Drawing.Point(33, 402);
+            this.dgvDataBuku.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDataBuku.Name = "dgvDataBuku";
             this.dgvDataBuku.RowHeadersWidth = 51;
             this.dgvDataBuku.RowTemplate.Height = 24;
-            this.dgvDataBuku.Size = new System.Drawing.Size(884, 150);
+            this.dgvDataBuku.Size = new System.Drawing.Size(864, 180);
             this.dgvDataBuku.TabIndex = 1;
             this.dgvDataBuku.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataBuku_CellContentClick);
+            // 
+            // juduldatabuku
+            // 
+            this.juduldatabuku.AutoSize = true;
+            this.juduldatabuku.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.juduldatabuku.Location = new System.Drawing.Point(312, 22);
+            this.juduldatabuku.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.juduldatabuku.Name = "juduldatabuku";
+            this.juduldatabuku.Size = new System.Drawing.Size(386, 42);
+            this.juduldatabuku.TabIndex = 2;
+            this.juduldatabuku.Text = "Data Buku MyLibrary";
             // 
             // labelJudul
             // 
             this.labelJudul.AutoSize = true;
-            this.labelJudul.Location = new System.Drawing.Point(485, 130);
+            this.labelJudul.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.labelJudul.Location = new System.Drawing.Point(149, 155);
+            this.labelJudul.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(72, 16);
+            this.labelJudul.Size = new System.Drawing.Size(85, 20);
             this.labelJudul.TabIndex = 2;
             this.labelJudul.Text = "Judul Buku";
-            this.labelJudul.Click += new System.EventHandler(this.labelJudul_Click);
             // 
             // inputJudul
             // 
-            this.inputJudul.Location = new System.Drawing.Point(594, 127);
+            this.inputJudul.Location = new System.Drawing.Point(153, 189);
+            this.inputJudul.Margin = new System.Windows.Forms.Padding(4);
             this.inputJudul.Name = "inputJudul";
-            this.inputJudul.Size = new System.Drawing.Size(319, 22);
+            this.inputJudul.Size = new System.Drawing.Size(250, 22);
             this.inputJudul.TabIndex = 3;
-            // 
-            // inputIdBuku
-            // 
-            this.inputIdBuku.Location = new System.Drawing.Point(338, 85);
-            this.inputIdBuku.Name = "inputIdBuku";
-            this.inputIdBuku.Size = new System.Drawing.Size(319, 22);
-            this.inputIdBuku.TabIndex = 4;
             // 
             // labelIdBuku
             // 
             this.labelIdBuku.AutoSize = true;
-            this.labelIdBuku.Location = new System.Drawing.Point(335, 52);
+            this.labelIdBuku.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIdBuku.Location = new System.Drawing.Point(149, 87);
+            this.labelIdBuku.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelIdBuku.Name = "labelIdBuku";
-            this.labelIdBuku.Size = new System.Drawing.Size(53, 16);
+            this.labelIdBuku.Size = new System.Drawing.Size(63, 20);
             this.labelIdBuku.TabIndex = 5;
             this.labelIdBuku.Text = "ID Buku";
             // 
             // inputJmlHal
             // 
-            this.inputJmlHal.Location = new System.Drawing.Point(594, 183);
+            this.inputJmlHal.Location = new System.Drawing.Point(479, 251);
+            this.inputJmlHal.Margin = new System.Windows.Forms.Padding(4);
             this.inputJmlHal.Name = "inputJmlHal";
-            this.inputJmlHal.Size = new System.Drawing.Size(319, 22);
+            this.inputJmlHal.Size = new System.Drawing.Size(250, 22);
             this.inputJmlHal.TabIndex = 6;
             // 
             // inputPenulis
             // 
-            this.inputPenulis.Location = new System.Drawing.Point(594, 236);
+            this.inputPenulis.Location = new System.Drawing.Point(153, 251);
+            this.inputPenulis.Margin = new System.Windows.Forms.Padding(4);
             this.inputPenulis.Name = "inputPenulis";
-            this.inputPenulis.Size = new System.Drawing.Size(319, 22);
+            this.inputPenulis.Size = new System.Drawing.Size(250, 22);
             this.inputPenulis.TabIndex = 7;
-            // 
-            // inputPenerbit
-            // 
-            this.inputPenerbit.Location = new System.Drawing.Point(594, 287);
-            this.inputPenerbit.Name = "inputPenerbit";
-            this.inputPenerbit.Size = new System.Drawing.Size(319, 22);
-            this.inputPenerbit.TabIndex = 8;
-            // 
-            // inputTahun
-            // 
-            this.inputTahun.Location = new System.Drawing.Point(594, 338);
-            this.inputTahun.Name = "inputTahun";
-            this.inputTahun.Size = new System.Drawing.Size(319, 22);
-            this.inputTahun.TabIndex = 9;
             // 
             // labelJmlHal
             // 
             this.labelJmlHal.AutoSize = true;
-            this.labelJmlHal.Location = new System.Drawing.Point(466, 186);
+            this.labelJmlHal.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.labelJmlHal.Location = new System.Drawing.Point(475, 221);
+            this.labelJmlHal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelJmlHal.Name = "labelJmlHal";
-            this.labelJmlHal.Size = new System.Drawing.Size(108, 16);
+            this.labelJmlHal.Size = new System.Drawing.Size(123, 20);
             this.labelJmlHal.TabIndex = 10;
             this.labelJmlHal.Text = "Jumlah Halaman";
+            this.labelJmlHal.Click += new System.EventHandler(this.labelJmlHal_Click);
             // 
             // labelPenulis
             // 
             this.labelPenulis.AutoSize = true;
-            this.labelPenulis.Location = new System.Drawing.Point(449, 242);
+            this.labelPenulis.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.labelPenulis.Location = new System.Drawing.Point(149, 221);
+            this.labelPenulis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPenulis.Name = "labelPenulis";
-            this.labelPenulis.Size = new System.Drawing.Size(51, 16);
+            this.labelPenulis.Size = new System.Drawing.Size(58, 20);
             this.labelPenulis.TabIndex = 11;
             this.labelPenulis.Text = "Penulis";
+            // 
+            // inputPenerbit
+            // 
+            this.inputPenerbit.Location = new System.Drawing.Point(153, 317);
+            this.inputPenerbit.Margin = new System.Windows.Forms.Padding(4);
+            this.inputPenerbit.Name = "inputPenerbit";
+            this.inputPenerbit.Size = new System.Drawing.Size(250, 22);
+            this.inputPenerbit.TabIndex = 8;
             // 
             // labelPenerbit
             // 
             this.labelPenerbit.AutoSize = true;
-            this.labelPenerbit.Location = new System.Drawing.Point(444, 300);
+            this.labelPenerbit.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPenerbit.Location = new System.Drawing.Point(149, 293);
+            this.labelPenerbit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPenerbit.Name = "labelPenerbit";
-            this.labelPenerbit.Size = new System.Drawing.Size(57, 16);
+            this.labelPenerbit.Size = new System.Drawing.Size(67, 20);
             this.labelPenerbit.TabIndex = 12;
             this.labelPenerbit.Text = "Penerbit";
+            this.labelPenerbit.Click += new System.EventHandler(this.labelPenerbit_Click);
+            // 
+            // buttonSubmit
+            // 
+            this.buttonSubmit.BackColor = System.Drawing.Color.MintCream;
+            this.buttonSubmit.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.Location = new System.Drawing.Point(479, 309);
+            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(79, 37);
+            this.buttonSubmit.TabIndex = 13;
+            this.buttonSubmit.Text = "Submit";
+            this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
+            // 
+            // buttonReset
+            // 
+            this.buttonReset.BackColor = System.Drawing.Color.MintCream;
+            this.buttonReset.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonReset.Location = new System.Drawing.Point(650, 309);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(79, 37);
+            this.buttonReset.TabIndex = 14;
+            this.buttonReset.Text = "Reset";
+            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // inputTahun
+            // 
+            this.inputTahun.Location = new System.Drawing.Point(479, 189);
+            this.inputTahun.Margin = new System.Windows.Forms.Padding(4);
+            this.inputTahun.Name = "inputTahun";
+            this.inputTahun.Size = new System.Drawing.Size(250, 22);
+            this.inputTahun.TabIndex = 15;
+            // 
+            // labelTahun
+            // 
+            this.labelTahun.AutoSize = true;
+            this.labelTahun.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.labelTahun.Location = new System.Drawing.Point(475, 155);
+            this.labelTahun.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTahun.Name = "labelTahun";
+            this.labelTahun.Size = new System.Drawing.Size(92, 20);
+            this.labelTahun.TabIndex = 17;
+            this.labelTahun.Text = "Tahun Terbit";
+            this.labelTahun.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.labelStatus.Location = new System.Drawing.Point(475, 87);
+            this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(50, 20);
+            this.labelStatus.TabIndex = 18;
+            this.labelStatus.Text = "Status";
+            // 
+            // inputStatus
+            // 
+            this.inputStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.inputStatus.FormattingEnabled = true;
+            this.inputStatus.Items.AddRange(new object[] {
+            "disimpan",
+            "dipinjam",
+            "hilang"});
+            this.inputStatus.Location = new System.Drawing.Point(477, 121);
+            this.inputStatus.Name = "inputStatus";
+            this.inputStatus.Size = new System.Drawing.Size(252, 24);
+            this.inputStatus.TabIndex = 19;
+            // 
+            // inputIdBuku
+            // 
+            this.inputIdBuku.FormattingEnabled = true;
+            this.inputIdBuku.Location = new System.Drawing.Point(153, 121);
+            this.inputIdBuku.Name = "inputIdBuku";
+            this.inputIdBuku.Size = new System.Drawing.Size(252, 24);
+            this.inputIdBuku.TabIndex = 20;
             // 
             // PageBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(939, 617);
+            this.Controls.Add(this.inputIdBuku);
+            this.Controls.Add(this.inputStatus);
+            this.Controls.Add(this.labelStatus);
+            this.Controls.Add(this.labelTahun);
+            this.Controls.Add(this.inputTahun);
+            this.Controls.Add(this.buttonReset);
+            this.Controls.Add(this.buttonSubmit);
+            this.Controls.Add(this.juduldatabuku);
             this.Controls.Add(this.labelPenerbit);
             this.Controls.Add(this.labelPenulis);
             this.Controls.Add(this.labelJmlHal);
-            this.Controls.Add(this.inputTahun);
             this.Controls.Add(this.inputPenerbit);
             this.Controls.Add(this.inputPenulis);
             this.Controls.Add(this.inputJmlHal);
             this.Controls.Add(this.labelIdBuku);
-            this.Controls.Add(this.inputIdBuku);
             this.Controls.Add(this.inputJudul);
             this.Controls.Add(this.labelJudul);
             this.Controls.Add(this.dgvDataBuku);
             this.Controls.Add(this.backButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PageBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Buku";
@@ -185,16 +294,24 @@
         #endregion
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.DataGridView dgvDataBuku;
+
+        private System.Windows.Forms.Label juduldatabuku;
+
         private System.Windows.Forms.Label labelJudul;
         private System.Windows.Forms.TextBox inputJudul;
-        private System.Windows.Forms.TextBox inputIdBuku;
         private System.Windows.Forms.Label labelIdBuku;
         private System.Windows.Forms.TextBox inputJmlHal;
         private System.Windows.Forms.TextBox inputPenulis;
-        private System.Windows.Forms.TextBox inputPenerbit;
-        private System.Windows.Forms.TextBox inputTahun;
         private System.Windows.Forms.Label labelJmlHal;
         private System.Windows.Forms.Label labelPenulis;
+        private System.Windows.Forms.TextBox inputPenerbit;
         private System.Windows.Forms.Label labelPenerbit;
+        private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.TextBox inputTahun;
+        private System.Windows.Forms.Label labelTahun;
+        private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.ComboBox inputStatus;
+        private System.Windows.Forms.ComboBox inputIdBuku;
     }
 }

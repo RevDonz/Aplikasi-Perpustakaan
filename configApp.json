@@ -1,7 +1,7 @@
 {
   "height": 540,
   "width": 720,
-  "bahasa": "id",
+  "bahasa": "en",
   "text": {
     "greeting": {
       "id": "Selamat Datang",
@@ -10,6 +10,24 @@
     "pilihBahasa": {
       "id": "Pilih Bahasa",
       "en": "Choose Language"
+    },
+    "messageLogin": {
+      "id": "Sukses Login! Selamat Datang di MyLibrary",
+      "en": "Login Success! Welcome to MyLibrary"
+    },
+    "alertLogin": {
+      "id": "Username atau Password salah!",
+      "en": "Wrong Username or Password!"
+    },
+    "formDataBuku": {
+      "idBuku": {
+        "id": "ID Buku",
+        "en": "Book ID"
+      },
+      "namaPeminjam": {
+        "id": "Nama Peminjam",
+        "en": "Borrower Name"
+      }
     }
   },
   "button": {
@@ -28,6 +46,10 @@
     "dataBuku": {
       "id": "Data Buku",
       "en": "Book Data"
+    },
+    "dataPeminjaman": {
+      "id": "Data Peminjaman",
+      "en": "Borrower Data"
     },
     "cariBuku": {
       "id": "Cari Buku",

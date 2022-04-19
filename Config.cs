@@ -28,14 +28,16 @@ namespace Aplikasi_Perpustakaan
         public kembali kembali { get; set; }
         public dataBuku dataBuku { get; set; }
         public cariBuku cariBuku { get; set; }
+        public dataPeminjaman dataPeminjaman { get; set; }
         public button() { }
-        public button(tambah tambah, hapus hapus, kembali kembali, dataBuku dataBuku, cariBuku cariBuku)
+        public button(tambah tambah, hapus hapus, kembali kembali, dataBuku dataBuku, cariBuku cariBuku, dataPeminjaman dataPeminjaman)
         {
             this.tambah = tambah;
             this.hapus = hapus;
             this.dataBuku = dataBuku;
             this.kembali = kembali;
             this.cariBuku = cariBuku;
+            this.dataPeminjaman = dataPeminjaman;
         }
     }
 
@@ -43,12 +45,18 @@ namespace Aplikasi_Perpustakaan
     {
         public greeting greeting { get; set; }
         public pilihBahasa pilihBahasa { get; set; }
+        public messageLogin messageLogin { get; set; }
+        public alertLogin alertLogin { get; set; }
+        public formDataBuku formDataBuku { get; set; }
         public text() { }
 
-        public text(greeting greeting, pilihBahasa pilihBahasa)
+        public text(greeting greeting, pilihBahasa pilihBahasa, messageLogin messageLogin, alertLogin alertLogin, formDataBuku formDataBuku)
         {
             this.greeting = greeting;
             this.pilihBahasa = pilihBahasa;
+            this.messageLogin = messageLogin;
+            this.alertLogin = alertLogin;
+            this.formDataBuku = formDataBuku;
         }
     }
 
@@ -59,6 +67,45 @@ namespace Aplikasi_Perpustakaan
 
         public greeting() { }
         public greeting(string id, string en)
+        {
+            this.id = id;
+            this.en = en;
+        }
+    }
+
+    class formDataBuku
+    {
+        public idBuku idBuku { get; set; }
+        public namaPeminjam namaPeminjam { get; set; }
+
+        public formDataBuku() { }
+        public formDataBuku(idBuku idBuku, namaPeminjam namaPeminjam)
+        {
+            this.idBuku = idBuku;
+            this.namaPeminjam = namaPeminjam;
+        }
+    }
+
+    class idBuku
+    {
+        public string id { get; set; }
+        public string en { get; set; }
+
+        public idBuku() { }
+        public idBuku(string id, string en)
+        {
+            this.id = id;
+            this.en = en;
+        }
+    }
+
+    class namaPeminjam
+    {
+        public string id { get; set; }
+        public string en { get; set; }
+
+        public namaPeminjam() { }
+        public namaPeminjam(string id, string en)
         {
             this.id = id;
             this.en = en;
@@ -78,6 +125,32 @@ namespace Aplikasi_Perpustakaan
         }
     }
 
+    class messageLogin
+    {
+        public string id { get; set; }
+        public string en { get; set; }
+
+        public messageLogin() { }
+        public messageLogin(string id, string en)
+        {
+            this.id = id;
+            this.en = en;
+        }
+    }
+
+    class alertLogin
+    {
+        public string id { get; set; }
+        public string en { get; set; }
+
+        public alertLogin() { }
+        public alertLogin(string id, string en)
+        {
+            this.id = id;
+            this.en = en;
+        }
+    }
+
     class tambah
     {
         public string id { get; set; }
@@ -85,6 +158,19 @@ namespace Aplikasi_Perpustakaan
 
         public tambah() { }
         public tambah(string id, string en)
+        {
+            this.id = id;
+            this.en = en;
+        }
+    }
+
+    class dataPeminjaman
+    {
+        public string id { get; set; }
+        public string en { get; set; }
+
+        public dataPeminjaman() { }
+        public dataPeminjaman(string id, string en)
         {
             this.id = id;
             this.en = en;

@@ -11,10 +11,10 @@
     },
     {
       "idBuku": 2,
-      "judulBuku": "Buku2",
-      "jumlahHalaman": 120,
+      "judulBuku": "Kedua",
+      "jumlahHalaman": 100,
       "penulis": "Penulis2",
-      "penerbit": "Penerbit1",
+      "penerbit": "Penerbit2",
       "tahunTerbit": 2005,
       "status": "hilang"
     },
@@ -47,20 +47,11 @@
     },
     {
       "idBuku": 6,
-      "judulBuku": "Judul Baru",
-      "jumlahHalaman": 100,
-      "penulis": "Bukan saya",
-      "penerbit": "Gramedia",
-      "tahunTerbit": 2022,
-      "status": "disimpan"
-    },
-    {
-      "idBuku": 7,
-      "judulBuku": "BUKUBARU",
-      "jumlahHalaman": 10,
-      "penulis": "Bukan saya",
-      "penerbit": "Gramedia",
-      "tahunTerbit": 2022,
+      "judulBuku": "Buku6",
+      "jumlahHalaman": 23,
+      "penulis": "penulis4",
+      "penerbit": "Penerbit8",
+      "tahunTerbit": 2019,
       "status": "disimpan"
     }
   ],
@@ -69,19 +60,7 @@
       "nama_peminjam": "Saya",
       "id_buku": 5,
       "tanggal_pinjam": "2022-04-14T00:00:00",
-      "status_peminjaman": "dikonfirmasi"
-    },
-    {
-      "nama_peminjam": "Saya adalah seorangmanusiayang ljhasdfjkhalsdfhjk",
-      "id_buku": 4,
-      "tanggal_pinjam": "2022-04-19T13:08:42.7613721+07:00",
-      "status_peminjaman": "dikonfirmasi"
-    },
-    {
-      "nama_peminjam": "Saya adalah seorangmanusiayang ljhasdfjkhalsdfhjk",
-      "id_buku": 4,
-      "tanggal_pinjam": "2022-04-19T13:08:44.8626102+07:00",
-      "status_peminjaman": "dikonfirmasi"
+      "status_peminjaman": "dikembalikan"
     }
   ],
   "path": "D:\\TUBES KPL\\Aplikasi-Perpustakaan\\dataBuku.json"
