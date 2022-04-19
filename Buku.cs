@@ -66,5 +66,13 @@ namespace Aplikasi_Perpustakaan
                 return null;
             }
         }
+
+        public static Raw tambah(Raw raw, Buku data)
+        {
+            raw.buku.Add(data);
+            string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
+            File.WriteAllText(raw.path, json);
+            return raw;
+        }
     }
 }

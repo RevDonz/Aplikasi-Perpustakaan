@@ -14,7 +14,7 @@ namespace Aplikasi_Perpustakaan
         {
             InitializeComponent();
 
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "databuku.json";
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
 
             List<Buku> list_buku = new List<Buku>();
 

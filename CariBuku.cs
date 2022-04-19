@@ -25,7 +25,8 @@ namespace Aplikasi_Perpustakaan
         {
             dynamic temp = SearchBuku(cari);
             List<Buku> list_buku = new List<Buku>();
-            list_buku = Serializer.deserialize<Buku>(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\" + "dataBuku.json");
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
+            list_buku = Raw.getRecord(path).buku;
             for (int i = 0; i < list_buku.Count; i++)
             {
                 Buku dataBuku = list_buku[i];
