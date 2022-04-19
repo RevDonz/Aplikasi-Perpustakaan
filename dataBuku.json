@@ -62,15 +62,6 @@
       "penerbit": "Gramedia",
       "tahunTerbit": 2022,
       "status": "disimpan"
-    },
-    {
-      "idBuku": 7,
-      "judulBuku": "Judulnya diganti",
-      "jumlahHalaman": 10,
-      "penulis": "Bukan Saya",
-      "penerbit": "Gramedia",
-      "tahunTerbit": 2022,
-      "status": "disimpan"
     }
   ],
   "peminjaman": [
@@ -78,30 +69,6 @@
       "nama_peminjam": "Saya",
       "id_buku": 5,
       "tanggal_pinjam": "2022-04-14T00:00:00",
-      "status_peminjaman": "dikembalikan"
-    },
-    {
-      "nama_peminjam": "Saya adalah seorangmanusiayang ljhasdfjkhalsdfhjk",
-      "id_buku": 4,
-      "tanggal_pinjam": "2022-04-19T13:08:42.7613721+07:00",
-      "status_peminjaman": "dikonfirmasi"
-    },
-    {
-      "nama_peminjam": "Saya adalah seorangmanusiayang ljhasdfjkhalsdfhjk",
-      "id_buku": 4,
-      "tanggal_pinjam": "2022-04-19T13:08:44.8626102+07:00",
-      "status_peminjaman": "dikonfirmasi"
-    },
-    {
-      "nama_peminjam": "Baru",
-      "id_buku": 2,
-      "tanggal_pinjam": "2022-04-19T14:27:03.2360366+07:00",
-      "status_peminjaman": "dikonfirmasi"
-    },
-    {
-      "nama_peminjam": "Doni",
-      "id_buku": 1,
-      "tanggal_pinjam": "2022-04-19T15:15:40.9695922+07:00",
       "status_peminjaman": "dikembalikan"
     }
   ],

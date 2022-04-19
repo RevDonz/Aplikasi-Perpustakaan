@@ -45,42 +45,6 @@
             this.LabelGreeting.Text = "Selamat Datang di MyLibrary";
             this.LabelGreeting.Click += new System.EventHandler(this.LabelGreeting_Click);
             // 
-            // LabelChooseLang
-            // 
-            this.LabelChooseLang.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LabelChooseLang.AutoSize = true;
-            this.LabelChooseLang.Location = new System.Drawing.Point(812, 8);
-            this.LabelChooseLang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LabelChooseLang.Name = "LabelChooseLang";
-            this.LabelChooseLang.Size = new System.Drawing.Size(82, 16);
-            this.LabelChooseLang.TabIndex = 4;
-            this.LabelChooseLang.Text = "Pilih Bahasa";
-            this.LabelChooseLang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_idn
-            // 
-            this.btn_idn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_idn.Location = new System.Drawing.Point(782, 37);
-            this.btn_idn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btn_idn.Name = "btn_idn";
-            this.btn_idn.Size = new System.Drawing.Size(144, 36);
-            this.btn_idn.TabIndex = 5;
-            this.btn_idn.Text = "Indonesia";
-            this.btn_idn.UseVisualStyleBackColor = true;
-            this.btn_idn.Click += new System.EventHandler(this.btn_idn_Click);
-            // 
-            // btn_en
-            // 
-            this.btn_en.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_en.Location = new System.Drawing.Point(782, 77);
-            this.btn_en.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btn_en.Name = "btn_en";
-            this.btn_en.Size = new System.Drawing.Size(144, 37);
-            this.btn_en.TabIndex = 6;
-            this.btn_en.Text = "Inggris";
-            this.btn_en.UseVisualStyleBackColor = true;
-            this.btn_en.Click += new System.EventHandler(this.btn_en_Click);
-            // 
             // buttonBook
             // 
             this.buttonBook.BackColor = System.Drawing.Color.MintCream;

@@ -102,14 +102,14 @@
             // 
             // labelPeminjam
             // 
-            this.labelJudul.AutoSize = true;
-            this.labelJudul.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJudul.Location = new System.Drawing.Point(42, 170);
-            this.labelJudul.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(96, 15);
-            this.labelJudul.TabIndex = 13;
-            this.labelJudul.Text = "Nama Peminjam";
+            this.labelPeminjam.AutoSize = true;
+            this.labelPeminjam.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPeminjam.Location = new System.Drawing.Point(42, 170);
+            this.labelPeminjam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPeminjam.Name = "labelJudul";
+            this.labelPeminjam.Size = new System.Drawing.Size(96, 15);
+            this.labelPeminjam.TabIndex = 13;
+            this.labelPeminjam.Text = "Nama Peminjam";
             // 
             // buttonSubmit
             // 
