@@ -34,7 +34,7 @@
             this.btn_en = new System.Windows.Forms.Button();
             this.buttonBook = new System.Windows.Forms.Button();
             this.buttonPeminjaman = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelGreeting
@@ -109,22 +109,23 @@
             this.buttonPeminjaman.UseVisualStyleBackColor = true;
             this.buttonPeminjaman.Click += new System.EventHandler(this.buttonPeminjaman_Click);
             // 
-            // button1
+            // buttonSearch
             // 
-            this.button1.Location = new System.Drawing.Point(459, 542);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 62);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Cari Buku";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSearch.Location = new System.Drawing.Point(459, 542);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(186, 62);
+            this.buttonSearch.TabIndex = 9;
+            this.buttonSearch.Text = "Cari Buku";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // PageDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 617);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonPeminjaman);
             this.Controls.Add(this.btn_en);
             this.Controls.Add(this.LabelChooseLang);
@@ -150,7 +151,7 @@
         private System.Windows.Forms.Button btn_en;
         private System.Windows.Forms.Button buttonPeminjaman;
         private System.Windows.Forms.Button buttonBook;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSearch;
     }
 }
 
