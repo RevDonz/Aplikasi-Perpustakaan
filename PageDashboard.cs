@@ -64,7 +64,7 @@ namespace Aplikasi_Perpustakaan
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SearchBook bookSearch = new SearchBook();
+            PageSearchBook bookSearch = new PageSearchBook();
             bookSearch.Closed += (s, args) => this.Close();
             bookSearch.Show();
         }

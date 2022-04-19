@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aplikasi_Perpustakaan
 {
-    public partial class SearchBook : Form
+    public partial class PageSearchBook : Form
     {
-        public SearchBook()
+        public PageSearchBook()
         {
             InitializeComponent();
         }
