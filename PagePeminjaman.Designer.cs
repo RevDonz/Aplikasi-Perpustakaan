@@ -33,7 +33,7 @@
             this.labelPenulis = new System.Windows.Forms.Label();
             this.labelIdBuku = new System.Windows.Forms.Label();
             this.inputNama = new System.Windows.Forms.TextBox();
-            this.labelJudul = new System.Windows.Forms.Label();
+            this.labelPeminjam = new System.Windows.Forms.Label();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.dgvDataBuku = new System.Windows.Forms.DataGridView();
@@ -100,16 +100,16 @@
             this.inputNama.Size = new System.Drawing.Size(182, 20);
             this.inputNama.TabIndex = 14;
             // 
-            // labelJudul
+            // labelPeminjam
             // 
-            this.labelJudul.AutoSize = true;
-            this.labelJudul.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJudul.Location = new System.Drawing.Point(42, 170);
-            this.labelJudul.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(96, 15);
-            this.labelJudul.TabIndex = 13;
-            this.labelJudul.Text = "Nama Peminjam";
+            this.labelPeminjam.AutoSize = true;
+            this.labelPeminjam.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPeminjam.Location = new System.Drawing.Point(42, 170);
+            this.labelPeminjam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPeminjam.Name = "labelJudul";
+            this.labelPeminjam.Size = new System.Drawing.Size(96, 15);
+            this.labelPeminjam.TabIndex = 13;
+            this.labelPeminjam.Text = "Nama Peminjam";
             // 
             // buttonSubmit
             // 
@@ -199,7 +199,7 @@
             this.Controls.Add(this.labelPenulis);
             this.Controls.Add(this.labelIdBuku);
             this.Controls.Add(this.inputNama);
-            this.Controls.Add(this.labelJudul);
+            this.Controls.Add(this.labelPeminjam);
             this.Controls.Add(this.dgvDataPeminjaman);
             this.Controls.Add(this.backButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -222,7 +222,7 @@
         private System.Windows.Forms.Label labelPenulis;
         private System.Windows.Forms.Label labelIdBuku;
         private System.Windows.Forms.TextBox inputNama;
-        private System.Windows.Forms.Label labelJudul;
+        private System.Windows.Forms.Label labelPeminjam;
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.DataGridView dgvDataBuku;

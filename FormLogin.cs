@@ -12,7 +12,10 @@ namespace Aplikasi_Perpustakaan
 {
     public partial class FormLogin : Form
     {
+        public string messageLogin;
+        public string alertLogin;
         int attempt = 0;
+
         public FormLogin()
         {
             InitializeComponent();
@@ -26,7 +29,7 @@ namespace Aplikasi_Perpustakaan
             if(username.Contains(inputUsername.Text) && password.Contains(inputPassword.Text) && Array.IndexOf(username, inputUsername.Text) ==
                 Array.IndexOf(password, inputPassword.Text))
             {
-                DialogResult result = MessageBox.Show("Sukses Login! Selamat Datang di MyLibrary");
+                DialogResult result = MessageBox.Show(this.messageLogin);
                 if (result == DialogResult.OK)
                 {
                     this.Hide();
@@ -39,7 +42,7 @@ namespace Aplikasi_Perpustakaan
             {
                 inputUsername.Clear();
                 inputPassword.Clear();
-                MessageBox.Show("Username atau Password Salah!");
+                MessageBox.Show(this.alertLogin);
                 attempt += 1;
 
                 if (attempt == 3)
@@ -52,7 +55,18 @@ namespace Aplikasi_Perpustakaan
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            if (conf.bahasa == "id")
+            {
+                this.messageLogin = conf.text.messageLogin.id;
+                this.alertLogin = conf.text.alertLogin.id;
+            }
+            else
+            {
+                this.messageLogin = conf.text.messageLogin.en;
+                this.alertLogin = conf.text.alertLogin.en;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
