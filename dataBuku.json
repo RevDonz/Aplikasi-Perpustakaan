@@ -72,41 +72,17 @@
       "status_peminjaman": "dikonfirmasi"
     },
     {
-      "nama_peminjam": "Baru",
-      "id_buku": 2,
-      "tanggal_pinjam": "0001-01-01T00:00:00",
+      "nama_peminjam": "Saya adalah seorangmanusiayang ljhasdfjkhalsdfhjk",
+      "id_buku": 4,
+      "tanggal_pinjam": "2022-04-19T13:08:42.7613721+07:00",
       "status_peminjaman": "dikonfirmasi"
     },
     {
-      "nama_peminjam": "Baru",
-      "id_buku": 2,
-      "tanggal_pinjam": "0001-01-01T00:00:00",
-      "status_peminjaman": "dikonfirmasi"
-    },
-    {
-      "nama_peminjam": "Baru",
-      "id_buku": 2,
-      "tanggal_pinjam": "0001-01-01T00:00:00",
-      "status_peminjaman": "dikonfirmasi"
-    },
-    {
-      "nama_peminjam": "Baru",
-      "id_buku": 2,
-      "tanggal_pinjam": "0001-01-01T00:00:00",
-      "status_peminjaman": "dikonfirmasi"
-    },
-    {
-      "nama_peminjam": "Baru",
-      "id_buku": 2,
-      "tanggal_pinjam": "0001-01-01T00:00:00",
-      "status_peminjaman": "dikonfirmasi"
-    },
-    {
-      "nama_peminjam": "Rama",
-      "id_buku": 3,
-      "tanggal_pinjam": "2022-04-19T12:46:51.6754999+07:00",
+      "nama_peminjam": "Saya adalah seorangmanusiayang ljhasdfjkhalsdfhjk",
+      "id_buku": 4,
+      "tanggal_pinjam": "2022-04-19T13:08:44.8626102+07:00",
       "status_peminjaman": "dikonfirmasi"
     }
   ],
-  "path": "D:\\Aplikasi-Perpustakaan\\dataBuku.json"
+  "path": "E:\\SEMESTER 4\\Konstruksi Perangkat Lunak\\Tugas Besar\\Aplikasi Perpustakaan\\dataBuku.json"
 }

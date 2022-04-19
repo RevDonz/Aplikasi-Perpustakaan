@@ -17,15 +17,6 @@ namespace Aplikasi_Perpustakaan
         public PagePeminjaman()
         {
             InitializeComponent();
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
-            List<Peminjaman> list_peminjaman = new List<Peminjaman>();
-            Raw raw = Raw.getRecord(path);
-            list_peminjaman = raw.peminjaman;
-            dgvDataPeminjaman.DataSource = this.ToDataTable(list_peminjaman);
-
-            List<Buku> list_buku = new List<Buku>();
-            list_buku = raw.buku;
-            dgvDataBuku.DataSource = this.ToDataTable(list_buku);
         }
 
         public DataTable ToDataTable<T>(List<T> items)
@@ -52,7 +43,6 @@ namespace Aplikasi_Perpustakaan
             return dataTable;
         }
 
-
         private void PeminjamanPage_Load(object sender, EventArgs e)
         {
             ProgramConfig config = new ProgramConfig();
@@ -65,6 +55,18 @@ namespace Aplikasi_Perpustakaan
             {
                 this.inputIdBuku.Items.Add(item.idBuku);
             }
+
+            List<Peminjaman> list_peminjaman = new List<Peminjaman>();
+            List<Buku> list_buku = new List<Buku>();
+
+            list_peminjaman = raw.peminjaman;
+            dgvDataPeminjaman.DataSource = this.ToDataTable(list_peminjaman);
+            
+            list_buku = raw.buku;
+            dgvDataBuku.DataSource = this.ToDataTable(list_buku);
+
+            comboBoxStatus.SelectedItem = "dikonfirmasi";
+            inputIdBuku.SelectedItem = 1;
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -94,6 +96,13 @@ namespace Aplikasi_Perpustakaan
                 MessageBox.Show("Id Buku harus berupa angka");
             }
 
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            comboBoxStatus.SelectedItem = "dikonfirmasi";
+            inputIdBuku.SelectedItem = 1;
+            inputNama.Text = "";
         }
     }
 }
