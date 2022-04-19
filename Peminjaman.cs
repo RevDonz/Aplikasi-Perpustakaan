@@ -27,11 +27,6 @@ namespace Aplikasi_Perpustakaan
         {
             raw.peminjaman.Add(data);
             string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
-            //using (StreamWriter file = File.CreateText(path))
-            //{
-            //    JsonSerializer serializer = new JsonSerializer();
-            //    serializer.Serialize(file, raw);
-            //}
             File.WriteAllText(raw.path, json);
             return raw;
         }

@@ -56,9 +56,9 @@
     },
     {
       "idBuku": 7,
-      "judulBuku": "BUKUBARU",
+      "judulBuku": "Judulnya diganti",
       "jumlahHalaman": 10,
-      "penulis": "Bukan saya",
+      "penulis": "Bukan Saya",
       "penerbit": "Gramedia",
       "tahunTerbit": 2022,
       "status": "disimpan"
@@ -69,7 +69,7 @@
       "nama_peminjam": "Saya",
       "id_buku": 5,
       "tanggal_pinjam": "2022-04-14T00:00:00",
-      "status_peminjaman": "dikonfirmasi"
+      "status_peminjaman": "dikembalikan"
     },
     {
       "nama_peminjam": "Saya adalah seorangmanusiayang ljhasdfjkhalsdfhjk",
@@ -81,6 +81,12 @@
       "nama_peminjam": "Saya adalah seorangmanusiayang ljhasdfjkhalsdfhjk",
       "id_buku": 4,
       "tanggal_pinjam": "2022-04-19T13:08:44.8626102+07:00",
+      "status_peminjaman": "dikonfirmasi"
+    },
+    {
+      "nama_peminjam": "Baru",
+      "id_buku": 2,
+      "tanggal_pinjam": "2022-04-19T14:27:03.2360366+07:00",
       "status_peminjaman": "dikonfirmasi"
     }
   ],

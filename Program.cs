@@ -15,46 +15,26 @@ namespace Aplikasi_Perpustakaan
         [STAThread]
         static void Main()
         {
-            //Peminjaman peminjaman1 = new Peminjaman("Baru", 2, new DateTime(), "dikonfirmasi");
-            //Buku buku1 = new Buku(7, "BUKUBARU", 10, "Bukan saya", "Gramedia", 2022, "disimpan");
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
+            
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new PageDashboard());
 
-            //string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
-            //System.Diagnostics.Debug.WriteLine(path);
+            Raw raw = Raw.getRecord(path);
 
-            //Raw raw = Raw.getRecord(path);
-            //raw = buku1.tambah(raw);
-
-            //raw = Peminjaman.pinjam(raw, peminjaman1);
-            //raw = Buku.tambah(raw, buku1);
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PageDashboard());
-
-            //raw = Buku.update(raw, 2, "hilang");
-
-            //list<buku> list_buku = new list<buku>();
-            //list<peminjaman> list_peminjaman = new list<peminjaman>();
-
-            //list_buku = raw.buku;
-            //list_peminjaman = raw.peminjaman;
-
-
-            //foreach (buku buku in list_buku)
-            //{
-            //    system.diagnostics.debug.writeline(buku.penulis);
-            //}
-            //foreach (peminjaman peminjaman in list_peminjaman)
-            //{
-            //    system.diagnostics.debug.writeline(peminjaman.tanggal_pinjam.tostring("dd/mm/yyyy"));
-            //}
-            //CariBuku book = new CariBuku();
-            //dynamic q = book.BukuTersedia("Buku1");
-            //Console.WriteLine(q);
-
-            //dynamic rq = book.BukuTersedia("Buku1");
-            //Console.WriteLine(rq);
-
+            Buku buku1 = new Buku(7, "BUKU BARU", 10, "Bukan Saya", "Gramedia", 2022, "disimpan");
+            raw = buku1.tambah(raw);
+            foreach (Buku item in raw.buku)
+            {
+                System.Diagnostics.Debug.WriteLine(item.judulBuku);
+            }
+            buku1.judulBuku = "Judulnya diganti";
+            raw = buku1.update(raw);
+            foreach (Buku item in raw.buku)
+            {
+                System.Diagnostics.Debug.WriteLine(item.judulBuku);
+            }
         }
     }
 }
