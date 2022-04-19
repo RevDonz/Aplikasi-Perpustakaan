@@ -47,7 +47,7 @@ namespace Aplikasi_Perpustakaan
             //dynamic q = book.BukuTersedia("Buku1");
             //Console.WriteLine(q);
 
-            dynamic rq = book.BukuTersedia("Buku10");
+            dynamic rq = book.BukuTersedia("Buku1");
             Console.WriteLine(rq);
 
         }
