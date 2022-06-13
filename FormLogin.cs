@@ -68,6 +68,11 @@ namespace Aplikasi_Perpustakaan
                 this.alertLogin = conf.text.alertLogin.en;
             }
         }
+        private void inputPassword_TextChanged(object sender, EventArgs e)
+        {
+            inputPassword.ForeColor = Color.Black;
+            inputPassword.PasswordChar = '●';
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -97,16 +102,6 @@ namespace Aplikasi_Perpustakaan
 
         private void label2_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void inputPassword_TextChanged(object sender, EventArgs e)
-        {
-           
-
-            inputPassword.ForeColor = Color.Black;
-
-            inputPassword.PasswordChar = '●';
 
         }
 

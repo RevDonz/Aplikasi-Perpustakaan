@@ -40,7 +40,9 @@ namespace Aplikasi_Perpustakaan
 
         private void SearchBook_Load(object sender, EventArgs e)
         {
-
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            this.Size = new Size(conf.width, conf.height);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Aplikasi_Perpustakaan
             this.tanggal_pinjam = tanggal_pinjam;
             this.status_peminjaman = status_peminjaman;
         }
-
+        
         public static Raw pinjam(Raw raw, Peminjaman data)
         {
             raw.peminjaman.Add(data);
