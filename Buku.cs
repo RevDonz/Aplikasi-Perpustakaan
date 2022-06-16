@@ -10,7 +10,7 @@ namespace Aplikasi_Perpustakaan
 {
     internal class Buku
     {
-        public int idBuku { get; set; }
+        public string idBuku { get; set; }
         public string judulBuku { get; set; }
         public int jumlahHalaman { get; set; }
         public string penulis { get; set; }
@@ -18,7 +18,7 @@ namespace Aplikasi_Perpustakaan
         public int tahunTerbit { get; set; }
         public string status { get; set; }
 
-        public Buku(int idBuku, string judulBuku, int jumlahHalaman, string penulis, string penerbit, int tahunTerbit, string status)
+        public Buku(string idBuku, string judulBuku, int jumlahHalaman, string penulis, string penerbit, int tahunTerbit, string status)
         {
             this.idBuku = idBuku;
             this.judulBuku = judulBuku;
@@ -29,7 +29,7 @@ namespace Aplikasi_Perpustakaan
             this.status = status;
         }
 
-        public static Buku search(Raw data, int id_buku)
+        public static Buku search(Raw data, string id_buku)
         {
             foreach (Buku item in data.buku)
             {

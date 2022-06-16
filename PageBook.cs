@@ -4,6 +4,7 @@ using System.Data;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using LibrariesAPI;
 
 namespace Aplikasi_Perpustakaan
 {
@@ -54,20 +55,25 @@ namespace Aplikasi_Perpustakaan
                 backButton.Text = conf.button.kembali.en;
             }
 
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
-            List<Buku> list_buku = new List<Buku>();
-            Raw raw = Raw.getRecord(path);
+            //string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
+            //List<Buku> list_buku = new List<Buku>();
+            //Raw raw = Raw.getRecord(path);
 
-            list_buku = raw.buku;
-            dgvDataBuku.DataSource = this.ToDataTable(list_buku);
+            //list_buku = raw.buku;
+
+            string url = "https://w5bzmo.deta.dev/buku/get";
+            dynamic result = LibrariesAPI.API.Get<Buku>(url);
+
+            dgvDataBuku.DataSource = this.ToDataTable(result);
 
             inputStatus.SelectedItem = "disimpan";
             inputIdBuku.SelectedItem = 1;
 
-            foreach (Buku item in raw.buku)
+            foreach (Buku item in result)
             {
                 this.inputIdBuku.Items.Add(item.idBuku);
             }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -104,7 +110,7 @@ namespace Aplikasi_Perpustakaan
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
             Raw raw = Raw.getRecord(path);
 
-            int id_buku = int.Parse(this.inputIdBuku.Text);
+            string id_buku = this.inputIdBuku.Text;
             string judul = this.inputJudul.Text;
             int jumlahHalaman = int.Parse(this.inputJmlHal.Text);
             string penulis = this.inputPenulis.Text;

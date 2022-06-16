@@ -66,7 +66,7 @@
       "nama_peminjam": "Rama",
       "id_buku": 4,
       "tanggal_pinjam": "2022-04-19T20:51:16.0561554+07:00",
-      "status_peminjaman": "dikonfirmasi"
+      "status_peminjaman": "dikembalikan"
     },
     {
       "nama_peminjam": "Doni",
