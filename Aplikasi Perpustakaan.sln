@@ -4,11 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplikasi Perpustakaan", "Aplikasi Perpustakaan.csproj", "{CBBFAF07-EC7C-4B67-8F01-580D2BE47166}"
-	ProjectSection(ProjectDependencies) = postProject
-		{219FA623-6C68-4EDF-9965-7381D2939B93} = {219FA623-6C68-4EDF-9965-7381D2939B93}
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAPI", "..\TesAPI\TestAPI.csproj", "{219FA623-6C68-4EDF-9965-7381D2939B93}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrariesAPI", "..\LibrariesAPI\LibrariesAPI.csproj", "{1E8B3923-E15A-423B-9DA9-7E4250B0583C}"
 EndProject
@@ -22,10 +17,6 @@ Global
 		{CBBFAF07-EC7C-4B67-8F01-580D2BE47166}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBBFAF07-EC7C-4B67-8F01-580D2BE47166}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBBFAF07-EC7C-4B67-8F01-580D2BE47166}.Release|Any CPU.Build.0 = Release|Any CPU
-		{219FA623-6C68-4EDF-9965-7381D2939B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{219FA623-6C68-4EDF-9965-7381D2939B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{219FA623-6C68-4EDF-9965-7381D2939B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{219FA623-6C68-4EDF-9965-7381D2939B93}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E8B3923-E15A-423B-9DA9-7E4250B0583C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E8B3923-E15A-423B-9DA9-7E4250B0583C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E8B3923-E15A-423B-9DA9-7E4250B0583C}.Release|Any CPU.ActiveCfg = Release|Any CPU

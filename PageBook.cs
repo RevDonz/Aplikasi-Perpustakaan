@@ -55,12 +55,6 @@ namespace Aplikasi_Perpustakaan
                 backButton.Text = conf.button.kembali.en;
             }
 
-            //string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
-            //List<Buku> list_buku = new List<Buku>();
-            //Raw raw = Raw.getRecord(path);
-
-            //list_buku = raw.buku;
-
             string url = "https://w5bzmo.deta.dev/buku/get";
             dynamic result = LibrariesAPI.API.Get<Buku>(url);
 
@@ -129,6 +123,7 @@ namespace Aplikasi_Perpustakaan
                     break;
                 }
             }
+
             if (!found)
             {
                 raw = buku.tambah(raw);
