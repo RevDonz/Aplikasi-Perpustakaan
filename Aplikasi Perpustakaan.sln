@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplikasi Perpustakaan", "Aplikasi Perpustakaan.csproj", "{CBBFAF07-EC7C-4B67-8F01-580D2BE47166}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplikasi Perpustakaan", "Aplikasi Perpustakaan\Aplikasi Perpustakaan.csproj", "{CBBFAF07-EC7C-4B67-8F01-580D2BE47166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrariesAPI", "..\LibrariesAPI\LibrariesAPI.csproj", "{1E8B3923-E15A-423B-9DA9-7E4250B0583C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrariesAPI", "LibrariesAPI\LibrariesAPI.csproj", "{1E8B3923-E15A-423B-9DA9-7E4250B0583C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
