@@ -35,8 +35,6 @@ namespace LibrariesAPI
                 jsonString = reader.ReadToEnd();
             }
 
-            Console.WriteLine(jsonString);
-
             List<T> items = JsonConvert.DeserializeObject<List<T>>(jsonString);
             return items as List<T>;
 
@@ -60,6 +58,20 @@ namespace LibrariesAPI
             {
                 return false;
             }
+        }
+
+        public static bool Delete(String url)
+        {
+            HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(String.Format(url));
+            WebReq.Method = "DELETE";
+            HttpWebResponse WebResp = (HttpWebResponse)WebReq.GetResponse();
+
+            if (WebResp.GetResponseStream() != null)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 

@@ -1,10 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aplikasi_Perpustakaan
 {
@@ -27,6 +22,22 @@ namespace Aplikasi_Perpustakaan
             this.penerbit = penerbit;
             this.tahunTerbit = tahunTerbit;
             this.status = status;
+        }
+
+        public static dynamic GetDataBuku()
+        {
+            string url = "https://w5bzmo.deta.dev/buku/get";
+            dynamic result = LibrariesAPI.API.Get<Buku>(url);
+
+            return result;
+        }
+
+        public static dynamic DeleteDataBuku(string id)
+        {
+            string url = "https://w5bzmo.deta.dev/buku/delete?id_buku=" + id;
+            dynamic result = LibrariesAPI.API.Delete(url);
+
+            return result;
         }
 
         public static Buku search(Raw data, string id_buku)
