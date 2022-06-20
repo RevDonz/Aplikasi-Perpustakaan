@@ -55,18 +55,10 @@ namespace Aplikasi_Perpustakaan
                 backButton.Text = conf.button.kembali.en;
             }
 
-            string url = "https://w5bzmo.deta.dev/buku/get";
-            dynamic result = LibrariesAPI.API.Get<Buku>(url);
-
+            dynamic result = Buku.GetDataBuku();
             dgvDataBuku.DataSource = this.ToDataTable(result);
 
             inputStatus.SelectedItem = "disimpan";
-            inputIdBuku.SelectedItem = 1;
-
-            foreach (Buku item in result)
-            {
-                this.inputIdBuku.Items.Add(item.idBuku);
-            }
             
         }
 
@@ -85,7 +77,7 @@ namespace Aplikasi_Perpustakaan
 
         private void dgvDataBuku_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void labelJudul_Click(object sender, EventArgs e)
@@ -101,10 +93,7 @@ namespace Aplikasi_Perpustakaan
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
-            Raw raw = Raw.getRecord(path);
-
-            string id_buku = this.inputIdBuku.Text;
+            string id_buku = null;
             string judul = this.inputJudul.Text;
             int jumlahHalaman = int.Parse(this.inputJmlHal.Text);
             string penulis = this.inputPenulis.Text;
@@ -113,29 +102,20 @@ namespace Aplikasi_Perpustakaan
             string status = this.inputStatus.Text;
 
             Buku buku = new Buku(id_buku, judul, jumlahHalaman, penulis, penerbit, tahun, status);
+            dynamic result = Buku.TambahBuku(buku);
 
-            bool found = false;
-            foreach (Buku item in raw.buku)
+            if (result)
             {
-                if (item.idBuku == buku.idBuku)
-                {
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found)
-            {
-                raw = buku.tambah(raw);
                 MessageBox.Show("Buku berhasil ditambahkan");
+                dynamic resBuku = Buku.GetDataBuku();
+                dgvDataBuku.DataSource = this.ToDataTable(resBuku);
+                resetInput();
             }
             else
             {
-                raw = buku.update(raw);
-                MessageBox.Show("Buku berhasil diupdate");
+                MessageBox.Show("Buku gagal ditambahkan");
+                resetInput();
             }
-            dgvDataBuku.DataSource = null;
-            dgvDataBuku.DataSource = this.ToDataTable(raw.buku);
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -148,9 +128,50 @@ namespace Aplikasi_Perpustakaan
 
         }
 
+        private void dgvDataBuku_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = dgvDataBuku.Rows[index];
+
+            labelIdBuku.Text = selectedRow.Cells[0].Value.ToString();
+            inputJudul.Text = selectedRow.Cells[1].Value.ToString();
+            inputJmlHal.Text = selectedRow.Cells[2].Value.ToString();
+            inputPenulis.Text = selectedRow.Cells[3].Value.ToString();
+            inputPenerbit.Text = selectedRow.Cells[4].Value.ToString();
+            inputTahun.Text = selectedRow.Cells[5].Value.ToString();
+            inputStatus.SelectedItem = selectedRow.Cells[6].Value.ToString();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            dynamic result = Buku.DeleteDataBuku(labelIdBuku.Text);
+
+            if (result != null)
+            {
+                MessageBox.Show("Hapus Data Berhasil", "Berhasil");
+                dynamic buku = Buku.GetDataBuku();
+                dgvDataBuku.DataSource = this.ToDataTable(buku);
+                resetInput();
+            } 
+            else
+            {
+                MessageBox.Show("Hapus Data Gagal", "Gagal");
+                resetInput();
+            }
+        }
+
+        private void resetInput()
+        {
+            inputJmlHal.Text = "";
+            inputJudul.Text = "";
+            inputPenerbit.Text = "";
+            inputPenulis.Text = "";
+            inputTahun.Text = "";
+        }
+
         private void buttonReset_Click(object sender, EventArgs e)
         {
-
+            resetInput();
         }
     }
 }
