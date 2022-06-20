@@ -58,6 +58,10 @@ namespace Aplikasi_Perpustakaan
             dynamic result = Buku.GetDataBuku();
             dgvDataBuku.DataSource = this.ToDataTable(result);
 
+            Buku resById = Buku.GetDataBuku("Bu100OraOra2000");
+            Console.WriteLine(resById.penulis);
+            Console.WriteLine(resById.penerbit);
+
             inputStatus.SelectedItem = "disimpan";
             
         }
@@ -93,17 +97,28 @@ namespace Aplikasi_Perpustakaan
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
+            
             string id_buku = null;
             string judul = this.inputJudul.Text;
-            int jumlahHalaman = int.Parse(this.inputJmlHal.Text);
+            string jumlahHalaman = this.inputJmlHal.Text;
             string penulis = this.inputPenulis.Text;
             string penerbit = this.inputPenerbit.Text;
-            int tahun = int.Parse(this.inputTahun.Text);
+            string tahun = this.inputTahun.Text;
             string status = this.inputStatus.Text;
 
-            Buku buku = new Buku(id_buku, judul, jumlahHalaman, penulis, penerbit, tahun, status);
-            dynamic result = Buku.TambahBuku(buku);
+            
+            if (jumlahHalaman == "")
+            {
+                jumlahHalaman = "0";
+            }
+            if (tahun == "")
+            {
+                tahun = "0";
+            }
 
+            Buku buku = new Buku(id_buku, judul, int.Parse(jumlahHalaman), penulis, penerbit, int.Parse(tahun), status);
+            dynamic result = Buku.TambahBuku(buku);
+            
             if (result)
             {
                 MessageBox.Show("Buku berhasil ditambahkan");

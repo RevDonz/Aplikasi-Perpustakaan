@@ -32,6 +32,14 @@ namespace Aplikasi_Perpustakaan
             return result;
         }
 
+        public static dynamic GetDataBuku(string idBuku)
+        {
+            string url = "https://w5bzmo.deta.dev/buku/get?idBuku=" + idBuku;
+            dynamic result = LibrariesAPI.API.GetById<Buku>(url);
+
+            return result;
+        }
+
         public static dynamic TambahBuku(Buku buku)
         {
             string url = "https://w5bzmo.deta.dev/buku/post";
@@ -91,12 +99,5 @@ namespace Aplikasi_Perpustakaan
             }
         }
 
-        public Raw tambah(Raw raw)
-        {
-            raw.buku.Add(this);
-            string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
-            File.WriteAllText(raw.path, json);
-            return raw;
-        }
     }
 }
