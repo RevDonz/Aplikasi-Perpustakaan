@@ -105,7 +105,7 @@ namespace Aplikasi_Perpustakaan
             string penerbit = this.inputPenerbit.Text;
             string tahun = this.inputTahun.Text;
             string status = this.inputStatus.Text;
-
+            
             
             if (jumlahHalaman == "")
             {

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Aplikasi_Perpustakaan
@@ -25,13 +20,19 @@ namespace Aplikasi_Perpustakaan
         public bool BukuTersedia<T>(T cari)
         {
             dynamic temp = SearchBuku(cari);
+
             string convertTemp = Convert.ToString(temp);
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
 
-            List<Buku> list_buku = new List<Buku>();
+            //string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
 
-            Raw raw = Raw.getRecord(path);
-            list_buku = raw.buku;
+            //List<Buku> list_buku = new List<Buku>();
+
+            //Raw raw = Raw.getRecord(path);
+
+            //list_buku = raw.buku;
+
+            dynamic list_buku = Buku.GetDataBuku();
+
             for (int i = 0; i < list_buku.Count; i++)
             {
                 Buku dataBuku = list_buku[i];
@@ -45,10 +46,9 @@ namespace Aplikasi_Perpustakaan
         public void TampilDataBuku(bool hasil, dynamic cari)
         {
             cari = Convert.ToString(cari);
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
-            List<Buku> list_buku = new List<Buku>();
-            Raw raw = Raw.getRecord(path);
-            list_buku = raw.buku;
+
+            dynamic list_buku = Buku.GetDataBuku();
+
             if (hasil == true)
             {
                 for (int i = 0; i < list_buku.Count; i++)
