@@ -48,10 +48,10 @@
             // 
             this.backButton.BackColor = System.Drawing.Color.MintCream;
             this.backButton.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(29, 14);
-            this.backButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.backButton.Location = new System.Drawing.Point(22, 11);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(93, 37);
+            this.backButton.Size = new System.Drawing.Size(70, 30);
             this.backButton.TabIndex = 1;
             this.backButton.Text = "Kembali";
             this.backButton.UseVisualStyleBackColor = false;
@@ -61,12 +61,12 @@
             // 
             this.dgvDataPeminjaman.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvDataPeminjaman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDataPeminjaman.Location = new System.Drawing.Point(161, 386);
-            this.dgvDataPeminjaman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDataPeminjaman.Location = new System.Drawing.Point(121, 314);
+            this.dgvDataPeminjaman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDataPeminjaman.Name = "dgvDataPeminjaman";
             this.dgvDataPeminjaman.RowHeadersWidth = 51;
             this.dgvDataPeminjaman.RowTemplate.Height = 24;
-            this.dgvDataPeminjaman.Size = new System.Drawing.Size(608, 194);
+            this.dgvDataPeminjaman.Size = new System.Drawing.Size(463, 158);
             this.dgvDataPeminjaman.TabIndex = 2;
             this.dgvDataPeminjaman.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataBuku_CellContentClick);
             // 
@@ -74,9 +74,10 @@
             // 
             this.labelPenulis.AutoSize = true;
             this.labelPenulis.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPenulis.Location = new System.Drawing.Point(56, 261);
+            this.labelPenulis.Location = new System.Drawing.Point(42, 212);
+            this.labelPenulis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPenulis.Name = "labelPenulis";
-            this.labelPenulis.Size = new System.Drawing.Size(50, 20);
+            this.labelPenulis.Size = new System.Drawing.Size(40, 15);
             this.labelPenulis.TabIndex = 22;
             this.labelPenulis.Text = "Status";
             // 
@@ -84,27 +85,29 @@
             // 
             this.labelIdBuku.AutoSize = true;
             this.labelIdBuku.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIdBuku.Location = new System.Drawing.Point(56, 158);
+            this.labelIdBuku.Location = new System.Drawing.Point(42, 128);
+            this.labelIdBuku.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIdBuku.Name = "labelIdBuku";
-            this.labelIdBuku.Size = new System.Drawing.Size(63, 20);
+            this.labelIdBuku.Size = new System.Drawing.Size(50, 15);
             this.labelIdBuku.TabIndex = 16;
             this.labelIdBuku.Text = "ID Buku";
             // 
             // inputNama
             // 
-            this.inputNama.Location = new System.Drawing.Point(219, 207);
-            this.inputNama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.inputNama.Location = new System.Drawing.Point(164, 168);
+            this.inputNama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.inputNama.Name = "inputNama";
-            this.inputNama.Size = new System.Drawing.Size(241, 22);
+            this.inputNama.Size = new System.Drawing.Size(182, 20);
             this.inputNama.TabIndex = 14;
             // 
             // labelPeminjam
             // 
             this.labelPeminjam.AutoSize = true;
             this.labelPeminjam.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPeminjam.Location = new System.Drawing.Point(56, 209);
+            this.labelPeminjam.Location = new System.Drawing.Point(42, 170);
+            this.labelPeminjam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPeminjam.Name = "labelPeminjam";
-            this.labelPeminjam.Size = new System.Drawing.Size(122, 20);
+            this.labelPeminjam.Size = new System.Drawing.Size(96, 15);
             this.labelPeminjam.TabIndex = 13;
             this.labelPeminjam.Text = "Nama Peminjam";
             // 
@@ -112,10 +115,10 @@
             // 
             this.buttonSubmit.BackColor = System.Drawing.Color.MintCream;
             this.buttonSubmit.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubmit.Location = new System.Drawing.Point(59, 314);
-            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSubmit.Location = new System.Drawing.Point(44, 255);
+            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(79, 37);
+            this.buttonSubmit.Size = new System.Drawing.Size(59, 30);
             this.buttonSubmit.TabIndex = 23;
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = false;
@@ -125,10 +128,10 @@
             // 
             this.buttonReset.BackColor = System.Drawing.Color.MintCream;
             this.buttonReset.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReset.Location = new System.Drawing.Point(383, 314);
-            this.buttonReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonReset.Location = new System.Drawing.Point(287, 255);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(79, 37);
+            this.buttonReset.Size = new System.Drawing.Size(59, 30);
             this.buttonReset.TabIndex = 24;
             this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = false;
@@ -138,12 +141,12 @@
             // 
             this.dgvDataBuku.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvDataBuku.ColumnHeadersHeight = 29;
-            this.dgvDataBuku.Location = new System.Drawing.Point(529, 148);
-            this.dgvDataBuku.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDataBuku.Location = new System.Drawing.Point(397, 120);
+            this.dgvDataBuku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDataBuku.Name = "dgvDataBuku";
             this.dgvDataBuku.RowHeadersWidth = 51;
             this.dgvDataBuku.RowTemplate.Height = 24;
-            this.dgvDataBuku.Size = new System.Drawing.Size(349, 150);
+            this.dgvDataBuku.Size = new System.Drawing.Size(262, 122);
             this.dgvDataBuku.TabIndex = 25;
             // 
             // comboBoxStatus
@@ -154,10 +157,10 @@
             this.comboBoxStatus.Items.AddRange(new object[] {
             "dikonfirmasi",
             "dikembalikan"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(219, 260);
-            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxStatus.Location = new System.Drawing.Point(164, 211);
+            this.comboBoxStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(241, 24);
+            this.comboBoxStatus.Size = new System.Drawing.Size(182, 21);
             this.comboBoxStatus.TabIndex = 26;
             // 
             // inputIdBuku
@@ -166,10 +169,9 @@
             this.inputIdBuku.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.inputIdBuku.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.inputIdBuku.FormattingEnabled = true;
-            this.inputIdBuku.Location = new System.Drawing.Point(219, 158);
-            this.inputIdBuku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputIdBuku.Location = new System.Drawing.Point(164, 128);
             this.inputIdBuku.Name = "inputIdBuku";
-            this.inputIdBuku.Size = new System.Drawing.Size(241, 24);
+            this.inputIdBuku.Size = new System.Drawing.Size(182, 21);
             this.inputIdBuku.TabIndex = 27;
             this.inputIdBuku.SelectedIndexChanged += new System.EventHandler(this.inputIdBuku_SelectedIndexChanged);
             // 
@@ -177,20 +179,19 @@
             // 
             this.labeljudulpeminjaman.AutoSize = true;
             this.labeljudulpeminjaman.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeljudulpeminjaman.Location = new System.Drawing.Point(273, 55);
-            this.labeljudulpeminjaman.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labeljudulpeminjaman.Location = new System.Drawing.Point(205, 45);
             this.labeljudulpeminjaman.Name = "labeljudulpeminjaman";
-            this.labeljudulpeminjaman.Size = new System.Drawing.Size(471, 39);
+            this.labeljudulpeminjaman.Size = new System.Drawing.Size(379, 31);
             this.labeljudulpeminjaman.TabIndex = 28;
             this.labeljudulpeminjaman.Text = "Data Peminjaman MyLibrary";
             // 
             // PagePeminjaman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Turquoise;
-            this.ClientSize = new System.Drawing.Size(939, 617);
+            this.ClientSize = new System.Drawing.Size(704, 501);
             this.Controls.Add(this.labeljudulpeminjaman);
             this.Controls.Add(this.inputIdBuku);
             this.Controls.Add(this.comboBoxStatus);
@@ -204,7 +205,7 @@
             this.Controls.Add(this.dgvDataPeminjaman);
             this.Controls.Add(this.backButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PagePeminjaman";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Peminjaman";

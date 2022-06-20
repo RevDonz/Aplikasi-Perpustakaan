@@ -32,6 +32,14 @@ namespace Aplikasi_Perpustakaan
             return result;
         }
 
+        public static dynamic TambahBuku(Buku buku)
+        {
+            string url = "https://w5bzmo.deta.dev/buku/post";
+            dynamic result = LibrariesAPI.API.Post<Buku>(url, buku);
+
+            return result;
+        }
+
         public static dynamic DeleteDataBuku(string id)
         {
             string url = "https://w5bzmo.deta.dev/buku/delete?id_buku=" + id;

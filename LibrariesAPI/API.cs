@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Net.Http;
+using System.Text;
 
 namespace LibrariesAPI
 {
@@ -42,22 +44,22 @@ namespace LibrariesAPI
 
         public static bool Post<T>(String url, T value)
         {
-            HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(String.Format(url));
-            WebReq.Method = "POST";
-            //HttpWebResponse WebResp = (HttpWebResponse)WebReq.GetResponse();
 
-            if (typeof(T) == typeof(Buku))
-            {
-                return true;
-            }
-            else if (typeof(T) == typeof(Peminjaman))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            var json = JsonConvert.SerializeObject(value);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            HttpClient client = new HttpClient();
+
+            var response = client.PostAsync(url, data).Result;
+
+            string resString = response.Content.ReadAsStringAsync().Result;
+            
+            dynamic resJson= JsonConvert.DeserializeObject(resString);
+
+            //bool result = resJson.status ? true : false;
+            Console.WriteLine(resJson);
+            return true;
+            
         }
 
         public static bool Delete(String url)

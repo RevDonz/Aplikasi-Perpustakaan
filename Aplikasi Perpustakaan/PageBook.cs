@@ -93,10 +93,7 @@ namespace Aplikasi_Perpustakaan
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
-            Raw raw = Raw.getRecord(path);
-
-            string id_buku = "idBuku";
+            string id_buku = null;
             string judul = this.inputJudul.Text;
             int jumlahHalaman = int.Parse(this.inputJmlHal.Text);
             string penulis = this.inputPenulis.Text;
@@ -105,29 +102,20 @@ namespace Aplikasi_Perpustakaan
             string status = this.inputStatus.Text;
 
             Buku buku = new Buku(id_buku, judul, jumlahHalaman, penulis, penerbit, tahun, status);
+            dynamic result = Buku.TambahBuku(buku);
 
-            bool found = false;
-            foreach (Buku item in raw.buku)
+            if (result)
             {
-                if (item.idBuku == buku.idBuku)
-                {
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found)
-            {
-                raw = buku.tambah(raw);
                 MessageBox.Show("Buku berhasil ditambahkan");
+                dynamic resBuku = Buku.GetDataBuku();
+                dgvDataBuku.DataSource = this.ToDataTable(resBuku);
+                resetInput();
             }
             else
             {
-                raw = buku.update(raw);
-                MessageBox.Show("Buku berhasil diupdate");
+                MessageBox.Show("Buku gagal ditambahkan");
+                resetInput();
             }
-            dgvDataBuku.DataSource = null;
-            dgvDataBuku.DataSource = this.ToDataTable(raw.buku);
         }
 
         private void label1_Click_1(object sender, EventArgs e)
