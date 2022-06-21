@@ -148,5 +148,18 @@ namespace Aplikasi_Perpustakaan
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+            labelIdBuku.Text = conf_bahasa.bahasaPagePeminjaman.labelIdBuku.en;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
