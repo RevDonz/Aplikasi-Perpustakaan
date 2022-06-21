@@ -23,20 +23,8 @@ namespace Aplikasi_Perpustakaan
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
             this.Size = new Size(conf.width, conf.height);
-            if (conf.bahasa == "id")
-            {
-                LabelGreeting.Text = conf.text.greeting.id;
-                buttonBook.Text = conf.button.dataBuku.id;
-                buttonPeminjaman.Text = conf.button.dataPeminjaman.id;
-                buttonSearch.Text = conf.button.cariBuku.id;
-            }
-            else
-            {
-                LabelGreeting.Text = conf.text.greeting.en;
-                buttonBook.Text = conf.button.dataBuku.en;
-                buttonPeminjaman.Text = conf.button.dataPeminjaman.en;
-                buttonSearch.Text = conf.button.cariBuku.en;
-            }
+            
+
         }
 
         private void LabelGreeting_Click(object sender, EventArgs e)
@@ -72,6 +60,27 @@ namespace Aplikasi_Perpustakaan
         private void LabelChooseLang_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            LabelGreeting.Text = conf.text.greeting.en;
+            buttonBook.Text = conf.button.dataBuku.en;
+            buttonPeminjaman.Text = conf.button.dataPeminjaman.en;
+            buttonSearch.Text = conf.button.cariBuku.en;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProgramConfig config = new ProgramConfig();
+            dynamic conf = config.ReadConfigFile();
+            LabelGreeting.Text = conf.text.greeting.id;
+            buttonBook.Text = conf.button.dataBuku.id;
+            buttonPeminjaman.Text = conf.button.dataPeminjaman.id;
+            buttonSearch.Text = conf.button.cariBuku.id;
         }
     }
 }
