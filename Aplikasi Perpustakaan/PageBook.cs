@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
@@ -105,32 +106,45 @@ namespace Aplikasi_Perpustakaan
             string penerbit = this.inputPenerbit.Text;
             string tahun = this.inputTahun.Text;
             string status = this.inputStatus.Text;
+            dynamic result = false;
 
-            
-            if (jumlahHalaman == "")
+            if (judul.Length >= 30)
             {
-                jumlahHalaman = "0";
+                MessageBox.Show("Judul Buku Terlalu Panjang");
+                inputJudul.Text = "";
             }
-            if (tahun == "")
+            else if (judul == null || jumlahHalaman == "" || penulis == null || penerbit == null || tahun == "")
             {
-                tahun = "0";
+                MessageBox.Show("Input tidak boleh kosong!");
             }
 
-            Buku buku = new Buku(id_buku, judul, int.Parse(jumlahHalaman), penulis, penerbit, int.Parse(tahun), status);
-            dynamic result = Buku.TambahBuku(buku);
-            
-            if (result)
+            else if (int.Parse(jumlahHalaman) >= 1000000)
             {
-                MessageBox.Show("Buku berhasil ditambahkan");
-                dynamic resBuku = Buku.GetDataBuku();
-                dgvDataBuku.DataSource = this.ToDataTable(resBuku);
-                resetInput();
+                Debug.Assert(int.Parse(jumlahHalaman) <= int.MaxValue);
+                Debug.Assert(int.Parse(jumlahHalaman) <= 1000000, "Input tidak boleh lebih dari 1 juta");
+
             }
             else
             {
-                MessageBox.Show("Buku gagal ditambahkan");
-                resetInput();
+                Buku buku = new Buku(id_buku, judul, int.Parse(jumlahHalaman), penulis, penerbit, int.Parse(tahun), status);
+               
+                result = Buku.TambahBuku(buku);
+
+                if (result)
+                {
+                    MessageBox.Show("Buku berhasil ditambahkan");
+                    dynamic resBuku = Buku.GetDataBuku();
+                    dgvDataBuku.DataSource = this.ToDataTable(resBuku);
+                    resetInput();
+                }
+                else
+                {
+                    MessageBox.Show("Buku gagal ditambahkan");
+                    resetInput();
+                }
+
             }
+           
         }
 
         private void label1_Click_1(object sender, EventArgs e)
