@@ -23,6 +23,7 @@ namespace Aplikasi_Perpustakaan
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
             this.Size = new Size(conf.width, conf.height);
+
             if (conf.bahasa == "id")
             {
                 LabelGreeting.Text = conf.text.greeting.id;

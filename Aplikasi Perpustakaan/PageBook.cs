@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
-using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using LibrariesAPI;
 
 namespace Aplikasi_Perpustakaan
 {
@@ -56,7 +53,8 @@ namespace Aplikasi_Perpustakaan
                 backButton.Text = conf.button.kembali.en;
             }
 
-            dynamic result = Buku.GetDataBuku();
+            List<Buku> result = Buku.GetDataBuku();
+
             dgvDataBuku.DataSource = this.ToDataTable(result);
 
             Buku resById = Buku.GetDataBuku("Bu100OraOra2000");
@@ -119,6 +117,15 @@ namespace Aplikasi_Perpustakaan
             }
 
             else if (int.Parse(jumlahHalaman) >= 1000000)
+
+            string status = null;
+            dynamic result = false;
+
+            Buku buku = new Buku(id_buku, judul, int.Parse(jumlahHalaman), penulis, penerbit, int.Parse(tahun), status);
+
+            result = Buku.TambahBuku(buku);
+
+            if (result)
             {
                 Debug.Assert(int.Parse(jumlahHalaman) <= int.MaxValue);
                 Debug.Assert(int.Parse(jumlahHalaman) <= 1000000, "Input tidak boleh lebih dari 1 juta");
@@ -144,7 +151,6 @@ namespace Aplikasi_Perpustakaan
                 }
 
             }
-           
         }
 
         private void label1_Click_1(object sender, EventArgs e)

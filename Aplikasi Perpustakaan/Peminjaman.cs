@@ -22,7 +22,31 @@ namespace Aplikasi_Perpustakaan
             this.tanggal_pinjam = tanggal_pinjam;
             this.status_peminjaman = status_peminjaman;
         }
-        
+
+        public static dynamic GetDataPeminjaman()
+        {
+            string url = "https://w5bzmo.deta.dev/peminjaman/get";
+            dynamic result = LibrariesAPI.API.Get<Buku>(url);
+
+            return result;
+        }
+
+        public static dynamic GetDataPeminjaman(string idPeminjaman)
+        {
+            string url = "https://w5bzmo.deta.dev/buku/get?idPeminjaman=" + idPeminjaman;
+            dynamic result = LibrariesAPI.API.GetById<Buku>(url);
+
+            return result;
+        }
+
+        public static dynamic TambahPeminjaman(Peminjaman peminjaman)
+        {
+            string url = "https://w5bzmo.deta.dev/buku/post";
+            dynamic result = LibrariesAPI.API.Post<Peminjaman>(url, peminjaman);
+
+            return result;
+        }
+
         public static Raw pinjam(Raw raw, Peminjaman data)
         {
             raw.peminjaman.Add(data);

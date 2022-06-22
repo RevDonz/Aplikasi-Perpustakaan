@@ -87,5 +87,9 @@
       "status_peminjaman": "dikonfirmasi"
     }
   ],
+<<<<<<< HEAD:dataBuku.json
+  "path": "D:\\TUBES KPL\\Aplikasi-Perpustakaan\\dataBuku.json"
+=======
   "path": "E:\\SEMESTER 4\\Konstruksi Perangkat Lunak\\Tugas Besar\\Aplikasi Perpustakaan\\dataBuku.json"
+>>>>>>> master:Aplikasi Perpustakaan/dataBuku.json
 }
