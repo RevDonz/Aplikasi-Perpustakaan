@@ -52,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LanguageCounter.cs" />
+    <Compile Include="ProgramConfigTranslate.cs" />
+    <Compile Include="ConfigTranslate.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +120,7 @@
       <DependentUpon>PageSearchBook.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="configApp.json" />
+    <None Include="configTranslate.json" />
     <None Include="dataBuku.json" />
     <None Include="configApp.json" />
     <None Include="packages.config" />

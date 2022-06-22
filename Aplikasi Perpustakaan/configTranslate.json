@@ -1,0 +1,42 @@
+{
+  "bahasaPagePeminjaman": {
+    "labelIdBuku": {
+      "id": "ID Buku",
+      "en": "Book ID"
+    },
+    "labelNamaPeminjam": {
+      "id": "Nama Peminjam",
+      "en": "Borrower's name"
+    }
+  },
+  "bahasaPageBook": {
+    "labelJudulBuku": {
+      "id": "Judul Buku",
+      "en": "Book's Title"
+    },
+    "labelPenulis": {
+      "id": "Penulis",
+      "en": "Writer"
+    },
+    "labelPenerbit": {
+      "id": "Penerbit",
+      "en": "Publisher"
+    },
+    "labelTahunPenerbit": {
+      "id": "Tahun Terbit",
+      "en": "Publication Year"
+    },
+    "labelJumlahHalaman": {
+      "id": "Jumlah Halaman",
+      "en": "Number of Pages"
+    },
+    "buttonHapus": {
+      "id": "Hapus",
+      "en": "Delete"
+    },
+    "buttonKembali": {
+      "id": "Kembali",
+      "en": "Back"
+    }
+  }
+}

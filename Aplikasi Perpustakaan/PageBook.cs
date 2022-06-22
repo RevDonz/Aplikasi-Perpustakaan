@@ -45,13 +45,31 @@ namespace Aplikasi_Perpustakaan
             dynamic conf = config.ReadConfigFile();
             this.Size = new System.Drawing.Size(conf.width, conf.height);
 
-            if (conf.bahasa == "id")
+            if (LanguageCounter.identifier == "en")
             {
-                backButton.Text = conf.button.kembali.id;
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+                labelJudul.Text = conf_bahasa.bahasaPageBook.labelJudulBuku.en;
+                labelPenulis.Text = conf_bahasa.bahasaPageBook.labelPenulis.en;
+                labelPenerbit.Text = conf_bahasa.bahasaPageBook.labelPenerbit.en;
+                labelTahun.Text = conf_bahasa.bahasaPageBook.labelTahunPenerbit.en;
+                labelJmlHal.Text = conf_bahasa.bahasaPageBook.labelJumlahHalaman.en;
+                backButton.Text = conf_bahasa.bahasaPageBook.buttonKembali.en;
+                buttonDelete.Text = conf_bahasa.bahasaPageBook.buttonHapus.en;
+                juduldatabuku.Text = "MyLibrary Book Data";
             }
-            else
+            else if(LanguageCounter.identifier == "id")
             {
-                backButton.Text = conf.button.kembali.en;
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+                labelJudul.Text = conf_bahasa.bahasaPageBook.labelJudulBuku.id;
+                labelPenulis.Text = conf_bahasa.bahasaPageBook.labelPenulis.id;
+                labelPenerbit.Text = conf_bahasa.bahasaPageBook.labelPenerbit.id;
+                labelTahun.Text = conf_bahasa.bahasaPageBook.labelTahunPenerbit.id;
+                labelJmlHal.Text = conf_bahasa.bahasaPageBook.labelJumlahHalaman.id;
+                backButton.Text = conf_bahasa.bahasaPageBook.buttonKembali.id;
+                buttonDelete.Text = conf_bahasa.bahasaPageBook.buttonHapus.id;
+                juduldatabuku.Text = "Data Buku MyLibrary";
             }
 
             List<Buku> result = Buku.GetDataBuku();
@@ -197,6 +215,11 @@ namespace Aplikasi_Perpustakaan
         private void buttonReset_Click(object sender, EventArgs e)
         {
             resetInput();
+        }
+
+        private void inputJudul_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
