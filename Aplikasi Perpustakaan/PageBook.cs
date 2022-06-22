@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using LibrariesAPI;
 
 namespace Aplikasi_Perpustakaan
 {
@@ -55,7 +53,8 @@ namespace Aplikasi_Perpustakaan
                 backButton.Text = conf.button.kembali.en;
             }
 
-            dynamic result = Buku.GetDataBuku();
+            List<Buku> result = Buku.GetDataBuku();
+
             dgvDataBuku.DataSource = this.ToDataTable(result);
 
             Buku resById = Buku.GetDataBuku("Bu100OraOra2000");
@@ -104,21 +103,13 @@ namespace Aplikasi_Perpustakaan
             string penulis = this.inputPenulis.Text;
             string penerbit = this.inputPenerbit.Text;
             string tahun = this.inputTahun.Text;
-            string status = this.inputStatus.Text;
-            
-            
-            if (jumlahHalaman == "")
-            {
-                jumlahHalaman = "0";
-            }
-            if (tahun == "")
-            {
-                tahun = "0";
-            }
+            string status = null;
+            dynamic result = false;
 
             Buku buku = new Buku(id_buku, judul, int.Parse(jumlahHalaman), penulis, penerbit, int.Parse(tahun), status);
-            dynamic result = Buku.TambahBuku(buku);
-            
+
+            result = Buku.TambahBuku(buku);
+
             if (result)
             {
                 MessageBox.Show("Buku berhasil ditambahkan");
@@ -131,6 +122,16 @@ namespace Aplikasi_Perpustakaan
                 MessageBox.Show("Buku gagal ditambahkan");
                 resetInput();
             }
+
+            //if (jumlahHalaman == "")
+            //{
+            //    jumlahHalaman = "0";
+            //}
+            //if (tahun == "")
+            //{
+            //    tahun = "0";
+            //}
+
         }
 
         private void label1_Click_1(object sender, EventArgs e)

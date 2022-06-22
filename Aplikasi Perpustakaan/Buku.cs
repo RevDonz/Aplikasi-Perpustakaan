@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Aplikasi_Perpustakaan
 {
-    internal class Buku
+    public class Buku
     {
         public string idBuku { get; set; }
         public string judulBuku { get; set; }
@@ -24,10 +25,10 @@ namespace Aplikasi_Perpustakaan
             this.status = status;
         }
 
-        public static dynamic GetDataBuku()
+        public static List<Buku> GetDataBuku()
         {
             string url = "https://w5bzmo.deta.dev/buku/get";
-            dynamic result = LibrariesAPI.API.Get<Buku>(url);
+            List<Buku> result = LibrariesAPI.API.Get<Buku>(url);
 
             return result;
         }
@@ -50,54 +51,54 @@ namespace Aplikasi_Perpustakaan
 
         public static dynamic DeleteDataBuku(string id)
         {
-            string url = "https://w5bzmo.deta.dev/buku/delete?id_buku=" + id;
+            string url = "https://w5bzmo.deta.dev/buku/delete?idBuku=" + id;
             dynamic result = LibrariesAPI.API.Delete(url);
 
             return result;
         }
 
-        public static Buku search(Raw data, string id_buku)
-        {
-            foreach (Buku item in data.buku)
-            {
-                if (item.idBuku == id_buku)
-                {
-                    return item;
-                }
-            }
-            return null;
-        }
+        //public static Buku search(Raw data, string id_buku)
+        //{
+        //    foreach (Buku item in data.buku)
+        //    {
+        //        if (item.idBuku == id_buku)
+        //        {
+        //            return item;
+        //        }
+        //    }
+        //    return null;
+        //}
 
-        public Raw update(Raw data)
-        {
-            bool changed = false;
+        //public Raw update(Raw data)
+        //{
+        //    bool changed = false;
 
-            foreach (Buku item in data.buku)
-            {
-                if (item.idBuku == this.idBuku)
-                {
-                    changed = true;
-                    item.status = status;
-                    item.judulBuku = this.judulBuku;
-                    item.jumlahHalaman = this.jumlahHalaman;
-                    item.penulis = this.penulis;
-                    item.penerbit = this.penerbit;
-                    item.tahunTerbit = this.tahunTerbit;
-                    break;
-                }
-            }
+        //    foreach (Buku item in data.buku)
+        //    {
+        //        if (item.idBuku == this.idBuku)
+        //        {
+        //            changed = true;
+        //            item.status = status;
+        //            item.judulBuku = this.judulBuku;
+        //            item.jumlahHalaman = this.jumlahHalaman;
+        //            item.penulis = this.penulis;
+        //            item.penerbit = this.penerbit;
+        //            item.tahunTerbit = this.tahunTerbit;
+        //            break;
+        //        }
+        //    }
 
-            string json = JsonConvert.SerializeObject(data, Formatting.Indented);
-            File.WriteAllText(data.path, json);
+        //    string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+        //    File.WriteAllText(data.path, json);
 
-            if (changed)
-            {
-                return data;
-            } else
-            {
-                return null;
-            }
-        }
+        //    if (changed)
+        //    {
+        //        return data;
+        //    } else
+        //    {
+        //        return null;
+        //    }
+        //}
 
     }
 }
