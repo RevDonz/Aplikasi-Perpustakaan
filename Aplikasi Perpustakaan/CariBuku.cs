@@ -43,8 +43,13 @@ namespace Aplikasi_Perpustakaan
             }
             return false;
         }
+
+        public enum status_buku { disimpan, dipinjam, hilang };
         public void TampilDataBuku(bool hasil, dynamic cari)
         {
+            status_buku stats_disimpan = status_buku.disimpan;
+            status_buku stats_dipinjam = status_buku.dipinjam;
+            status_buku stats_hilang = status_buku.hilang;
             cari = Convert.ToString(cari);
 
             dynamic list_buku = Buku.GetDataBuku();
@@ -56,8 +61,24 @@ namespace Aplikasi_Perpustakaan
                     Buku dataBuku = list_buku[i];
                     if (cari == dataBuku.judulBuku)
                     {
-                        MessageBox.Show("judul: " + dataBuku.judulBuku + "\n" + "id: " + dataBuku.idBuku + "\n" + "jumlah halaman: " + dataBuku.jumlahHalaman + "\n" + "peulis: " + dataBuku.penulis + "\n" + "status peminjaman: " + dataBuku.status);
-                        break;
+                        if (dataBuku.status == stats_disimpan.ToString())
+                        {
+                            MessageBox.Show("Buku Tersedia dan dapat dipinjam");
+                            MessageBox.Show("judul: " + dataBuku.judulBuku + "\n" + "id: " + dataBuku.idBuku + "\n" + "jumlah halaman: " + dataBuku.jumlahHalaman + "\n" + "peulis: " + dataBuku.penulis + "\n" + "status peminjaman: " + dataBuku.status);
+                            break;
+                        }
+                        else if (dataBuku.status == stats_dipinjam.ToString())
+                        {
+                            MessageBox.Show("Buku Sedang dipinjam, mohon bersabar :)");
+                            MessageBox.Show("judul: " + dataBuku.judulBuku + "\n" + "id: " + dataBuku.idBuku + "\n" + "jumlah halaman: " + dataBuku.jumlahHalaman + "\n" + "peulis: " + dataBuku.penulis + "\n" + "status peminjaman: " + dataBuku.status);
+                            break;
+                        }
+                        else if (dataBuku.status == stats_hilang.ToString())
+                        {
+                            MessageBox.Show("Mohon maaf, buku yang anda cari hilang");
+                            MessageBox.Show("judul: " + dataBuku.judulBuku + "\n" + "id: " + dataBuku.idBuku + "\n" + "jumlah halaman: " + dataBuku.jumlahHalaman + "\n" + "peulis: " + dataBuku.penulis + "\n" + "status peminjaman: " + dataBuku.status);
+                            break;
+                        }
                     }
                 }
             }
