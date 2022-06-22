@@ -10,7 +10,6 @@ namespace Aplikasi_Perpustakaan
     {
         public enum StatusBuku{disimpan, dipinjam, hilang};
         public enum Aksi { dipinjam, dikembalikan, hilang};
-
        
         public class Transisi
         {

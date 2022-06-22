@@ -1,16 +1,11 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Aplikasi_Perpustakaan
 {
     internal class Buku
     {
-        public int idBuku { get; set; }
+        public string idBuku { get; set; }
         public string judulBuku { get; set; }
         public int jumlahHalaman { get; set; }
         public string penulis { get; set; }
@@ -18,7 +13,7 @@ namespace Aplikasi_Perpustakaan
         public int tahunTerbit { get; set; }
         public string status { get; set; }
 
-        public Buku(int idBuku, string judulBuku, int jumlahHalaman, string penulis, string penerbit, int tahunTerbit, string status)
+        public Buku(string idBuku, string judulBuku, int jumlahHalaman, string penulis, string penerbit, int tahunTerbit, string status)
         {
             this.idBuku = idBuku;
             this.judulBuku = judulBuku;
@@ -29,7 +24,39 @@ namespace Aplikasi_Perpustakaan
             this.status = status;
         }
 
-        public static Buku search(Raw data, int id_buku)
+        public static dynamic GetDataBuku()
+        {
+            string url = "https://w5bzmo.deta.dev/buku/get";
+            dynamic result = LibrariesAPI.API.Get<Buku>(url);
+
+            return result;
+        }
+
+        public static dynamic GetDataBuku(string idBuku)
+        {
+            string url = "https://w5bzmo.deta.dev/buku/get?idBuku=" + idBuku;
+            dynamic result = LibrariesAPI.API.GetById<Buku>(url);
+
+            return result;
+        }
+
+        public static dynamic TambahBuku(Buku buku)
+        {
+            string url = "https://w5bzmo.deta.dev/buku/post";
+            dynamic result = LibrariesAPI.API.Post<Buku>(url, buku);
+
+            return result;
+        }
+
+        public static dynamic DeleteDataBuku(string id)
+        {
+            string url = "https://w5bzmo.deta.dev/buku/delete?id_buku=" + id;
+            dynamic result = LibrariesAPI.API.Delete(url);
+
+            return result;
+        }
+
+        public static Buku search(Raw data, string id_buku)
         {
             foreach (Buku item in data.buku)
             {
@@ -72,12 +99,5 @@ namespace Aplikasi_Perpustakaan
             }
         }
 
-        public Raw tambah(Raw raw)
-        {
-            raw.buku.Add(this);
-            string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
-            File.WriteAllText(raw.path, json);
-            return raw;
-        }
     }
 }

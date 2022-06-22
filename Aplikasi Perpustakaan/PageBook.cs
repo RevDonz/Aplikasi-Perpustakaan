@@ -4,6 +4,7 @@ using System.Data;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using LibrariesAPI;
 
 namespace Aplikasi_Perpustakaan
 {
@@ -54,20 +55,15 @@ namespace Aplikasi_Perpustakaan
                 backButton.Text = conf.button.kembali.en;
             }
 
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
-            List<Buku> list_buku = new List<Buku>();
-            Raw raw = Raw.getRecord(path);
+            dynamic result = Buku.GetDataBuku();
+            dgvDataBuku.DataSource = this.ToDataTable(result);
 
-            list_buku = raw.buku;
-            dgvDataBuku.DataSource = this.ToDataTable(list_buku);
+            Buku resById = Buku.GetDataBuku("Bu100OraOra2000");
+            Console.WriteLine(resById.penulis);
+            Console.WriteLine(resById.penerbit);
 
             inputStatus.SelectedItem = "disimpan";
-            inputIdBuku.SelectedItem = 1;
-
-            foreach (Buku item in raw.buku)
-            {
-                this.inputIdBuku.Items.Add(item.idBuku);
-            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -85,11 +81,8 @@ namespace Aplikasi_Perpustakaan
 
         private void dgvDataBuku_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
-
-
-        
 
         private void labelJudul_Click(object sender, EventArgs e)
 
@@ -104,40 +97,40 @@ namespace Aplikasi_Perpustakaan
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
-            Raw raw = Raw.getRecord(path);
-
-            int id_buku = int.Parse(this.inputIdBuku.Text);
+            
+            string id_buku = null;
             string judul = this.inputJudul.Text;
-            int jumlahHalaman = int.Parse(this.inputJmlHal.Text);
+            string jumlahHalaman = this.inputJmlHal.Text;
             string penulis = this.inputPenulis.Text;
             string penerbit = this.inputPenerbit.Text;
-            int tahun = int.Parse(this.inputTahun.Text);
+            string tahun = this.inputTahun.Text;
             string status = this.inputStatus.Text;
-
-            Buku buku = new Buku(id_buku, judul, jumlahHalaman, penulis, penerbit, tahun, status);
-
-            bool found = false;
-            foreach (Buku item in raw.buku)
+            
+            
+            if (jumlahHalaman == "")
             {
-                if (item.idBuku == buku.idBuku)
-                {
-                    found = true;
-                    break;
-                }
+                jumlahHalaman = "0";
             }
-            if (!found)
+            if (tahun == "")
             {
-                raw = buku.tambah(raw);
+                tahun = "0";
+            }
+
+            Buku buku = new Buku(id_buku, judul, int.Parse(jumlahHalaman), penulis, penerbit, int.Parse(tahun), status);
+            dynamic result = Buku.TambahBuku(buku);
+            
+            if (result)
+            {
                 MessageBox.Show("Buku berhasil ditambahkan");
+                dynamic resBuku = Buku.GetDataBuku();
+                dgvDataBuku.DataSource = this.ToDataTable(resBuku);
+                resetInput();
             }
             else
             {
-                raw = buku.update(raw);
-                MessageBox.Show("Buku berhasil diupdate");
+                MessageBox.Show("Buku gagal ditambahkan");
+                resetInput();
             }
-            dgvDataBuku.DataSource = null;
-            dgvDataBuku.DataSource = this.ToDataTable(raw.buku);
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -150,9 +143,50 @@ namespace Aplikasi_Perpustakaan
 
         }
 
+        private void dgvDataBuku_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = dgvDataBuku.Rows[index];
+
+            labelIdBuku.Text = selectedRow.Cells[0].Value.ToString();
+            inputJudul.Text = selectedRow.Cells[1].Value.ToString();
+            inputJmlHal.Text = selectedRow.Cells[2].Value.ToString();
+            inputPenulis.Text = selectedRow.Cells[3].Value.ToString();
+            inputPenerbit.Text = selectedRow.Cells[4].Value.ToString();
+            inputTahun.Text = selectedRow.Cells[5].Value.ToString();
+            inputStatus.SelectedItem = selectedRow.Cells[6].Value.ToString();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            dynamic result = Buku.DeleteDataBuku(labelIdBuku.Text);
+
+            if (result != null)
+            {
+                MessageBox.Show("Hapus Data Berhasil", "Berhasil");
+                dynamic buku = Buku.GetDataBuku();
+                dgvDataBuku.DataSource = this.ToDataTable(buku);
+                resetInput();
+            } 
+            else
+            {
+                MessageBox.Show("Hapus Data Gagal", "Gagal");
+                resetInput();
+            }
+        }
+
+        private void resetInput()
+        {
+            inputJmlHal.Text = "";
+            inputJudul.Text = "";
+            inputPenerbit.Text = "";
+            inputPenulis.Text = "";
+            inputTahun.Text = "";
+        }
+
         private void buttonReset_Click(object sender, EventArgs e)
         {
-
+            resetInput();
         }
     }
 }
