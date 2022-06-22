@@ -8,6 +8,7 @@ using System.Text;
 
 namespace LibrariesAPI
 {
+
     public class API
     {
         public static List<T> Get<T>(String url)
@@ -23,9 +24,15 @@ namespace LibrariesAPI
                 jsonString = reader.ReadToEnd();
             }
 
-            List<T> items = JsonConvert.DeserializeObject<List<T>>(jsonString);
-            return items as List<T>;
+            dynamic items = JsonConvert.DeserializeObject(jsonString);
+            List<T> list = new List<T>();
 
+            foreach (dynamic item in items.value)
+            {
+                list.Add(item.ToObject<T>());
+            }
+
+            return list;
         }
 
         public static T GetById<T>(String url)
@@ -41,7 +48,7 @@ namespace LibrariesAPI
                 jsonString = reader.ReadToEnd();
             }
 
-            T items = JsonConvert.DeserializeObject<T>(jsonString);
+            dynamic items = JsonConvert.DeserializeObject<T>(jsonString);;           Console.WriteLine(items);
 
             return items;
 
