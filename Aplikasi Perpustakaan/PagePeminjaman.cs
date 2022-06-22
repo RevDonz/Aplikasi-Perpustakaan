@@ -158,5 +158,9 @@ namespace Aplikasi_Perpustakaan
 
         }
 
+        private void inputNama_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -97,6 +97,7 @@
             this.inputNama.Name = "inputNama";
             this.inputNama.Size = new System.Drawing.Size(241, 22);
             this.inputNama.TabIndex = 14;
+            this.inputNama.TextChanged += new System.EventHandler(this.inputNama_TextChanged);
             // 
             // labelPeminjam
             // 

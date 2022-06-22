@@ -47,8 +47,6 @@
             this.inputStatus = new System.Windows.Forms.ComboBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.labelIdBuku = new System.Windows.Forms.Label();
-            this.button_EN_pageBook = new System.Windows.Forms.Button();
-            this.button_ID_pageBook = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataBuku)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +101,7 @@
             // inputJudul
             // 
             this.inputJudul.Location = new System.Drawing.Point(80, 156);
-            this.inputJudul.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputJudul.Margin = new System.Windows.Forms.Padding(4);
             this.inputJudul.Name = "inputJudul";
             this.inputJudul.Size = new System.Drawing.Size(249, 22);
             this.inputJudul.TabIndex = 3;
@@ -112,7 +110,7 @@
             // inputJmlHal
             // 
             this.inputJmlHal.Location = new System.Drawing.Point(399, 286);
-            this.inputJmlHal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputJmlHal.Margin = new System.Windows.Forms.Padding(4);
             this.inputJmlHal.Name = "inputJmlHal";
             this.inputJmlHal.Size = new System.Drawing.Size(249, 22);
             this.inputJmlHal.TabIndex = 6;
@@ -120,7 +118,7 @@
             // inputPenulis
             // 
             this.inputPenulis.Location = new System.Drawing.Point(80, 224);
-            this.inputPenulis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputPenulis.Margin = new System.Windows.Forms.Padding(4);
             this.inputPenulis.Name = "inputPenulis";
             this.inputPenulis.Size = new System.Drawing.Size(249, 22);
             this.inputPenulis.TabIndex = 7;
@@ -151,7 +149,7 @@
             // inputPenerbit
             // 
             this.inputPenerbit.Location = new System.Drawing.Point(80, 286);
-            this.inputPenerbit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputPenerbit.Margin = new System.Windows.Forms.Padding(4);
             this.inputPenerbit.Name = "inputPenerbit";
             this.inputPenerbit.Size = new System.Drawing.Size(249, 22);
             this.inputPenerbit.TabIndex = 8;
@@ -172,7 +170,7 @@
             this.buttonSubmit.BackColor = System.Drawing.Color.MintCream;
             this.buttonSubmit.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.Location = new System.Drawing.Point(713, 148);
-            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(140, 37);
             this.buttonSubmit.TabIndex = 13;
@@ -185,7 +183,7 @@
             this.buttonReset.BackColor = System.Drawing.Color.MintCream;
             this.buttonReset.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.buttonReset.Location = new System.Drawing.Point(713, 212);
-            this.buttonReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(4);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(140, 37);
             this.buttonReset.TabIndex = 14;
@@ -196,7 +194,7 @@
             // inputTahun
             // 
             this.inputTahun.Location = new System.Drawing.Point(399, 224);
-            this.inputTahun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputTahun.Margin = new System.Windows.Forms.Padding(4);
             this.inputTahun.Name = "inputTahun";
             this.inputTahun.Size = new System.Drawing.Size(249, 22);
             this.inputTahun.TabIndex = 15;
@@ -243,7 +241,7 @@
             this.buttonDelete.BackColor = System.Drawing.Color.MintCream;
             this.buttonDelete.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.buttonDelete.Location = new System.Drawing.Point(713, 278);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(140, 37);
             this.buttonDelete.TabIndex = 21;
@@ -265,33 +263,12 @@
             this.labelIdBuku.Text = "Id Buku";
             this.labelIdBuku.Visible = false;
             // 
-            // button_EN_pageBook
-            // 
-            this.button_EN_pageBook.Location = new System.Drawing.Point(713, 87);
-            this.button_EN_pageBook.Name = "button_EN_pageBook";
-            this.button_EN_pageBook.Size = new System.Drawing.Size(75, 23);
-            this.button_EN_pageBook.TabIndex = 23;
-            this.button_EN_pageBook.Text = "EN";
-            this.button_EN_pageBook.UseVisualStyleBackColor = true;
-            this.button_EN_pageBook.Click += new System.EventHandler(this.button_EN_pageBook_Click);
-            // 
-            // button_ID_pageBook
-            // 
-            this.button_ID_pageBook.Location = new System.Drawing.Point(809, 86);
-            this.button_ID_pageBook.Name = "button_ID_pageBook";
-            this.button_ID_pageBook.Size = new System.Drawing.Size(75, 23);
-            this.button_ID_pageBook.TabIndex = 24;
-            this.button_ID_pageBook.Text = "ID";
-            this.button_ID_pageBook.UseVisualStyleBackColor = true;
-            // 
             // PageBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(939, 617);
-            this.Controls.Add(this.button_ID_pageBook);
-            this.Controls.Add(this.button_EN_pageBook);
             this.Controls.Add(this.labelIdBuku);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.inputStatus);
@@ -345,7 +322,5 @@
         private System.Windows.Forms.ComboBox inputStatus;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label labelIdBuku;
-        private System.Windows.Forms.Button button_EN_pageBook;
-        private System.Windows.Forms.Button button_ID_pageBook;
     }
 }
