@@ -49,6 +49,7 @@ namespace Aplikasi_Perpustakaan
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
             this.Size = new Size(conf.width, conf.height);
+
             string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\databuku.json";
 
             Raw raw = Raw.getRecord(path);
@@ -69,17 +70,25 @@ namespace Aplikasi_Perpustakaan
             comboBoxStatus.SelectedItem = "dikonfirmasi";
             inputIdBuku.SelectedItem = 1;
 
-            if (conf.bahasa == "id")
-            {
-                backButton.Text = conf.button.kembali.id;
-                labelIdBuku.Text = conf.text.formDataBuku.idBuku.id;
-                labelPeminjam.Text = conf.text.formDataBuku.namaPeminjam.id;
-            }
-            else
+            if (LanguageCounter.identifier == "en")
             {
                 backButton.Text = conf.button.kembali.en;
-                labelIdBuku.Text = conf.text.formDataBuku.idBuku.en;
-                labelPeminjam.Text = conf.text.formDataBuku.namaPeminjam.en;
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+                labelPeminjam.Text = conf_bahasa.bahasaPagePeminjaman.labelNamaPeminjam.en;
+                labelIdBuku.Text = conf_bahasa.bahasaPagePeminjaman.labelIdBuku.en;
+                labeljudulpeminjaman.Text = "MyLibrary Book Loan Data";
+
+            }
+            else if (LanguageCounter.identifier == "id")
+            {
+                backButton.Text = conf.button.kembali.id;
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+                labelPeminjam.Text = conf_bahasa.bahasaPagePeminjaman.labelNamaPeminjam.id;
+                labelIdBuku.Text = conf_bahasa.bahasaPagePeminjaman.labelIdBuku.id;
+                labeljudulpeminjaman.Text = "Data Peminjaman MyLibrary";
+
             }
         }
 
@@ -149,17 +158,5 @@ namespace Aplikasi_Perpustakaan
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
-            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
-            labelIdBuku.Text = conf_bahasa.bahasaPagePeminjaman.labelIdBuku.en;
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

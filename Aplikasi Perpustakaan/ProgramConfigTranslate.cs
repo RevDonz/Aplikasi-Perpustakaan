@@ -29,22 +29,32 @@ namespace Aplikasi_Perpustakaan
             labelIdBuku labelIdBuku = new labelIdBuku("ID Buku","Book ID");
             labelNamaPeminjam labelNamaPeminjam = new labelNamaPeminjam("Nama Peminjam","Borrower's name");
             bahasaPagePeminjaman bahasaPagePeminjaman = new bahasaPagePeminjaman(labelIdBuku, labelNamaPeminjam);
-            defaultConfigBahasa = new ConfigTranslate(bahasaPagePeminjaman);
+
+            labelJudulBuku labelJudulBuku = new labelJudulBuku("Judul Buku","Book's Title");
+            labelPenulis labelPenulis = new labelPenulis("Penulis","Writer");
+            labelPenerbit labelPenerbit = new labelPenerbit("Penerbit", "Publisher");
+            labelTahunPenerbit labelTahunPenerbit = new labelTahunPenerbit("Tahun Terbit", "Publication Year");
+            labelJumlahHalaman labelJumlahHalaman = new labelJumlahHalaman("Jumlah Halaman", "Number of Pages");
+            buttonHapus buttonHapus = new buttonHapus("Hapus", "Delete");
+            buttonKembali buttonKembali = new buttonKembali("Kembali", "Back");
+            bahasaPageBook bahasaPageBook = new bahasaPageBook(labelJudulBuku, labelPenulis,
+                labelPenerbit, labelTahunPenerbit, labelJumlahHalaman, buttonHapus, buttonKembali);
+            defaultConfigBahasa = new ConfigTranslate(bahasaPagePeminjaman, bahasaPageBook);
         }
 
         public dynamic ReadConfigFile()
         {
-            string jsonFromFile = File.ReadAllText(path + '/' + configFileName);
-            conf = JsonConvert.DeserializeObject<Config>(jsonFromFile);
+            string jsonFromFilee = File.ReadAllText(path + '/' + configFileName);
+            conf = JsonConvert.DeserializeObject<ConfigTranslate>(jsonFromFilee);
             return conf;
         }
 
         private void WriteNewConfigFile()
         {
 
-            String jsonString = JsonConvert.SerializeObject(defaultConfigBahasa);
+            String jsonStringg = JsonConvert.SerializeObject(defaultConfigBahasa);
             string fullPath = path + '/' + configFileName;
-            File.WriteAllText(fullPath, jsonString);
+            File.WriteAllText(fullPath, jsonStringg);
         }
     }
 

@@ -32,8 +32,7 @@
             this.buttonBook = new System.Windows.Forms.Button();
             this.buttonPeminjaman = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelGreeting
@@ -54,7 +53,7 @@
             this.buttonBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBook.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBook.Location = new System.Drawing.Point(143, 318);
-            this.buttonBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBook.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBook.Name = "buttonBook";
             this.buttonBook.Size = new System.Drawing.Size(193, 76);
             this.buttonBook.TabIndex = 7;
@@ -68,7 +67,7 @@
             this.buttonPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonPeminjaman.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPeminjaman.Location = new System.Drawing.Point(375, 318);
-            this.buttonPeminjaman.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPeminjaman.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPeminjaman.Name = "buttonPeminjaman";
             this.buttonPeminjaman.Size = new System.Drawing.Size(193, 76);
             this.buttonPeminjaman.TabIndex = 8;
@@ -81,7 +80,7 @@
             this.buttonSearch.BackColor = System.Drawing.Color.MintCream;
             this.buttonSearch.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearch.Location = new System.Drawing.Point(603, 318);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(199, 76);
             this.buttonSearch.TabIndex = 9;
@@ -89,25 +88,15 @@
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // button1
+            // button3
             // 
-            this.button1.Location = new System.Drawing.Point(39, 492);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "EN";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(143, 492);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "ID";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button3.Location = new System.Drawing.Point(37, 491);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(128, 32);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Language(ID/EN)";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // PageDashboard
             // 
@@ -115,8 +104,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(939, 617);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonPeminjaman);
             this.Controls.Add(this.buttonBook);
@@ -138,8 +126,7 @@
         private System.Windows.Forms.Button buttonPeminjaman;
         private System.Windows.Forms.Button buttonBook;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

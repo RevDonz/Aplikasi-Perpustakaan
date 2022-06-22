@@ -23,7 +23,20 @@ namespace Aplikasi_Perpustakaan
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
             this.Size = new Size(conf.width, conf.height);
-            
+            if (LanguageCounter.identifier == "id")
+            {
+                LabelGreeting.Text = conf.text.greeting.id;
+                buttonBook.Text = conf.button.dataBuku.id;
+                buttonPeminjaman.Text = conf.button.dataPeminjaman.id;
+                buttonSearch.Text = conf.button.cariBuku.id;
+            }
+            else if(LanguageCounter.identifier == "en")
+            {
+                LabelGreeting.Text = conf.text.greeting.en;
+                buttonBook.Text = conf.button.dataBuku.en;
+                buttonPeminjaman.Text = conf.button.dataPeminjaman.en;
+                buttonSearch.Text = conf.button.cariBuku.en;
+            }
 
         }
 
@@ -62,25 +75,28 @@ namespace Aplikasi_Perpustakaan
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            ProgramConfig config = new ProgramConfig();
-            dynamic conf = config.ReadConfigFile();
-            LabelGreeting.Text = conf.text.greeting.en;
-            buttonBook.Text = conf.button.dataBuku.en;
-            buttonPeminjaman.Text = conf.button.dataPeminjaman.en;
-            buttonSearch.Text = conf.button.cariBuku.en;
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ProgramConfig config = new ProgramConfig();
-            dynamic conf = config.ReadConfigFile();
-            LabelGreeting.Text = conf.text.greeting.id;
-            buttonBook.Text = conf.button.dataBuku.id;
-            buttonPeminjaman.Text = conf.button.dataPeminjaman.id;
-            buttonSearch.Text = conf.button.cariBuku.id;
+            if(LanguageCounter.identifier == "id")
+            {
+                LanguageCounter.identifier = "en";
+                ProgramConfig config = new ProgramConfig();
+                dynamic conf = config.ReadConfigFile();
+                LabelGreeting.Text = conf.text.greeting.en;
+                buttonBook.Text = conf.button.dataBuku.en;
+                buttonPeminjaman.Text = conf.button.dataPeminjaman.en;
+                buttonSearch.Text = conf.button.cariBuku.en;
+            }
+            else
+            {
+                LanguageCounter.identifier =  "id";
+                ProgramConfig config = new ProgramConfig();
+                dynamic conf = config.ReadConfigFile();
+                LabelGreeting.Text = conf.text.greeting.id;
+                buttonBook.Text = conf.button.dataBuku.id;
+                buttonPeminjaman.Text = conf.button.dataPeminjaman.id;
+                buttonSearch.Text = conf.button.cariBuku.id;
+            }
         }
     }
 }

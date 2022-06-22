@@ -188,5 +188,17 @@ namespace Aplikasi_Perpustakaan
         {
             resetInput();
         }
+
+        private void inputJudul_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_EN_pageBook_Click(object sender, EventArgs e)
+        {
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+            labelJudul.Text = conf_bahasa.bahasaPageBook.labelJudulBuku.en;
+        }
     }
 }
