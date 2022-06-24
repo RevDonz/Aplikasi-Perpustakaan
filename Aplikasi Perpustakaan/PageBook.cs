@@ -76,10 +76,6 @@ namespace Aplikasi_Perpustakaan
 
             dgvDataBuku.DataSource = this.ToDataTable(result);
 
-            Buku resById = Buku.GetDataBuku("Bu100OraOra2000");
-            Console.WriteLine(resById.penulis);
-            Console.WriteLine(resById.penerbit);
-
             inputStatus.SelectedItem = "disimpan";
             
         }
@@ -218,6 +214,11 @@ namespace Aplikasi_Perpustakaan
         }
 
         private void inputJudul_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDataBuku_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

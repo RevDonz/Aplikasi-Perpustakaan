@@ -48,7 +48,8 @@ namespace LibrariesAPI
                 jsonString = reader.ReadToEnd();
             }
 
-            dynamic items = JsonConvert.DeserializeObject<T>(jsonString);;           Console.WriteLine(items);
+            dynamic items = JsonConvert.DeserializeObject<T>(jsonString);
+;           Console.WriteLine(items);
 
             return items;
 
