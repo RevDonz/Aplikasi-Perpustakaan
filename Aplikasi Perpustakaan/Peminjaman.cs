@@ -8,51 +8,74 @@ using System.Threading.Tasks;
 
 namespace Aplikasi_Perpustakaan
 {
-    internal class Peminjaman
+    public class Peminjaman
     {
-        public string nama_peminjam { get; set; }
-        public int id_buku { get; set; }
-        public DateTime tanggal_pinjam { get; set; }
-        public string status_peminjaman { get; set; }
+        public string idPeminjaman { get; set; }
+        public string namaPeminjam { get; set; }
+        public string idBuku { get; set; }
+        public DateTime tanggalPinjam { get; set; }
+        public string statusPeminjaman { get; set; }
 
-        public Peminjaman(string nama_peminjam, int id_buku, DateTime tanggal_pinjam, string status_peminjaman)
+        public Peminjaman(string id_peminjaman, string nama_peminjam, string id_buku, DateTime tanggal_pinjam, string status_peminjaman)
         {
-            this.nama_peminjam = nama_peminjam;
-            this.id_buku = id_buku;
-            this.tanggal_pinjam = tanggal_pinjam;
-            this.status_peminjaman = status_peminjaman;
+            this.idPeminjaman = id_peminjaman;
+            this.namaPeminjam = nama_peminjam;
+            this.idBuku = id_buku;
+            this.tanggalPinjam = tanggal_pinjam;
+            this.statusPeminjaman = status_peminjaman;
         }
 
         public static dynamic GetDataPeminjaman()
         {
             string url = "https://w5bzmo.deta.dev/peminjaman/get";
-            dynamic result = LibrariesAPI.API.Get<Buku>(url);
+            dynamic result = LibrariesAPI.API.Get<ResponsePeminjaman>(url);
 
             return result;
         }
 
         public static dynamic GetDataPeminjaman(string idPeminjaman)
         {
-            string url = "https://w5bzmo.deta.dev/buku/get?idPeminjaman=" + idPeminjaman;
-            dynamic result = LibrariesAPI.API.GetById<Buku>(url);
+            string url = "https://w5bzmo.deta.dev/peminjaman/get?idPeminjaman=" + idPeminjaman;
+            dynamic result = LibrariesAPI.API.GetById<Peminjaman>(url);
 
             return result;
         }
 
         public static dynamic TambahPeminjaman(Peminjaman peminjaman)
         {
-            string url = "https://w5bzmo.deta.dev/buku/post";
+            Console.WriteLine(peminjaman.idBuku);
+            string url = "https://w5bzmo.deta.dev/peminjaman/post";
             dynamic result = LibrariesAPI.API.Post<Peminjaman>(url, peminjaman);
+            
+            return result;
+        }
+
+        public static dynamic DeleteDataPeminjaman(string id)
+        {
+            string url = "https://w5bzmo.deta.dev/peminjaman/delete?idPeminjaman=" + id;
+            dynamic result = LibrariesAPI.API.Delete(url);
 
             return result;
         }
 
-        public static Raw pinjam(Raw raw, Peminjaman data)
+    }
+
+    public class ResponsePeminjaman
+    {
+        public string idPeminjaman { get; set; }
+        public string namaPeminjam { get; set; }
+        public string judulBuku { get; set; }
+        public string tanggalPinjam { get; set; }
+        public string statusPeminjaman { get; set; }
+
+        public ResponsePeminjaman(string id_peminjaman, string nama_peminjam, string buku, string tanggal_pinjam, string status_peminjaman)
         {
-            raw.peminjaman.Add(data);
-            string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
-            File.WriteAllText(raw.path, json);
-            return raw;
+            this.idPeminjaman = id_peminjaman;
+            this.namaPeminjam = nama_peminjam;
+            this.judulBuku = buku;
+            this.tanggalPinjam = tanggal_pinjam;
+            this.statusPeminjaman = status_peminjaman;
         }
     }
+
 }
