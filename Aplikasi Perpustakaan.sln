@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplikasi Perpustakaan", "Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrariesAPI", "LibrariesAPI\LibrariesAPI.csproj", "{1E8B3923-E15A-423B-9DA9-7E4250B0583C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesPerpustakaan", "UnitTesPerpustakaan\UnitTesPerpustakaan.csproj", "{EF644BFC-6E11-4B25-984A-B730544A3461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesPerpustakaan", "UnitTesPerpustakaan\UnitTesPerpustakaan.csproj", "{EF644BFC-6E11-4B25-984A-B730544A3461}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestAutomata", "UnitTestAutomata\UnitTestAutomata.csproj", "{ED0A426B-60BF-4587-BF58-EB8433513622}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EF644BFC-6E11-4B25-984A-B730544A3461}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF644BFC-6E11-4B25-984A-B730544A3461}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF644BFC-6E11-4B25-984A-B730544A3461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0A426B-60BF-4587-BF58-EB8433513622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0A426B-60BF-4587-BF58-EB8433513622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0A426B-60BF-4587-BF58-EB8433513622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0A426B-60BF-4587-BF58-EB8433513622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

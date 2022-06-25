@@ -1,42 +1,52 @@
 {
-  "bahasaPagePeminjaman": {
-    "labelIdBuku": {
-      "id": "ID Buku",
-      "en": "Book ID"
+  "BahasaPagePeminjaman": {
+    "LabelIdBuku": {
+      "Id": "ID Buku",
+      "En": "Book ID"
     },
-    "labelNamaPeminjam": {
-      "id": "Nama Peminjam",
-      "en": "Borrower's name"
+    "LabelNamaPeminjam": {
+      "Id": "Nama Peminjam",
+      "En": "Borrower's name"
     }
   },
-  "bahasaPageBook": {
-    "labelJudulBuku": {
-      "id": "Judul Buku",
-      "en": "Book's Title"
+  "BahasaPageBook": {
+    "LabelJudulBuku": {
+      "Id": "Judul Buku",
+      "En": "Book's Title"
     },
-    "labelPenulis": {
-      "id": "Penulis",
-      "en": "Writer"
+    "LabelPenulis": {
+      "Id": "Penulis",
+      "En": "Writer"
     },
-    "labelPenerbit": {
-      "id": "Penerbit",
-      "en": "Publisher"
+    "LabelPenerbit": {
+      "Id": "Penerbit",
+      "En": "Publisher"
     },
-    "labelTahunPenerbit": {
-      "id": "Tahun Terbit",
-      "en": "Publication Year"
+    "LabelTahunPenerbit": {
+      "Id": "Tahun Terbit",
+      "En": "Publication Year"
     },
-    "labelJumlahHalaman": {
-      "id": "Jumlah Halaman",
-      "en": "Number of Pages"
+    "LabelJumlahHalaman": {
+      "Id": "Jumlah Halaman",
+      "En": "Number of Pages"
     },
-    "buttonHapus": {
-      "id": "Hapus",
-      "en": "Delete"
+    "ButtonHapus": {
+      "Id": "Hapus",
+      "En": "Delete"
     },
-    "buttonKembali": {
-      "id": "Kembali",
-      "en": "Back"
+    "ButtonKembali": {
+      "Id": "Kembali",
+      "En": "Back"
     }
+  },
+  "LinkAPI": {
+    "LinkBukuGet": "https://w5bzmo.deta.dev/buku/get",
+    "LinkBukuPost": "https://w5bzmo.deta.dev/buku/post",
+    "LinkBukuPatch": "https://w5bzmo.deta.dev/buku/patch",
+    "LinkBukuDelete": "https://w5bzmo.deta.dev/buku/delete",
+    "LinkPeminjamanGet": "https://w5bzmo.deta.dev/peminjaman/get",
+    "LinkPeminjamanPost": "https://w5bzmo.deta.dev/peminjaman/post",
+    "LinkPeminjamanPatch": "https://w5bzmo.deta.dev/peminjaman/patch",
+    "LinkPeminjamanDelete": "https://w5bzmo.deta.dev/peminjaman/delete"
   }
 }
