@@ -80,6 +80,7 @@
             this.labelIdBuku.Size = new System.Drawing.Size(50, 15);
             this.labelIdBuku.TabIndex = 16;
             this.labelIdBuku.Text = "ID Buku";
+            this.labelIdBuku.Visible = false;
             // 
             // inputNama
             // 

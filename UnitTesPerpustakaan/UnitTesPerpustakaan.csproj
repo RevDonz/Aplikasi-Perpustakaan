@@ -14,4 +14,9 @@
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Aplikasi Perpustakaan\Aplikasi Perpustakaan.csproj" />
+    <ProjectReference Include="..\LibrariesAPI\LibrariesAPI.csproj" />
+  </ItemGroup>
+
 </Project>

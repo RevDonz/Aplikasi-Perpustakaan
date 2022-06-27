@@ -97,9 +97,6 @@ namespace Aplikasi_Perpustakaan
                 
                 List<ResponsePeminjaman> list_peminjaman = Peminjaman.GetDataPeminjaman();
 
-                Console.WriteLine(newPeminjaman);
-                //string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\dataBuku.json";
-                //Raw raw = Raw.getRecord(path);
                 result = Peminjaman.TambahPeminjaman(newPeminjaman);
 
                 if (result)
@@ -109,30 +106,8 @@ namespace Aplikasi_Perpustakaan
 
                 bool found = false;
 
-                //foreach (Peminjaman item in list_peminjaman)
-                //{
-                //    if (item.namaPeminjam == newPeminjaman.namaPeminjam && item.idBuku == newPeminjaman.idBuku)
-                //    {
-                //        found = true;
-                //        if (newPeminjaman.statusPeminjaman == "dikonfirmasi")
-                //        {
-                //            MessageBox.Show("Data peminjaman ditemukan. Apakah status yang dimaksud 'dikembalikan'?");
-                //        }
-                //        else
-                //        {
-                //            item.statusPeminjaman = newPeminjaman.statusPeminjaman;
-                //            //string json = JsonConvert.SerializeObject(raw, Formatting.Indented);
-                //            //File.WriteAllText(raw.path, json);
-                //            //MessageBox.Show("Buku berhasil dikembalikan");
-                //        }
-                //    }
-                //}
-                //if (!found)
-                //{
-                //    raw = Peminjaman.pinjam(raw, newPeminjaman);
-                //}
-
                 dgvDataPeminjaman.DataSource = this.ToDataTable(list_peminjaman);
+
             }
             catch (Exception ex)
             {
@@ -176,6 +151,7 @@ namespace Aplikasi_Perpustakaan
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
+            Console.WriteLine(labelIdPeminjaman.Text);
             dynamic result = Peminjaman.DeleteDataPeminjaman(labelIdPeminjaman.Text);
 
             if (result != null)
@@ -195,7 +171,7 @@ namespace Aplikasi_Perpustakaan
             int index = e.RowIndex;
             DataGridViewRow selectedRow = dgvDataPeminjaman.Rows[index];
 
-            labelIdBuku.Text = selectedRow.Cells[0].Value.ToString();
+            labelIdPeminjaman.Text = selectedRow.Cells[0].Value.ToString();
         }
     }
 }
