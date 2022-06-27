@@ -27,15 +27,19 @@ namespace Aplikasi_Perpustakaan
 
         public static dynamic GetDataPeminjaman()
         {
-            string url = "https://w5bzmo.deta.dev/peminjaman/get";
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+            string url = conf_bahasa.LinkAPI.LinkPeminjamanGet;
             dynamic result = LibrariesAPI.API.Get<ResponsePeminjaman>(url);
-
+            
             return result;
         }
 
         public static dynamic GetDataPeminjaman(string idPeminjaman)
         {
-            string url = "https://w5bzmo.deta.dev/peminjaman/get?idPeminjaman=" + idPeminjaman;
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+            string url = conf_bahasa.LinkAPI.LinkPeminjamanGet + "?idPeminjaman=" + idPeminjaman;
             dynamic result = LibrariesAPI.API.GetById<Peminjaman>(url);
 
             return result;
@@ -44,7 +48,9 @@ namespace Aplikasi_Perpustakaan
         public static dynamic TambahPeminjaman(Peminjaman peminjaman)
         {
             Console.WriteLine(peminjaman.idBuku);
-            string url = "https://w5bzmo.deta.dev/peminjaman/post";
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+            string url = conf_bahasa.LinkAPI.LinkPeminjamanPost;
             dynamic result = LibrariesAPI.API.Post<Peminjaman>(url, peminjaman);
             
             return result;
@@ -52,7 +58,10 @@ namespace Aplikasi_Perpustakaan
 
         public static dynamic DeleteDataPeminjaman(string id)
         {
-            string url = "https://w5bzmo.deta.dev/peminjaman/delete?idPeminjaman=" + id;
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+
+            string url = conf_bahasa.LinkAPI.LinkPeminjamanDelete + "?idPeminjaman=" + id;
             dynamic result = LibrariesAPI.API.Delete(url);
 
             return result;

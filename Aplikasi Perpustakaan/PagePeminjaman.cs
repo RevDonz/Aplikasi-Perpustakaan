@@ -55,8 +55,8 @@ namespace Aplikasi_Perpustakaan
                 backButton.Text = conf.button.kembali.en;
                 ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
                 dynamic conf_bahasa = config_bahasa.ReadConfigFile();
-                labelPeminjam.Text = conf_bahasa.bahasaPagePeminjaman.labelNamaPeminjam.en;
-                labelIdBuku.Text = conf_bahasa.bahasaPagePeminjaman.labelIdBuku.en;
+                labelPeminjam.Text = conf_bahasa.BahasaPagePeminjaman.LabelNamaPeminjam.En;
+                labelIdBuku.Text = conf_bahasa.BahasaPagePeminjaman.LabelIdBuku.En;
                 labeljudulpeminjaman.Text = "MyLibrary Book Loan Data";
 
             }
@@ -65,10 +65,9 @@ namespace Aplikasi_Perpustakaan
                 backButton.Text = conf.button.kembali.id;
                 ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
                 dynamic conf_bahasa = config_bahasa.ReadConfigFile();
-                labelPeminjam.Text = conf_bahasa.bahasaPagePeminjaman.labelNamaPeminjam.id;
-                labelIdBuku.Text = conf_bahasa.bahasaPagePeminjaman.labelIdBuku.id;
+                labelPeminjam.Text = conf_bahasa.BahasaPagePeminjaman.LabelNamaPeminjam.Id;
+                labelIdBuku.Text = conf_bahasa.BahasaPagePeminjaman.LabelIdBuku.Id;
                 labeljudulpeminjaman.Text = "Data Peminjaman MyLibrary";
-
             }
 
             List<ResponsePeminjaman> list_peminjaman = Peminjaman.GetDataPeminjaman();

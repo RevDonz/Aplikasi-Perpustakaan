@@ -86,6 +86,8 @@ namespace Aplikasi_Perpustakaan
                 buttonBook.Text = conf.button.dataBuku.en;
                 buttonPeminjaman.Text = conf.button.dataPeminjaman.en;
                 buttonSearch.Text = conf.button.cariBuku.en;
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
             }
             else
             {
@@ -96,6 +98,8 @@ namespace Aplikasi_Perpustakaan
                 buttonBook.Text = conf.button.dataBuku.id;
                 buttonPeminjaman.Text = conf.button.dataPeminjaman.id;
                 buttonSearch.Text = conf.button.cariBuku.id;
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
             }
         }
     }

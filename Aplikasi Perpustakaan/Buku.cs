@@ -27,7 +27,9 @@ namespace Aplikasi_Perpustakaan
 
         public static List<Buku> GetDataBuku()
         {
-            string url = "https://w5bzmo.deta.dev/buku/get";
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+            string url = conf_bahasa.LinkAPI.LinkBukuGet;
             List<Buku> result = LibrariesAPI.API.Get<Buku>(url);
 
             return result;
@@ -35,7 +37,9 @@ namespace Aplikasi_Perpustakaan
 
         public static dynamic GetDataBuku(string idBuku)
         {
-            string url = "https://w5bzmo.deta.dev/buku/get?idBuku=" + idBuku;
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+            string url = conf_bahasa.LinkAPI.LinkBukuGet + "?idBuku=" + idBuku;
             dynamic result = LibrariesAPI.API.GetById<Buku>(url);
 
             return result;
@@ -43,7 +47,9 @@ namespace Aplikasi_Perpustakaan
 
         public static dynamic TambahBuku(Buku buku)
         {
-            string url = "https://w5bzmo.deta.dev/buku/post";
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+            string url = conf_bahasa.LinkAPI.LinkBukuPost;
             dynamic result = LibrariesAPI.API.Post<Buku>(url, buku);
 
             return result;
@@ -51,7 +57,9 @@ namespace Aplikasi_Perpustakaan
 
         public static dynamic DeleteDataBuku(string id)
         {
-            string url = "https://w5bzmo.deta.dev/buku/delete?idBuku=" + id;
+            ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+            dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+            string url = conf_bahasa.LinkAPI.LinkBukuDelete + "?idBuku=" + id;
             dynamic result = LibrariesAPI.API.Delete(url);
 
             return result;

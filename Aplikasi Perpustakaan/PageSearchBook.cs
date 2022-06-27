@@ -48,14 +48,14 @@ namespace Aplikasi_Perpustakaan
                 ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
                 dynamic conf_bahasa = config_bahasa.ReadConfigFile();
                 label1.Text = "Search a book in MyLibrary";
-                button2.Text = conf_bahasa.bahasaPageBook.buttonKembali.en;
+                button2.Text = conf_bahasa.BahasaPageBook.ButtonKembali.En;
             }
             else if (LanguageCounter.identifier == "id")
             {
                 ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
                 dynamic conf_bahasa = config_bahasa.ReadConfigFile();
                 label1.Text = "Cari Buku MyLibrary";
-                button2.Text = conf_bahasa.bahasaPageBook.buttonKembali.id;
+                button2.Text = conf_bahasa.BahasaPageBook.ButtonKembali.Id;
             }
         }
     }

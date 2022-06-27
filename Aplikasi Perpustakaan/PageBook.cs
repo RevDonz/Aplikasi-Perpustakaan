@@ -49,26 +49,26 @@ namespace Aplikasi_Perpustakaan
             {
                 ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
                 dynamic conf_bahasa = config_bahasa.ReadConfigFile();
-                labelJudul.Text = conf_bahasa.bahasaPageBook.labelJudulBuku.en;
-                labelPenulis.Text = conf_bahasa.bahasaPageBook.labelPenulis.en;
-                labelPenerbit.Text = conf_bahasa.bahasaPageBook.labelPenerbit.en;
-                labelTahun.Text = conf_bahasa.bahasaPageBook.labelTahunPenerbit.en;
-                labelJmlHal.Text = conf_bahasa.bahasaPageBook.labelJumlahHalaman.en;
-                backButton.Text = conf_bahasa.bahasaPageBook.buttonKembali.en;
-                buttonDelete.Text = conf_bahasa.bahasaPageBook.buttonHapus.en;
+                labelJudul.Text = conf_bahasa.BahasaPageBook.LabelJudulBuku.En;
+                labelPenulis.Text = conf_bahasa.BahasaPageBook.LabelPenulis.En;
+                labelPenerbit.Text = conf_bahasa.BahasaPageBook.LabelPenerbit.En;
+                labelTahun.Text = conf_bahasa.BahasaPageBook.LabelTahunPenerbit.En;
+                labelJmlHal.Text = conf_bahasa.BahasaPageBook.LabelJumlahHalaman.En;
+                backButton.Text = conf_bahasa.BahasaPageBook.ButtonKembali.En;
+                buttonDelete.Text = conf_bahasa.BahasaPageBook.ButtonHapus.En;
                 juduldatabuku.Text = "MyLibrary Book Data";
             }
             else if(LanguageCounter.identifier == "id")
             {
                 ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
                 dynamic conf_bahasa = config_bahasa.ReadConfigFile();
-                labelJudul.Text = conf_bahasa.bahasaPageBook.labelJudulBuku.id;
-                labelPenulis.Text = conf_bahasa.bahasaPageBook.labelPenulis.id;
-                labelPenerbit.Text = conf_bahasa.bahasaPageBook.labelPenerbit.id;
-                labelTahun.Text = conf_bahasa.bahasaPageBook.labelTahunPenerbit.id;
-                labelJmlHal.Text = conf_bahasa.bahasaPageBook.labelJumlahHalaman.id;
-                backButton.Text = conf_bahasa.bahasaPageBook.buttonKembali.id;
-                buttonDelete.Text = conf_bahasa.bahasaPageBook.buttonHapus.id;
+                labelJudul.Text = conf_bahasa.BahasaPageBook.LabelJudulBuku.Id;
+                labelPenulis.Text = conf_bahasa.BahasaPageBook.LabelPenulis.Id;
+                labelPenerbit.Text = conf_bahasa.BahasaPageBook.LabelPenerbit.Id;
+                labelTahun.Text = conf_bahasa.BahasaPageBook.LabelTahunPenerbit.Id;
+                labelJmlHal.Text = conf_bahasa.BahasaPageBook.LabelJumlahHalaman.Id;
+                backButton.Text = conf_bahasa.BahasaPageBook.ButtonKembali.Id;
+                buttonDelete.Text = conf_bahasa.BahasaPageBook.ButtonHapus.Id;
                 juduldatabuku.Text = "Data Buku MyLibrary";
             }
 

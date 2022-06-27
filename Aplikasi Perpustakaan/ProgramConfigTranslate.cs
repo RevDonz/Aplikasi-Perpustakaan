@@ -26,20 +26,32 @@ namespace Aplikasi_Perpustakaan
 
         private void SetDefault()
         {
-            labelIdBuku labelIdBuku = new labelIdBuku("ID Buku","Book ID");
-            labelNamaPeminjam labelNamaPeminjam = new labelNamaPeminjam("Nama Peminjam","Borrower's name");
-            bahasaPagePeminjaman bahasaPagePeminjaman = new bahasaPagePeminjaman(labelIdBuku, labelNamaPeminjam);
+            LabelIdBuku labelIdBuku = new LabelIdBuku("ID Buku","Book ID");
+            LabelNamaPeminjam labelNamaPeminjam = new LabelNamaPeminjam("Nama Peminjam","Borrower's name");
+            BahasaPagePeminjaman bahasaPagePeminjaman = new BahasaPagePeminjaman(labelIdBuku, labelNamaPeminjam);
 
-            labelJudulBuku labelJudulBuku = new labelJudulBuku("Judul Buku","Book's Title");
-            labelPenulis labelPenulis = new labelPenulis("Penulis","Writer");
-            labelPenerbit labelPenerbit = new labelPenerbit("Penerbit", "Publisher");
-            labelTahunPenerbit labelTahunPenerbit = new labelTahunPenerbit("Tahun Terbit", "Publication Year");
-            labelJumlahHalaman labelJumlahHalaman = new labelJumlahHalaman("Jumlah Halaman", "Number of Pages");
-            buttonHapus buttonHapus = new buttonHapus("Hapus", "Delete");
-            buttonKembali buttonKembali = new buttonKembali("Kembali", "Back");
-            bahasaPageBook bahasaPageBook = new bahasaPageBook(labelJudulBuku, labelPenulis,
+            LabelJudulBuku labelJudulBuku = new LabelJudulBuku("Judul Buku","Book's Title");
+            LabelPenulis labelPenulis = new LabelPenulis("Penulis","Writer");
+            LabelPenerbit labelPenerbit = new LabelPenerbit("Penerbit", "Publisher");
+            LabelTahunPenerbit labelTahunPenerbit = new LabelTahunPenerbit("Tahun Terbit", "Publication Year");
+            LabelJumlahHalaman labelJumlahHalaman = new LabelJumlahHalaman("Jumlah Halaman", "Number of Pages");
+            ButtonHapus buttonHapus = new ButtonHapus("Hapus", "Delete");
+            ButtonKembali buttonKembali = new ButtonKembali("Kembali", "Back");
+            BahasaPageBook bahasaPageBook = new BahasaPageBook(labelJudulBuku, labelPenulis,
                 labelPenerbit, labelTahunPenerbit, labelJumlahHalaman, buttonHapus, buttonKembali);
-            defaultConfigBahasa = new ConfigTranslate(bahasaPagePeminjaman, bahasaPageBook);
+
+            string linkBukuGet = "https://w5bzmo.deta.dev/buku/get";
+            string linkBukuPost = "https://w5bzmo.deta.dev/buku/post";
+            string linkBukuPatch = "https://w5bzmo.deta.dev/buku/patch";
+            string linkBukuDelete = "https://w5bzmo.deta.dev/buku/delete";
+            string linkPeminjamanGet = "https://w5bzmo.deta.dev/peminjaman/get";
+            string linkPeminjamanPost = "https://w5bzmo.deta.dev/peminjaman/post";
+            string linkPeminjamanPatch = "https://w5bzmo.deta.dev/peminjaman/patch";
+            string linkPeminjamanDelete = "https://w5bzmo.deta.dev/peminjaman/delete";
+            LinkAPI linkAPI = new LinkAPI(linkBukuGet, linkBukuPost, linkBukuPatch,
+                linkBukuDelete, linkPeminjamanGet, linkPeminjamanPost, linkPeminjamanPatch,
+                linkPeminjamanDelete);
+            defaultConfigBahasa = new ConfigTranslate(bahasaPagePeminjaman, bahasaPageBook, linkAPI);
         }
 
         public dynamic ReadConfigFile()
@@ -57,14 +69,4 @@ namespace Aplikasi_Perpustakaan
             File.WriteAllText(fullPath, jsonStringg);
         }
     }
-
-
-
-
-
-
-
-
-
-
 }
