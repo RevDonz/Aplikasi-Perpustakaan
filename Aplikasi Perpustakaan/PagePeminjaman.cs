@@ -157,7 +157,7 @@ namespace Aplikasi_Perpustakaan
             {
                 MessageBox.Show("Hapus Data Berhasil", "Berhasil");
                 dynamic peminjaman = Peminjaman.GetDataPeminjaman();
-                dgvDataBuku.DataSource = this.ToDataTable(peminjaman);
+                dgvDataPeminjaman.DataSource = this.ToDataTable(peminjaman);
             }
             else
             {

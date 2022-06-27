@@ -185,6 +185,7 @@
             this.labelIdPeminjaman.Size = new System.Drawing.Size(90, 15);
             this.labelIdPeminjaman.TabIndex = 32;
             this.labelIdPeminjaman.Text = "ID Peminjaman";
+            this.labelIdPeminjaman.Visible = false;
             // 
             // PagePeminjaman
             // 
@@ -209,7 +210,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PagePeminjaman";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "tes";
+            this.Text = "Peminjaman";
             this.Load += new System.EventHandler(this.PeminjamanPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataPeminjaman)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataBuku)).EndInit();
