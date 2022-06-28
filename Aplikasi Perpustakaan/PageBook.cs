@@ -9,7 +9,7 @@ namespace Aplikasi_Perpustakaan
 {
     public partial class PageBook : Form
     {
-        
+
         public PageBook()
         {
             InitializeComponent();
@@ -63,7 +63,7 @@ namespace Aplikasi_Perpustakaan
             Console.WriteLine(resById.penerbit);
 
             inputStatus.SelectedItem = "disimpan";
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace Aplikasi_Perpustakaan
 
         private void dgvDataBuku_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void labelJudul_Click(object sender, EventArgs e)
@@ -97,16 +97,35 @@ namespace Aplikasi_Perpustakaan
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            
             string id_buku = null;
             string judul = this.inputJudul.Text;
             string jumlahHalaman = this.inputJmlHal.Text;
             string penulis = this.inputPenulis.Text;
             string penerbit = this.inputPenerbit.Text;
             string tahun = this.inputTahun.Text;
-            dynamic result = false;
             string status = null;
 
+            bool result = cekValidasi(id_buku, judul, jumlahHalaman, penulis, penerbit, tahun, status);
+
+            if (result)
+            {
+                MessageBox.Show("Buku berhasil ditambahkan");
+                dynamic resBuku = Buku.GetDataBuku();
+                dgvDataBuku.DataSource = this.ToDataTable(resBuku);
+                resetInput();
+            }
+            else
+            {
+                MessageBox.Show("Buku gagal ditambahkan");
+                resetInput();
+            }
+
+        }
+
+        public bool cekValidasi(string id_buku, string judul, string jumlahHalaman, string penulis, string penerbit,string tahun, string status)
+        {
+            dynamic result = false;
+          
             if (judul.Length >= 30)
             {
                 MessageBox.Show("Judul Buku Terlalu Panjang");
@@ -121,27 +140,18 @@ namespace Aplikasi_Perpustakaan
                 Debug.Assert(int.Parse(jumlahHalaman) <= int.MaxValue);
                 Debug.Assert(int.Parse(jumlahHalaman) <= 1000000, "Input tidak boleh lebih dari 1 juta");
             }
+
             else
             {
                 Buku buku = new Buku(id_buku, judul, int.Parse(jumlahHalaman), penulis, penerbit, int.Parse(tahun), status);
-               
+
                 result = Buku.TambahBuku(buku);
 
-                if (result)
-                {
-                    MessageBox.Show("Buku berhasil ditambahkan");
-                    dynamic resBuku = Buku.GetDataBuku();
-                    dgvDataBuku.DataSource = this.ToDataTable(resBuku);
-                    resetInput();
-                }
-                else
-                {
-                    MessageBox.Show("Buku gagal ditambahkan");
-                    resetInput();
-                }
+                return result;
 
             }
-        }
+            return result;
+        } 
 
         private void label1_Click_1(object sender, EventArgs e)
         {
