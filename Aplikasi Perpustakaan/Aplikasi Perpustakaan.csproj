@@ -94,6 +94,7 @@
     <Compile Include="PageSearchBook.Designer.cs">
       <DependentUpon>PageSearchBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValidasiInput.cs" />
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
       <SubType>Designer</SubType>

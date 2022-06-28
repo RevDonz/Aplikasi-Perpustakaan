@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrariesAPI", "LibrariesAP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesPerpustakaan", "UnitTesPerpustakaan\UnitTesPerpustakaan.csproj", "{EF644BFC-6E11-4B25-984A-B730544A3461}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestAutomata", "UnitTestAutomata\UnitTestAutomata.csproj", "{ED0A426B-60BF-4587-BF58-EB8433513622}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestAutomata", "UnitTestAutomata\UnitTestAutomata.csproj", "{ED0A426B-60BF-4587-BF58-EB8433513622}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
