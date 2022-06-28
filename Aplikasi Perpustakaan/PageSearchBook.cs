@@ -43,6 +43,20 @@ namespace Aplikasi_Perpustakaan
             ProgramConfig config = new ProgramConfig();
             dynamic conf = config.ReadConfigFile();
             this.Size = new Size(conf.width, conf.height);
+            if (LanguageCounter.identifier == "en")
+            {
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+                label1.Text = "Search a book in MyLibrary";
+                button2.Text = conf_bahasa.BahasaPageBook.ButtonKembali.En;
+            }
+            else if (LanguageCounter.identifier == "id")
+            {
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+                label1.Text = "Cari Buku MyLibrary";
+                button2.Text = conf_bahasa.BahasaPageBook.ButtonKembali.Id;
+            }
         }
     }
 }

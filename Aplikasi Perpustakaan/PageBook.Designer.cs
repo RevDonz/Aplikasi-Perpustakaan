@@ -55,7 +55,7 @@
             this.backButton.BackColor = System.Drawing.Color.MintCream;
             this.backButton.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Location = new System.Drawing.Point(25, 20);
-            this.backButton.Margin = new System.Windows.Forms.Padding(2);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(70, 30);
             this.backButton.TabIndex = 0;
@@ -68,13 +68,14 @@
             this.dgvDataBuku.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvDataBuku.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDataBuku.Location = new System.Drawing.Point(25, 299);
-            this.dgvDataBuku.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDataBuku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDataBuku.Name = "dgvDataBuku";
             this.dgvDataBuku.RowHeadersWidth = 51;
             this.dgvDataBuku.RowTemplate.Height = 24;
             this.dgvDataBuku.Size = new System.Drawing.Size(648, 174);
             this.dgvDataBuku.TabIndex = 1;
             this.dgvDataBuku.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataBuku_CellClick);
+            this.dgvDataBuku.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataBuku_CellContentClick_1);
             // 
             // juduldatabuku
             // 
@@ -102,6 +103,7 @@
             this.inputJudul.Name = "inputJudul";
             this.inputJudul.Size = new System.Drawing.Size(188, 20);
             this.inputJudul.TabIndex = 3;
+            this.inputJudul.TextChanged += new System.EventHandler(this.inputJudul_TextChanged);
             // 
             // inputJmlHal
             // 
@@ -216,7 +218,7 @@
             "dipinjam",
             "hilang"});
             this.inputStatus.Location = new System.Drawing.Point(298, 126);
-            this.inputStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.inputStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.inputStatus.Name = "inputStatus";
             this.inputStatus.Size = new System.Drawing.Size(190, 21);
             this.inputStatus.TabIndex = 19;
@@ -272,7 +274,7 @@
             this.Controls.Add(this.dgvDataBuku);
             this.Controls.Add(this.backButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PageBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Buku";

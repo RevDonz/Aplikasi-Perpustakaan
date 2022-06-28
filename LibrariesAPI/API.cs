@@ -48,7 +48,8 @@ namespace LibrariesAPI
                 jsonString = reader.ReadToEnd();
             }
 
-            dynamic items = JsonConvert.DeserializeObject<T>(jsonString);;           Console.WriteLine(items);
+            dynamic items = JsonConvert.DeserializeObject<T>(jsonString);
+;           Console.WriteLine(items);
 
             return items;
 
@@ -74,16 +75,16 @@ namespace LibrariesAPI
 
         public static bool Delete(String url)
         {
-            HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(String.Format(url));
-            WebReq.Method = "DELETE";
-            HttpWebResponse WebResp = (HttpWebResponse)WebReq.GetResponse();
+            Console.WriteLine(url);
+            HttpClient client = new HttpClient();
 
-            if (WebResp.GetResponseStream() != null)
-            {
-                return true;
-            }
+            var response = client.DeleteAsync(url).Result;
 
-            return false;
+            string resString = response.Content.ReadAsStringAsync().Result;
+
+            dynamic resJson = JsonConvert.DeserializeObject(resString);
+            return resJson.status;
+
         }
     }
 }

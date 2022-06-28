@@ -45,22 +45,36 @@ namespace Aplikasi_Perpustakaan
             dynamic conf = config.ReadConfigFile();
             this.Size = new System.Drawing.Size(conf.width, conf.height);
 
-            if (conf.bahasa == "id")
+            if (LanguageCounter.identifier == "en")
             {
-                backButton.Text = conf.button.kembali.id;
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+                labelJudul.Text = conf_bahasa.BahasaPageBook.LabelJudulBuku.En;
+                labelPenulis.Text = conf_bahasa.BahasaPageBook.LabelPenulis.En;
+                labelPenerbit.Text = conf_bahasa.BahasaPageBook.LabelPenerbit.En;
+                labelTahun.Text = conf_bahasa.BahasaPageBook.LabelTahunPenerbit.En;
+                labelJmlHal.Text = conf_bahasa.BahasaPageBook.LabelJumlahHalaman.En;
+                backButton.Text = conf_bahasa.BahasaPageBook.ButtonKembali.En;
+                buttonDelete.Text = conf_bahasa.BahasaPageBook.ButtonHapus.En;
+                juduldatabuku.Text = "MyLibrary Book Data";
             }
-            else
+            else if(LanguageCounter.identifier == "id")
             {
-                backButton.Text = conf.button.kembali.en;
+                ProgramConfigTranslate config_bahasa = new ProgramConfigTranslate();
+                dynamic conf_bahasa = config_bahasa.ReadConfigFile();
+                labelJudul.Text = conf_bahasa.BahasaPageBook.LabelJudulBuku.Id;
+                labelPenulis.Text = conf_bahasa.BahasaPageBook.LabelPenulis.Id;
+                labelPenerbit.Text = conf_bahasa.BahasaPageBook.LabelPenerbit.Id;
+                labelTahun.Text = conf_bahasa.BahasaPageBook.LabelTahunPenerbit.Id;
+                labelJmlHal.Text = conf_bahasa.BahasaPageBook.LabelJumlahHalaman.Id;
+                backButton.Text = conf_bahasa.BahasaPageBook.ButtonKembali.Id;
+                buttonDelete.Text = conf_bahasa.BahasaPageBook.ButtonHapus.Id;
+                juduldatabuku.Text = "Data Buku MyLibrary";
             }
 
             List<Buku> result = Buku.GetDataBuku();
 
             dgvDataBuku.DataSource = this.ToDataTable(result);
-
-            Buku resById = Buku.GetDataBuku("Bu100OraOra2000");
-            Console.WriteLine(resById.penulis);
-            Console.WriteLine(resById.penerbit);
 
             inputStatus.SelectedItem = "disimpan";
 
@@ -207,6 +221,16 @@ namespace Aplikasi_Perpustakaan
         private void buttonReset_Click(object sender, EventArgs e)
         {
             resetInput();
+        }
+
+        private void inputJudul_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvDataBuku_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
