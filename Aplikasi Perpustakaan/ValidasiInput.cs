@@ -12,14 +12,13 @@ namespace Aplikasi_Perpustakaan
     {
         public static string CekValidasi(string id_buku, string judul, string jumlahHalaman, string penulis, string penerbit, string tahun, string status)
         {
-            String result;
+            String result = null;
 
             if (judul.Length >= 30)
             {
                 result = "judul"; 
-               
             }
-            else if (judul == null || jumlahHalaman == "" || penulis == null || penerbit == null || tahun == "")
+            else if (judul == null || judul == "" | jumlahHalaman == "" || penulis == null || penerbit == null || tahun == "")
             {
                 result = "kosong"; 
             }
@@ -34,7 +33,8 @@ namespace Aplikasi_Perpustakaan
                 return "berhasil";
 
             }
-            return null;
+
+            return result;
         }
     }
 }

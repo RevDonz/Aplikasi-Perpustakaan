@@ -10,9 +10,9 @@ namespace UnitTesPerpustakaan
         [TestMethod]
         public void GetJudulBukuTest()
         {
-            string expected = "Buku Baru 1";
+            string expected = "Bebas";
             List<Buku> result = Buku.GetDataBuku();
-            Assert.AreEqual(expected, result[1].judulBuku);
+            Assert.AreEqual(expected, result[0].judulBuku);
         }
 
         [TestMethod]
@@ -23,4 +23,4 @@ namespace UnitTesPerpustakaan
             Assert.AreEqual(expected, list_peminjaman[0].namaPeminjam);
         }
     }
-}
+}   
