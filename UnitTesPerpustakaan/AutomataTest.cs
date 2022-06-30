@@ -1,11 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Aplikasi_Perpustakaan;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using System.Collections.Generic;
 
-namespace UnitTestAutomata
+namespace UnitTesPerpustakaan
 {
     [TestClass]
-    public class UnitTestAutomata
+    public class AutomataTest
     {
         [TestMethod]
         public void ObjectInitializingDefaultValueValidation()
