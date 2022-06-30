@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Aplikasi_Perpustakaan
 {
-    internal class CariBuku
+    public class CariBuku
     {
         public T SearchBuku<T>(T searchBuku)
         {
