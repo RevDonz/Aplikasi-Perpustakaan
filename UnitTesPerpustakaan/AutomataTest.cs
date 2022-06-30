@@ -10,7 +10,7 @@ using System.Collections.Generic;
 namespace UnitTesPerpustakaan
 {
     [TestClass]
-    public class UnitTestAutomata
+    public class AutomataTest
     {
         [TestMethod]
         public void ObjectInitializingDefaultValueValidation()
