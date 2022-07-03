@@ -58,5 +58,10 @@ namespace Aplikasi_Perpustakaan
                 button2.Text = conf_bahasa.BahasaPageBook.ButtonKembali.Id;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
